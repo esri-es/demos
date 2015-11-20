@@ -1,0 +1,38 @@
+#map{
+  width: 100%;
+  height: 430px;
+}
+
+#pin{
+  position: absolute;
+  z-index: 99;
+  left: 50%;
+  margin-left: -20px;
+  top: 50%;
+  margin-top: -34px;
+}
+
+.animate-show,
+.animate-hide {
+  -webkit-transition:all linear 1s;
+  -moz-transition:all linear 1s;
+  -ms-transition:all linear 1s;
+  -o-transition:all linear 1s;
+  transition:all linear 1s;
+}
+
+.animate-show.ng-hide-remove,
+.animate-hide.ng-hide-add.ng-hide-add-active {
+  opacity: 0;
+  display: block !important;
+}
+
+.animate-hide.ng-hide-add,
+.animate-show.ng-hide-remove.ng-hide-remove-active {
+  opacity: 1;
+  display: block !important;
+}
+
+#operationSuccess{
+  margin-top: 1em;
+}

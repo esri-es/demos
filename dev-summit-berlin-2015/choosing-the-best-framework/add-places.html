@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html ng-app="esri-map-example">
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Add places</title>
+
+    <!-- load Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+    <!-- load Esri CSS -->
+    <link rel="stylesheet" href="http://js.arcgis.com/3.14/esri/css/esri.css">
+    
+    <!-- load Sample CSS -->
+    <link rel="stylesheet" href="add-places.css">
+  </head>
+
+  <body ng-controller="MapController">
+    <div class="container">
+      
+      <div class="row">  
+        <div class="col-md-12">
+          
+          <h1>Add new places form</h1>
+          
+          <div class="row">
+            <div class="col-md-6">
+              
+              <h2>Details</h2>
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Place name" ng-model="place.name">
+              </div>
+
+              <div class="form-group">
+                <label for="type">Food type:</label>
+                <select class="form-control" id="type" ng-model="place.type">
+                  <option>French</option>
+                  <option>Indian</option>
+                  <option>Spanish</option>
+                  <option>Italian</option>
+                  <option>American</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="address">Address:</label> (move the map)
+                <input type="text" class="form-control" id="address" placeholder="Address" ng-model="place.address" readonly>
+              </div>
+              
+              <h2>Preview</h2>
+              <div>
+
+                <!-- Display a preview using here the two-way data binding -->
+                <p><strong>Name</strong>: {{place.name || "Not available"}}</p>
+                <p><strong>Food type</strong>: {{place.type}}</p>
+                <p><strong>Address</strong>: {{place.address}}</p>
+                <p><strong>Lat, long</strong>: {{map.center.lat | number:3 }}, {{map.center.lng | number:3 }}</p>
+
+              </div>
+
+              <button class="btn btn-primary" ng-click="addPOI()">Send new place</button>
+
+              <div id="operationSuccess" ng-show="operationSuccess" class="animate-show animate-hide text-center alert alert-success">
+                New place added successfully
+              </div>
+
+            </div>
+
+            <div class="col-md-6">
+              
+              <h2>Location</h2>
+              <div style="position:relative">
+                <img src="pin.png" id="pin">
+
+                <!-- Loading a map and the feature layers -->
+                <esri-map id="map" map-options="map.options" center="map.center" zoom="map.zoom" >
+                  <esri-feature-layer 
+    url="http://services.arcgis.com/Q6ZFRRvMTlsTTFuP/arcgis/rest/services/Places/FeatureServer/0"
+                </esri-map>
+
+              </div>
+
+            </div>
+          </div>
+      </div>
+
+    </div>
+    <div class="row">  
+      <div class="col-md-12">
+        <h1>Directory</h1>
+        <p>Search <input ng-model="name"></p>
+        <table class="table table-striped table-bordered">
+          <tr>
+            <th>#</th>
+            <th><label>Name</label></th>
+            <th><label>Type</label></th>
+            <th><label>Address</label></th>
+          </tr>
+          <tbody>
+          <tr ng-repeat="f in features | filter:name">
+            <td>{{f.attributes.OBJECTID}}</td>
+            <td>{{f.attributes.name}}</td>
+            <td>{{f.attributes.type}}</td>
+            <td>{{f.attributes.address}}</td>
+          </tr>
+        </tbody>
+        </table>
+      </div>
+    </div>    
+    <a href="https://github.com/esri-es/JavascriptAPI/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+
+    <!-- load Esri JavaScript API -->
+    <script src="http://js.arcgis.com/3.14/"></script>
+    <!-- load Angular -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <!-- load AngularStrap -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-strap/2.3.5/angular-strap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-strap/2.3.5/angular-strap.tpl.min.js"></script>
+    <!-- load angular-esri-map directives -->
+    <script src="angular-esri-map.js"></script>
+    <!-- load sample code -->
+    <script src="add-places.js"></script>
+    <!-- run example app controller -->
+      
+  </body>
+</html>
