@@ -24,6 +24,7 @@
     	    height: 90%;
     		position: relative;
     	}
+
     	body,
     	body > div,
     	.tab-content,
@@ -43,7 +44,8 @@
 	    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">ArcGIS</a></li>
 	    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Google Maps</a></li>
 	    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Mapbox</a></li>
-	    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+	    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Bing</a></li>
+        <li role="presentation"><a href="#cartodb" aria-controls="settings" role="tab" data-toggle="tab">CartoDB</a></li>
 	  </ul>
 
 	  <!-- Tab panes -->
@@ -57,7 +59,12 @@
 	    <div role="tabpanel" class="tab-pane" id="messages">
          <iframe src="basemaps/mapbox.html"></iframe>      
         </div>
-	    <div role="tabpanel" class="tab-pane" id="settings">...</div>
+	    <div role="tabpanel" class="tab-pane" id="settings">
+            <iframe src="basemaps/bing.html"></iframe>      
+        </div>
+        <div role="tabpanel" class="tab-pane" id="cartodb">
+            <iframe src="basemaps/cartodb.html"></iframe>      
+        </div>
 	  </div>
 
 	</div>

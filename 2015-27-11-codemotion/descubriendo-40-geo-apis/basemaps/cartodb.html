@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+    <title></title>
+
+    <link rel="stylesheet" href="http://js.arcgis.com/3.14/esri/css/esri.css">
+    <style>
+      html, body, #map { 
+        height: 100%; width: 100%;
+        margin: 0; padding: 0;
+
+      } 
+
+      #basemapsDIV {
+	      position: absolute;
+	      top: 12px;
+	      left: 70px;
+	      padding: 12px;
+	      background-color: rgba(0, 0, 0, 0.5);
+	      color: white;
+		    }
+      
+    </style>
+
+    <script src="http://js.arcgis.com/3.14/"></script>
+    <script>
+      var map, mapbox;
+      require([
+        "esri/map", 
+        "esri/layers/WebTiledLayer",
+        "dojo/dom",
+      	"dojo/on",
+        "dojo/domReady!"
+      ], function(
+        Map, WebTiledLayer, dom, on
+      ) {
+        
+        var token = "pk.eyJ1IjoibWFwYm94IiwiYSI6IlhHVkZmaW8ifQ.hAMX5hSW-QnTeRCMAy9A8Q";
+
+        map = new Map("map", {
+          center: [-3.688510, 40.453010],
+          zoom: 16,
+          logo: false
+        });
+
+        
+        
+				//https://cartodb-basemaps-c.global.ssl.fastly.net/light_nolabels/4/7/7.png
+        //https://cartodb-basemaps-c.global.ssl.fastly.net/dark_nolabels/4/1/7.png
+        var tiledLayer = new WebTiledLayer(
+
+        	"https://cartodb-basemaps-c.global.ssl.fastly.net/light_nolabels/${level}/${col}/${row}.png", 
+	        {
+	          "copyright": "CardoDB basemap powered by ArcGIS API"//,
+	          //"subDomains": ["a", "b", "c"]
+	        }
+	      );
+
+        
+        map.addLayer(tiledLayer);
+
+	        on(dom.byId("changeBasemap"), "change", function (ev) {
+	        var select = ev.target;
+	        var basemap = select.options[select.selectedIndex].value;
+
+	        map.removeAllLayers();
+
+	        var tiledLayer = new WebTiledLayer(
+	        	"https://cartodb-basemaps-c.global.ssl.fastly.net/" + basemap + "/${level}/${col}/${row}.png",
+	        	{
+		          "copyright": "CardoDB basemap powered by ArcGIS API"
+		        }
+		      );
+
+	        map.addLayer(tiledLayer);
+	      });
+      });
+    </script>
+  </head>
+  <body class="nihilo">
+    <div id="map" ></div>
+    <div id="basemapsDIV">
+	    <select id="changeBasemap">
+	      <option value="light_nolabels">Light no labels</option>
+	      <option value="dark_nolabels">Dark no labels</option>
+	    </select>
+	   </div>
+  </body>
+</html>
+
