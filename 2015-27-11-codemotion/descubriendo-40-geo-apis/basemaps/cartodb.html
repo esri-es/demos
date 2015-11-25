@@ -46,14 +46,11 @@
         });
 
         
-        
-				//https://cartodb-basemaps-c.global.ssl.fastly.net/light_nolabels/4/7/7.png
-        //https://cartodb-basemaps-c.global.ssl.fastly.net/dark_nolabels/4/1/7.png
         var tiledLayer = new WebTiledLayer(
 
-        	"https://cartodb-basemaps-c.global.ssl.fastly.net/light_nolabels/${level}/${col}/${row}.png", 
+        	"https://cartodb-basemaps-c.global.ssl.fastly.net/light_all/${level}/${col}/${row}.png", 
 	        {
-	          "copyright": "CardoDB basemap powered by ArcGIS API"//,
+	          "copyright": '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a> powered by <a href="js.arcgis.com">ArcGIS API</a>'//,
 	          //"subDomains": ["a", "b", "c"]
 	        }
 	      );
@@ -70,7 +67,7 @@
 	        var tiledLayer = new WebTiledLayer(
 	        	"https://cartodb-basemaps-c.global.ssl.fastly.net/" + basemap + "/${level}/${col}/${row}.png",
 	        	{
-		          "copyright": "CardoDB basemap powered by ArcGIS API"
+		          "copyright": '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a> powered by ArcGIS API'
 		        }
 		      );
 
@@ -83,8 +80,12 @@
     <div id="map" ></div>
     <div id="basemapsDIV">
 	    <select id="changeBasemap">
-	      <option value="light_nolabels">Light no labels</option>
-	      <option value="dark_nolabels">Dark no labels</option>
+	      <option value="light_all">Positron</option>
+        <option value="dark_all">Dark Matter</option>
+        <option value="light_nolabels">Positron (no labels)</option>
+	      <option value="dark_nolabels">Dark Matter (no labels)</option>
+        <option value="light_only_labels">Positron (only labels)</option>
+        <option value="dark_only_labels">Dark Matter (only labels)</option>
 	    </select>
 	   </div>
   </body>
