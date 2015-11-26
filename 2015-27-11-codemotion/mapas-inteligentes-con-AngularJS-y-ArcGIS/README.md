@@ -10,17 +10,24 @@ En este workshop práctica veremos cómo crear mapas interactivos con capacidad 
 Primero clonamos el repositorio:
 
 ```bash
-cd workspace && git clone git@github.com:esri-es/demos.git codemotion-angular-workshop
+cd workspace && git clone git@github.com:esri-es/demos.git esri-demos
 ```
 
 Luego entramos en el directorio e instalamos las dependencias:
 
 ```bash
-cd codemotion-angular-workshop && bower install angular-esri-map
+cd esri-demos/2015-27-11-codemotion/mapas-inteligentes-con-AngularJS-y-ArcGIS && bower install angular-esri-map
 ```
 
-Y finalmente vamos al paso 1.
+Vamos al paso 1.
 
 ```bash
 git checkout -f step-0
 ```
+
+Y lanzamos un servidor de páginas, por ejemplo [http-server](https://www.npmjs.com/package/http-server):
+
+```bash
+http-server -p 9090
+```
+
