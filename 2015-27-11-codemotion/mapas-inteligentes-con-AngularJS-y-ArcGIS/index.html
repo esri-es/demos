@@ -12,6 +12,7 @@
 <body ng-controller="MapController">
 
 <div id="search"></div>
+<button ng-click="activateDrawTool('Point')">Point</button>
 
 <esri-map id="map" center="map.center" zoom="map.zoom" basemap="{{map.basemap}}" load="onMapLoad">
   <esri-feature-layer ng-repeat="url in selectedLayers" url="{{url}}"></esri-feature-layer>

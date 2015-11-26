@@ -74,3 +74,13 @@ Antes de seguir hacemos una pequeña refactorización
 ```bash
 git checkout -f step-4
 ```
+
+## 5) Añadimos POIs
+
+Añadimos la posibilidad de marcar puntos de interés sobre el mapa
+
+[Ver cambios]()
+
+```bash
+git checkout -f step-5
+```
