@@ -79,7 +79,7 @@ git checkout -f step-4
 
 Añadimos la posibilidad de marcar puntos de interés sobre el mapa
 
-[Ver cambios]()
+[Ver cambios](https://github.com/esri-es/demos/commit/d993e3002dbee548cacbaef0345437d367ff02e0)
 
 ```bash
 git checkout -f step-5

@@ -26,8 +26,7 @@ angular.module('esri-map-example', ['esri.map'])
         'esri/symbols/SimpleMarkerSymbol',
         'esri/layers/GraphicsLayer',
         'esri/graphic',
-        'esri/Color',
-        'esri/dijit/analysis/CreateDriveTimeAreas'
+        'esri/Color'
       ],function(Search, Draw, SimpleMarkerSymbol, GraphicsLayer, Graphic, Color, CreateDriveTimeAreas){
 
         var s = new Search({
