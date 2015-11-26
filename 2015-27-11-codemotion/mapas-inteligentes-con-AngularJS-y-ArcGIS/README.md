@@ -5,7 +5,7 @@ En este workshop práctica veremos cómo crear mapas interactivos con capacidad 
 
 # Pasos
 
-## 1) Hola mundo
+## 0) Hola mundo
 
 Primero clonamos el repositorio:
 
@@ -31,7 +31,7 @@ Y lanzamos un servidor de páginas, por ejemplo [http-server](https://www.npmjs.
 http-server -p 9090
 ```
 
-## 2) Basemaps
+## 1) Basemaps
 
 En este paso simplemente vamos a añadir un selector que nos permita cambiar de basemap.
 
@@ -41,14 +41,26 @@ En este paso simplemente vamos a añadir un selector que nos permita cambiar de 
 git checkout -f step-1
 ```
 
-## 3) Añadir y quitar capas de datos
+## 2) Añadir y quitar capas de datos
 
 Ahora vamos hacer que las capas de datos cambien dinámicamente, para ello usaremos una capa de [líneas de metro de madrid](http://services1.arcgis.com/8MFSmLQvO5AV2Ytj/arcgis/rest/services/LineasMetro/FeatureServer/0)
 y otra de [estaciones de metro](http://services1.arcgis.com/8MFSmLQvO5AV2Ytj/arcgis/rest/services/Estaciones_de_Metro_Madrid/FeatureServer/0)
 que [ha compartido un usuario públicamente](http://hhkaos2.maps.arcgis.com/home/search.html?q=owner:federico.lopez1) a través de [ArcGIS Online](http://www.arcgis.com/home/search.html?q=madrid&t=content)
 
-[Ver cambios]()
+[Ver cambios](https://github.com/esri-es/demos/commit/e927abd77816bac195cea0e3c673279d6737fd8f)
 
 ```bash
 git checkout -f step-2
+```
+
+## 3) Añadimos un widget
+
+Como las directivas sólo incluyen una mínima parte de las funcionalidades de la [API JavaScript de ArcGIS](http://js.arcgis.com),
+utilizaremos el servicio [esriLoader](http://esri.github.io/angular-esri-map/docs/#/api/esri.core.factory:esriLoader)
+para cargar el [widget de búsqueda](https://developers.arcgis.com/javascript/jsapi/search-amd.html) a modo de ejemplo.
+
+[Ver cambios]()
+
+```bash
+git checkout -f step-3
 ```

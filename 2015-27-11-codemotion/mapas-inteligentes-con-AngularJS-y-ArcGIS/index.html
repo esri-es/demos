@@ -10,7 +10,8 @@
 
 <body ng-controller="MapController">
 
-<esri-map id="map" center="map.center" zoom="map.zoom" basemap="{{map.basemap}}">
+<div id="search"></div>
+<esri-map id="map" center="map.center" zoom="map.zoom" basemap="{{map.basemap}}" load="onMapLoad">
   <esri-feature-layer ng-repeat="url in selectedLayers" url="{{url}}"></esri-feature-layer>
 </esri-map>
 <div ng-repeat="layer in layers">
@@ -36,7 +37,7 @@
 <script src="bower_components/angular-esri-map/dist/angular-esri-map.js"></script>
 <script type="text/javascript">
   angular.module('esri-map-example', ['esri.map'])
-          .controller('MapController', function ($scope) {
+          .controller('MapController', function ($scope, esriLoader) {
             $scope.map = {
               center: {
                 lng: -3.703403,
@@ -54,6 +55,20 @@
                 url: 'http://services1.arcgis.com/8MFSmLQvO5AV2Ytj/arcgis/rest/services/Estaciones_de_Metro_Madrid/FeatureServer/0'
               }
             ];
+
+            $scope.onMapLoad = function(map) {
+
+              esriLoader.require([
+                "esri/dijit/Search"
+              ],function(Search){
+
+                var s = new Search({
+                  map: map
+                }, "search");
+                s.startup();
+
+              });
+            };
 
             // list of layers currently added to the map
             $scope.selectedLayers = [];
