@@ -104,6 +104,16 @@
       var requestHandle = esriRequest({
           "url": "https://spreadsheets.google.com/feeds/list/1_2iKEGe5DvKdk1wAyGdaT8IdUGyf3WesH58oNAEm3cU/od6/public/full?alt=json"
       });
+
+      var is_valid = function(latLong){
+        if(latLong.length == 2){
+          if(latLong[0] !== "0" && latLong[1] !== "0"){
+            return true;
+          }
+        }else{
+          false;
+        }
+      };
       
       requestHandle.then(function(text){
         var n = text.feed.entry.length, latLong, loc, symbol;
@@ -115,39 +125,52 @@
         for(i = 0; i < n; i++){
           
           latLong = text.feed.entry[i].gsx$googlegeocoder.$t.split(",");
-          //console.log("Google=",latLong);
-      	  capaGrafica.add(
-      	  	new Graphic(
-      	  		new Point(latLong[1], latLong[0]), 
-      	  		new PictureMarkerSymbol(googlePin, 14, 24),
-      		  	{title: text.feed.entry[i].gsx$direccion.$t, service:"Google" },
-      		  	template
-      	  	)
-      	  );
+          
+          if(is_valid(latLong)){
+            //console.log("Google=",latLong);
+        	  capaGrafica.add(
+        	  	new Graphic(
+        	  		new Point(latLong[1], latLong[0]), 
+        	  		new PictureMarkerSymbol(googlePin, 14, 24),
+        		  	{title: text.feed.entry[i].gsx$direccion.$t, service:"Google" },
+        		  	template
+        	  	)
+        	  );
+          }else{
+            console.log("Invalid Google latlong=",latLong);
+          }
 
 
           latLong = text.feed.entry[i].gsx$esrigeocoder.$t.split(",");
           //console.log("Esri=",text.feed.entry[i].gsx$direccion.$t);
-    		  capaGrafica.add(
-    		  	new Graphic(
-    		  		new Point(latLong[1], latLong[0]), 
-    		  		new PictureMarkerSymbol(esriPin, 12, 24),
-    			  	{title: text.feed.entry[i].gsx$direccion.$t, service:"ArcGIS" },
-    			  	template
-    		  	)
-    		  );
+          if(is_valid(latLong)){
+      		  capaGrafica.add(
+      		  	new Graphic(
+      		  		new Point(latLong[1], latLong[0]), 
+      		  		new PictureMarkerSymbol(esriPin, 12, 24),
+      			  	{title: text.feed.entry[i].gsx$direccion.$t, service:"ArcGIS" },
+      			  	template
+      		  	)
+      		  );
+          }else{
+            console.log("Invalid Esri latlong=",latLong);
+          }
 
 
     		  latLong = text.feed.entry[i].gsx$osmgeocoder.$t.split(",");
     		  //console.log("OSM=",latLong);
-          capaGrafica.add(
-    		  	new Graphic(
-    		  		new Point(latLong[1], latLong[0]), 
-    		  		new PictureMarkerSymbol(osmPin, 16, 24),
-    			  	{title: text.feed.entry[i].gsx$direccion.$t, service:"Open StreetMap" },
-    			  	template
-    		  	)
-    	    );
+          if(is_valid(latLong)){
+            capaGrafica.add(
+      		  	new Graphic(
+      		  		new Point(latLong[1], latLong[0]), 
+      		  		new PictureMarkerSymbol(osmPin, 16, 24),
+      			  	{title: text.feed.entry[i].gsx$direccion.$t, service:"Open StreetMap" },
+      			  	template
+      		  	)
+      	    );
+          }else{
+            console.log("Invalid OSM latlong=",latLong);
+          }
         }
       },
       
