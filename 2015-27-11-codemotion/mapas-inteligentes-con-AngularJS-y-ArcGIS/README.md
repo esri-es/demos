@@ -59,7 +59,7 @@ Como las directivas sólo incluyen una mínima parte de las funcionalidades de l
 utilizaremos el servicio [esriLoader](http://esri.github.io/angular-esri-map/docs/#/api/esri.core.factory:esriLoader)
 para cargar el [widget de búsqueda](https://developers.arcgis.com/javascript/jsapi/search-amd.html) a modo de ejemplo.
 
-[Ver cambios]()
+[Ver cambios](https://github.com/esri-es/demos/commit/1fa6562815d3557e9c15a933e91738b4ae42c472)
 
 ```bash
 git checkout -f step-3
