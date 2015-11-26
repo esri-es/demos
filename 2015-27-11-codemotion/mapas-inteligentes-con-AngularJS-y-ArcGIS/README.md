@@ -69,7 +69,7 @@ git checkout -f step-3
 
 Antes de seguir hacemos una pequeña refactorización
 
-[Ver cambios]()
+[Ver cambios](https://github.com/esri-es/demos/commit/869d5d05839082bebc5facd376ae67eb823d709c)
 
 ```bash
 git checkout -f step-4
