@@ -6,10 +6,11 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+    
     <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.14/esri/css/esri.css">
+    <link rel="stylesheet" href="http://js.arcgis.com/3.14/dijit/themes/claro/claro.css"><link rel="stylesheet" href="http://js.arcgis.com/3.14/dijit/themes/claro/claro.css">
     <style>
-html, body, .container, #map {
+      html, body, .container, #mapDiv {
     height:100%;
     width:100%;
     margin:0;
@@ -17,41 +18,56 @@ html, body, .container, #map {
     margin:0;
     font-family: "Open Sans";
 }
-#map {
-    padding:0;
-}
+
 #layerListPane{
-    width:25%;
+         width: 25%;
+    float: right;
+    position: absolute;
+    z-index: 99;
+    right: 20px;
+    overflow-y: scroll;
+    height: 100%;
+    top: 20px;
+}
+#esriLayerList{
+      position: relative;
+    height: 100%;
+    overflow: scroll;
 }
 .esriLayer{
-  background-color: #fff;
+  background-color: rgba(255,255,255,.75);
 }
 .esriLayerList .esriList{
     border-top:none;
 }
 .esriLayerList .esriTitle {
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0);
   border-bottom:none;
 }
 .esriLayerList .esriList ul{
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0);
 }
-</style>
 
-    <script>var dojoConfig = { parseOnLoad:true };</script>
+    </style>
+
+    
     <script src="http://js.arcgis.com/3.14/"></script>
     <script>
         require([
             "esri/map",
             "esri/arcgis/utils",
+            "esri/geometry/Point",
             "esri/dijit/LayerList",
             "dojo/domReady!"
-        ], function(Map, arcgisUtils, LayerList){
-            arcgisUtils.createMap("a4de99009fa34f4b9b7626f758020e35", "mapDiv").then(function (response) {
+        ], function(Map, arcgisUtils, Point, LayerList){
+            arcgisUtils.createMap("23190b9e52be4d4a8c7a0e8714398c10", "mapDiv").then(function (response) {
                 map = response.map;
+
+                //map.centerAt(new Point(-3.688510, 40.453010))
 
                 var myWidget = new LayerList({
                    map: response.map,
+                   subLayers: false,
                    layers: arcgisUtils.getLayerList(response) 
                 },"layerList");
                 myWidget.startup();
@@ -61,11 +77,13 @@ html, body, .container, #map {
 </head>
 
 <body class="claro">
+  
   <div class="container" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'headline',gutters:false">
-  <div id="layerListPane" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'right'">
-      <div id="layerList"></div>
+    <div id="layerListPane" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'right'">
+        <div id="layerList"></div>
+    </div>
+    <div id="mapDiv" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'"></div>
   </div>
-  <div id="mapDiv" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'"></div>
-  </div>
+  
 </body>
 </html>

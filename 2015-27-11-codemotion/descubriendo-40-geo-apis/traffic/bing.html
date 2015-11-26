@@ -1,0 +1,95 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--The viewport meta tag is used to improve the presentation and behavior of the samples 
+      on iOS devices-->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+    <title>Multiple Routes</title>
+
+    <link rel="stylesheet" href="http://js.arcgis.com/3.14/dijit/themes/claro/claro.css">
+    <link rel="stylesheet" href="http://js.arcgis.com/3.14/esri/css/esri.css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+		<style type="text/css">
+		body{margin-top:1em;}
+		pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
+		.string { color: green; }
+		.number { color: darkorange; }
+		.boolean { color: blue; }
+		.null { color: magenta; }
+		.key { color: red; }
+
+		</style>
+    
+</head>
+<body>
+	<div class="container">
+
+	Area: <input type="text" value="37,-105,45,-94" id="area"> <button id="btn">Get incidents</button>
+	<h2>Response:</h2>
+	<pre id="response"></div>
+	</pre>
+	
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+
+  <script type="text/JavaScript">
+    $(document).ready(function(){
+    	$("#btn").click(function(){
+	    	var settings = {
+				  "async": true,
+				  
+				  "crossDomain": true,
+				  
+				  "url": "",
+				  "method": "GET",
+				  "headers": {
+				    "cache-control": "no-cache",
+				    "postman-token": "384c26ba-8f69-5fc5-2c1a-29854148c85c"
+				  }
+				}
+
+				var url = "http://dev.virtualearth.net/REST/v1/Traffic/Incidents/"+$("#area").val()+"?key=Ap2XquXVzw7hLotGj1q_Fz8cKui5p3ECQ9zyjp9sRK4ckrZYoPc-9w13KBXex0dP";
+				$.getJSON('http://cors.io/?u='+url,function(response){
+					console.log(response);
+					//debugger;
+				  $("#response").html(syntaxHighlight(response));
+				})
+
+				
+			});
+
+			function syntaxHighlight(json) {
+		    if (typeof json != 'string') {
+		         json = JSON.stringify(json, undefined, 2);
+		    }
+		    json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+		    return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+		        var cls = 'number';
+		        if (/^"/.test(match)) {
+		            if (/:$/.test(match)) {
+		                cls = 'key';
+		            } else {
+		                cls = 'string';
+		            }
+		        } else if (/true|false/.test(match)) {
+		            cls = 'boolean';
+		        } else if (/null/.test(match)) {
+		            cls = 'null';
+		        }
+		        return '<span class="' + cls + '">' + match + '</span>';
+		    });
+		}
+		});
+	</script>
+</body>
+</html>
