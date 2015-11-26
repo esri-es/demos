@@ -64,3 +64,13 @@ para cargar el [widget de búsqueda](https://developers.arcgis.com/javascript/js
 ```bash
 git checkout -f step-3
 ```
+
+## 4) Refactorizamos
+
+Antes de seguir hacemos una pequeña refactorización
+
+[Ver cambios]()
+
+```bash
+git checkout -f step-4
+```
