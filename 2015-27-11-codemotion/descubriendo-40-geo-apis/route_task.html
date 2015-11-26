@@ -10,21 +10,37 @@
 
     <link rel="stylesheet" href="http://js.arcgis.com/3.14/dijit/themes/claro/claro.css">
     <link rel="stylesheet" href="http://js.arcgis.com/3.14/esri/css/esri.css">
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
     <style type="text/css">
       html, body, #map { 
         height: 100%; width: 100%;
         margin: 0; padding: 0;
-
+        font-family: 'Josefin Sans', sans-serif;
       } 
+      button{
+        font-family: 'Josefin Sans', sans-serif;
+      }
 
       #panel {
         position: absolute;
-        top: 12px;
-        left: 70px;
+        bottom: 30px;
+        left: 10px;
         padding: 12px;
         background-color: rgba(0, 0, 0, 0.5);
         color: white;
         z-index: 99;
+        font-size: 1.2em;
+      }
+      .btn-primary{
+        padding-bottom: 1px;
+        margin: auto 5px;
+      }
+      .inline{
+        margin: auto 6px;
+        height: 29px;
+        display: inline-block;
+        width: auto;
       }
     </style>
     <script src="http://js.arcgis.com/3.14/"></script>
@@ -207,17 +223,17 @@
   <body class="claro">
   <div id="panel">
     Select route name: 
-    <select id="routeName">
+    <select id="routeName"  class="form-control inline">
       <option value="Route 1">Route 1</option>
       <option value="Route 2">Route 2</option>
       <option value="Route 3">Route 3</option>
     </select> to 
-    <button id="addStopsBtn">Add Stops</button>
-    <button id="clearStopsBtn">Clear Stops</button>
-    <button id="addBarriersBtn">Add Barriers</button>
-    <button id="clearBarriersBtn">Clear Barriers</button>
-    <button id="solveRoutesBtn">Solve Routes</button>
-    <button id="clearRoutesBtn">Clear Routes</button>
+    <button class="btn btn-primary" id="addStopsBtn">Add Stops</button>
+    <button class="btn btn-primary" id="clearStopsBtn">Clear Stops</button>
+    <button class="btn btn-primary" id="addBarriersBtn">Add Barriers</button>
+    <button class="btn btn-primary" id="clearBarriersBtn">Clear Barriers</button>
+    <button class="btn btn-primary" id="solveRoutesBtn">Solve Routes</button>
+    <button class="btn btn-primary" id="clearRoutesBtn">Clear Routes</button>
   </div>
   <div id="map"></div>
   <a href="https://github.com/esri-es/demos/tree/gh-pages/2015-27-11-codemotion/descubriendo-40-geo-apis"><img style="position: absolute; top: 0px; right: 0; border: 0; z-index:5" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>   
