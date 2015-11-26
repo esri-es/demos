@@ -40,3 +40,15 @@ En este paso simplemente vamos a añadir un selector que nos permita cambiar de 
 ```bash
 git checkout -f step-1
 ```
+
+## 3) Añadir y quitar capas de datos
+
+Ahora vamos hacer que las capas de datos cambien dinámicamente, para ello usaremos una capa de [líneas de metro de madrid](http://services1.arcgis.com/8MFSmLQvO5AV2Ytj/arcgis/rest/services/LineasMetro/FeatureServer/0)
+y otra de [estaciones de metro](http://services1.arcgis.com/8MFSmLQvO5AV2Ytj/arcgis/rest/services/Estaciones_de_Metro_Madrid/FeatureServer/0)
+que [ha compartido un usuario públicamente](http://hhkaos2.maps.arcgis.com/home/search.html?q=owner:federico.lopez1) a través de [ArcGIS Online](http://www.arcgis.com/home/search.html?q=madrid&t=content)
+
+[Ver cambios]()
+
+```bash
+git checkout -f step-2
+```

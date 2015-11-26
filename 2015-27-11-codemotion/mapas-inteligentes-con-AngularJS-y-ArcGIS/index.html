@@ -11,9 +11,11 @@
 <body ng-controller="MapController">
 
 <esri-map id="map" center="map.center" zoom="map.zoom" basemap="{{map.basemap}}">
-  <esri-feature-layer url="http://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Heritage_Trees_Portland/FeatureServer/0"></esri-feature-layer>
-  <esri-feature-layer url="http://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Portland_Parks/FeatureServer/0"></esri-feature-layer>
+  <esri-feature-layer ng-repeat="url in selectedLayers" url="{{url}}"></esri-feature-layer>
 </esri-map>
+<div ng-repeat="layer in layers">
+  <input type="checkbox" ng-model="selected" ng-change="toggleLayer(layer.url)" /> {{layer.name}} <br />
+</div>
 <p>Basemap:
   <select ng-model="map.basemap">
     <option value="gray">Gray</option>
@@ -37,11 +39,35 @@
           .controller('MapController', function ($scope) {
             $scope.map = {
               center: {
-                lng: -122.676207,
-                lat: 45.523452
+                lng: -3.703403,
+                lat: 40.4171792
               },
-              zoom: 12,
-              basemap: 'satellite'
+              zoom: 15,
+              basemap: 'gray'
+            };
+
+            $scope.layers = [{
+                name: 'Líneas de metro',
+                url: 'http://services1.arcgis.com/8MFSmLQvO5AV2Ytj/arcgis/rest/services/LineasMetro/FeatureServer/0'
+              },{
+                name: 'Estaciones de metro',
+                url: 'http://services1.arcgis.com/8MFSmLQvO5AV2Ytj/arcgis/rest/services/Estaciones_de_Metro_Madrid/FeatureServer/0'
+              }
+            ];
+
+            // list of layers currently added to the map
+            $scope.selectedLayers = [];
+
+            // add/remove a layer to/from the map by URL
+            $scope.toggleLayer = function (url) {
+              console.log('Toggling ' + url);
+              var index = $scope.selectedLayers.indexOf(url);
+              if (index >= 0) {
+                $scope.selectedLayers.splice(index, 1);
+              } else {
+                $scope.selectedLayers.push(url);
+              }
+              console.log('Selected layers: ' + $scope.selectedLayers);
             };
           });
 </script>
