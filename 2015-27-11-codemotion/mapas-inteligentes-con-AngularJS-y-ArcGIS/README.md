@@ -35,6 +35,8 @@ http-server -p 9090
 
 En este paso simplemente vamos a añadir un selector que nos permita cambiar de basemap.
 
+[Ver cambios](https://github.com/esri-es/demos/commit/72381b8c099abd2674e26adbe5c88f98bc7c6ada?diff=unified)
+
 ```bash
 git checkout -f step-1
 ```
