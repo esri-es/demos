@@ -5,7 +5,7 @@ En este workshop práctica veremos cómo crear mapas interactivos con capacidad 
 
 # Pasos
 
-# Hola mundo
+## 1) Hola mundo
 
 Primero clonamos el repositorio:
 
@@ -31,3 +31,10 @@ Y lanzamos un servidor de páginas, por ejemplo [http-server](https://www.npmjs.
 http-server -p 9090
 ```
 
+## 2) Basemaps
+
+En este paso simplemente vamos a añadir un selector que nos permita cambiar de basemap.
+
+```bash
+git checkout -f step-1
+```
