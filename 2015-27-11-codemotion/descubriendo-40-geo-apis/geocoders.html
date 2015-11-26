@@ -39,6 +39,14 @@
 		height: 24px;
   		line-height: 24px;
 	}
+  #basemapsDIV {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    padding: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
 
   </style>
   <script>
@@ -51,14 +59,32 @@
       "esri/graphic",
       "esri/request",
       "esri/dijit/PopupTemplate",
+      "dojo/dom",
+      "dojo/on",
       "dojo/domReady!"
     ], function(
-      Map, Search, GraphicsLayer, Point, PictureMarkerSymbol, Graphic, esriRequest, PopupTemplate
+      Map, Search, GraphicsLayer, Point, PictureMarkerSymbol, Graphic, esriRequest, PopupTemplate, dom, on
     ) {
       // Creamos un mapa
       // Generamos un nuevo mapa con un mapa base tipo callejero
       // Otros tipos: "satellite", "hybrid", "topo", "gray", "oceans",
       // "national-geographic", "osm".
+
+      bookmarks = {
+        granada:  { lng: -3.6181225, lat: 37.2034868, zoom: 15},
+        nerja:    { lng: -3.8792418, lat: 36.7461200, zoom: 16},
+        nules:    { lng: -0.1604475, lat: 39.8480474, zoom: 19},
+        hellin:   { lng: -1.6923125, lat: 38.5084700, zoom: 18},
+        madrid:   { lng: -3.6272849, lat: 40.4323080, zoom: 16}
+      }
+      on(dom.byId("changeBasemap"), "change", function (ev) {
+          var select = ev.target;
+          var value = select.options[select.selectedIndex].value;
+
+          map.centerAndZoom(new Point(bookmarks[value].lng, bookmarks[value].lat), bookmarks[value].zoom)
+      });
+      
+
       map = new Map("map", {
         center: [-1.874, 38.999],
         zoom: 7,
@@ -141,5 +167,16 @@
   <div id="search"></div>
   <div id="map"></div>
   <a href="https://github.com/esri-es/demos/tree/gh-pages/2015-27-11-codemotion/descubriendo-40-geo-apis"><img style="position: absolute; top: 0px; right: 0; border: 0; z-index:5" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+  
+  <div id="basemapsDIV">
+    <select id="changeBasemap">
+        <option value="granada">Compare</option>
+        <option value="granada">OSM & Google > ArcGIS</option>
+        <option value="nerja">Google > ArcGIS > OSM</option>
+        <option value="nules">OSM > Google = ArcGIS</option>
+        <option value="hellin">Google & ArcGIS > OSM</option>
+        <option value="madrid">Google = ArcGIS = OSM</option>
+    </select>
+  </div>
 </body>
 </html>
