@@ -52,6 +52,7 @@ html, body, .container, #map {
 
                 var myWidget = new LayerList({
                    map: response.map,
+                   subLayers: false,
                    layers: arcgisUtils.getLayerList(response) 
                 },"layerList");
                 myWidget.startup();
