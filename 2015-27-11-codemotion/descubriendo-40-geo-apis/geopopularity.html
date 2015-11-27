@@ -1,0 +1,92 @@
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+    <title></title>
+
+    <link rel="stylesheet" href="http://js.arcgis.com/3.14/esri/css/esri.css">
+    <style>
+      html, body, #map { 
+        height: 100%; width: 100%;
+        margin: 0; padding: 0;
+
+      } 
+
+      #basemapsDIV {
+        position: absolute;
+        top: 12px;
+        left: 70px;
+        padding: 12px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        }
+      
+    </style>
+
+    <script src="http://js.arcgis.com/3.14/"></script>
+    <script>
+      var map, mapbox;
+      require([
+        "esri/map", 
+        "esri/layers/WebTiledLayer",
+        "dojo/dom",
+        "dojo/on",
+        "dojo/domReady!"
+      ], function(
+        Map, WebTiledLayer, dom, on
+      ) {
+        
+        var token = "pk.eyJ1IjoibWFwYm94IiwiYSI6IlhHVkZmaW8ifQ.hAMX5hSW-QnTeRCMAy9A8Q";
+
+        map = new Map("map", {
+          center: [-3.688510, 40.453010],
+          zoom: 16,
+          basemap: "gray"
+        });
+
+
+        var tiledLayer = new WebTiledLayer(
+          "http://pre-m.avuxiapis.com/tile?t=sights&z=${level}&x=${col}&y=${row}&ut=c53a20151127172746ac4a7a0e&s=clb&o=0.5&appid=avi_aviconf_tmp&appkey=avi_aviconf_tmp_15112717",
+            {
+              "copyright": "Avuxi",
+              "id": "Open Cycle Map"
+            }
+        );
+        
+        map.addLayer(tiledLayer);
+
+          on(dom.byId("changeBasemap"), "change", function (ev) {
+          var select = ev.target;
+          var basemap = select.options[select.selectedIndex].value;
+
+          map.removeAllLayers();
+          map.setBasemap("gray")
+          var tiledLayer = new WebTiledLayer(
+            "http://pre-m.avuxiapis.com/tile?t=" + basemap + "&z=${level}&x=${col}&y=${row}&ut=c53a20151127172746ac4a7a0e&s=clb&o=0.5&appid=avi_aviconf_tmp&appkey=avi_aviconf_tmp_15112717",
+            {
+              "copyright": "Avuxi",
+              "id": "Open Cycle Map"
+            }
+          );
+
+          map.addLayer(tiledLayer);
+        });
+      });
+    </script>
+  </head>
+  <body class="nihilo">
+    <div id="map" ></div>
+    <div id="basemapsDIV">
+      <select id="changeBasemap">
+        <option value="sights">Sightseen</option>
+        <option value="eating">Eating</option>
+        <option value="shopping">Shopping</option>
+        <option value="partying">Night life</option>
+      </select>
+     </div>
+  </body>
+</html>
+
+
+        
