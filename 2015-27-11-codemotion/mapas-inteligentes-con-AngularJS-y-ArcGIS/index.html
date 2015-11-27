@@ -4,38 +4,53 @@
 <head>
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
   <meta charset="utf-8">
-
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" media="screen">
   <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.14/esri/css/esri.css">
+  <link rel="stylesheet" href="http://js.arcgis.com/3.14/dijit/themes/claro/claro.css">
+  <link rel="stylesheet" type="text/css" href="http://esri.github.io/bootstrap-map-js/src/css/bootstrapmap.css">
   <link rel="stylesheet" type="text/css" href="app.css">
 </head>
 
-<body ng-controller="MapController">
+<body ng-controller="MapController" class="claro">
 
-<div id="search"></div>
-<button ng-click="activateDrawTool('Point')">Point</button>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-center">Codemotion Workshop</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <div id="search"></div>
+      <button id="addPoint" ng-click="activateDrawTool('Point')" class="btn btn-primary">Point</button>
+      <select id="changeBasemaps" ng-model="map.basemap" class="form-control inline">
+        <option value="gray">Gray</option>
+        <option value="dark-gray">Dark Gray</option>
+        <option value="topo">Topographic</option>
+        <option value="streets">Streets</option>
+        <option value="satellite">Satellite</option>
+        <option value="hybrid">Hybrid</option>
+        <option value="oceans">Oceans</option>
+        <option value="national-geographic">National Geographic</option>
+        <option value="osm">Open Street Map</option>
+      </select>
 
-<esri-map id="map" center="map.center" zoom="map.zoom" basemap="{{map.basemap}}" load="onMapLoad">
-  <esri-feature-layer ng-repeat="url in selectedLayers" url="{{url}}"></esri-feature-layer>
-</esri-map>
+      <esri-map id="map" center="map.center" zoom="map.zoom" basemap="{{map.basemap}}" load="onMapLoad">
+        <esri-feature-layer ng-repeat="url in selectedLayers" url="{{url}}"></esri-feature-layer>
+      </esri-map>
+      <div id="customLayers">Capas:
+        <span ng-repeat="layer in layers">
+          <input type="checkbox" ng-model="selected" ng-change="toggleLayer(layer.url)" /> {{layer.name}}
+        </span>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div id="analysis-tool"></div>
+    </div>
+  </div>
 
-<div ng-repeat="layer in layers">
-  <input type="checkbox" ng-model="selected" ng-change="toggleLayer(layer.url)" /> {{layer.name}} <br />
 </div>
-
-<p>Basemap:
-  <select ng-model="map.basemap">
-    <option value="gray">Gray</option>
-    <option value="dark-gray">Dark Gray</option>
-    <option value="topo">Topographic</option>
-    <option value="streets">Streets</option>
-    <option value="satellite">Satellite</option>
-    <option value="hybrid">Hybrid</option>
-    <option value="oceans">Oceans</option>
-    <option value="national-geographic">National Geographic</option>
-    <option value="osm">Open Street Map</option>
-  </select>
-  Lat: {{ map.center.lat | number:3 }}, Lng: {{ map.center.lng | number:3 }}, Zoom: {{map.zoom}}
-</p>
 
 <script type="text/javascript" src="http://js.arcgis.com/3.14compact"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>

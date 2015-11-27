@@ -26,9 +26,11 @@ angular.module('esri-map-example', ['esri.map'])
         'esri/symbols/SimpleMarkerSymbol',
         'esri/layers/GraphicsLayer',
         'esri/graphic',
-        'esri/Color'
-      ],function(Search, Draw, SimpleMarkerSymbol, GraphicsLayer, Graphic, Color, CreateDriveTimeAreas){
-
+        'esri/Color',
+        'esri/dijit/analysis/CreateDriveTimeAreas',
+        'esri/config'
+      ],function(Search, Draw, SimpleMarkerSymbol, GraphicsLayer, Graphic, Color, CreateDriveTimeAreas, esriConfig){
+        esriConfig.defaults.io.proxyUrl = "http://localhost/proxy/proxy.php";
         var s = new Search({
           map: map
         }, "search");
@@ -76,6 +78,15 @@ angular.module('esri-map-example', ['esri.map'])
 
         // bind the toolbar to the map
         initToolbar(map);
+
+
+        var createDriveTimeAreas = new CreateDriveTimeAreas({
+          analysisGpServer: 'http://route.arcgis.com/arcgis/rest/services/World/ServiceAreas/NAServer/ServiceArea_World',
+          inputLayer: placesLayer,
+          map: map,
+          portalUrl: "http://www.arcgis.com"
+        }, "analysis-tool");
+         //createDriveTimeAreas.startup();
 
 
 

@@ -1,0 +1,40 @@
+#map{
+    height: 750px;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+#customLayers{
+    position: absolute;
+    bottom: 10px;
+    left: 33px;
+    background-color: rgba(0,0,0,0.5);
+    padding: .5em 1em;
+    color: #FFF;
+}
+.form-control.inline{
+    display: inline-block;
+    width: auto;
+}
+#changeBasemaps,
+#addPoint,
+#search{
+    position: absolute;
+    z-index: 99;
+}
+#changeBasemaps{
+    top: 16px;
+    right: 23px;
+}
+#addPoint{
+    top: 16px;
+    right: 160px;
+
+}
+#search{
+    top: 16px;
+    left: 70px;
+}
+#esriAnalysisCloseIcon{
+    display: none;
+}
