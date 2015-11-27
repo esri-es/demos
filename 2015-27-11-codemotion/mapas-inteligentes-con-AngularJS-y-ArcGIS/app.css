@@ -1,6 +1,9 @@
 #map{
     height: 750px;
 }
+#map2{
+    height: 500px;
+}
 body{
     font-family: 'Open Sans', sans-serif;
 }

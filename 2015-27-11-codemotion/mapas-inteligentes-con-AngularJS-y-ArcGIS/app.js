@@ -1,3 +1,4 @@
+
 angular.module('esri-map-example', ['esri.map'])
   .controller('MapController', function ($scope, esriLoader) {
     $scope.map = {
@@ -28,9 +29,35 @@ angular.module('esri-map-example', ['esri.map'])
         'esri/graphic',
         'esri/Color',
         'esri/dijit/analysis/CreateDriveTimeAreas',
-        'esri/config'
-      ],function(Search, Draw, SimpleMarkerSymbol, GraphicsLayer, Graphic, Color, CreateDriveTimeAreas, esriConfig){
-        esriConfig.defaults.io.proxyUrl = "http://localhost/proxy/proxy.php";
+        'esri/urlUtils',
+        'esri/config',
+        "dijit/form/HorizontalRule", "dijit/form/HorizontalRuleLabels", "dijit/form/HorizontalSlider",
+      ],function(Search, Draw, SimpleMarkerSymbol, GraphicsLayer, Graphic, Color, CreateDriveTimeAreas, urlUtils,esriConfig){
+        //esriConfig.defaults.io.proxyUrl = "http://localhost/proxy/proxy.php";
+
+        esriConfig.defaults.io.corsEnabledServers.push("route.arcgis.com");
+        esriConfig.defaults.io.corsEnabledServers.push("traffic.arcgis.com");
+        /*
+
+        urlUtils.addProxyRule({
+          urlPrefix: 'route.arcgis.com',
+          proxyURL: 'http://localhost/proxy/proxy.php'
+        })
+        urlUtils.addProxyRule({
+          urlPrefix: 'traffic.arcgis.com',
+          proxyURL: 'http://localhost/proxy/proxy.php'
+        })*/
+        urlUtils.addProxyRule({
+          urlPrefix: 'demographics2.arcgis.com',
+          proxyURL: 'http://localhost/proxy/proxy.php'
+        });
+        urlUtils.addProxyRule({
+          urlPrefix: 'demographics3.arcgis.com',
+          proxyURL: 'http://localhost/proxy/proxy.php'
+        });
+
+        http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/14/6178/8026
+
         var s = new Search({
           map: map
         }, "search");
@@ -82,7 +109,7 @@ angular.module('esri-map-example', ['esri.map'])
 
         var createDriveTimeAreas = new CreateDriveTimeAreas({
           analysisGpServer: 'http://route.arcgis.com/arcgis/rest/services/World/ServiceAreas/NAServer/ServiceArea_World',
-          inputLayer: placesLayer,
+          //inputLayer: map.getLayer("graphicsLayer2"),
           map: map,
           portalUrl: "http://www.arcgis.com"
         }, "analysis-tool");

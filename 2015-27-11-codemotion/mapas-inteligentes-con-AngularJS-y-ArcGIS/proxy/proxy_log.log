@@ -1,0 +1,151 @@
+
+ 
+11-27-15 01:45:28 | GET detected
+11-27-15 01:45:28 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:45:29 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:45:29 | Retry attempt 1 of 3
+11-27-15 01:45:29 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:45:29 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:45:29 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:45:29 | Retry attempt 2 of 3
+11-27-15 01:45:29 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:45:29 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:45:29 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:45:29 | Retry attempt 3 of 3
+11-27-15 01:45:29 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:45:29 | Removing session value
+11-27-15 01:45:29 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:45:29 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:45:29 | Proxy complete
+ 
+11-27-15 01:45:56 | GET detected
+11-27-15 01:45:56 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:45:56 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:45:56 | Retry attempt 1 of 3
+11-27-15 01:45:56 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:45:56 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:45:56 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:45:56 | Retry attempt 2 of 3
+11-27-15 01:45:56 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:45:56 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:45:57 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:45:57 | Retry attempt 3 of 3
+11-27-15 01:45:57 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:45:57 | Removing session value
+11-27-15 01:45:57 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:45:57 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:45:57 | Proxy complete
+ 
+11-27-15 01:46:00 | GET detected
+11-27-15 01:46:00 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:46:00 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:46:00 | Retry attempt 1 of 3
+11-27-15 01:46:00 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:46:00 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:46:00 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:46:00 | Retry attempt 2 of 3
+11-27-15 01:46:00 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:46:00 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:46:01 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:46:01 | Retry attempt 3 of 3
+11-27-15 01:46:01 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:46:01 | Removing session value
+11-27-15 01:46:01 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:46:01 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:46:01 | Proxy complete
+ 
+11-27-15 01:52:17 | GET detected
+11-27-15 01:52:17 | Using session token
+11-27-15 01:52:17 | Ok to proxy
+11-27-15 01:52:17 | Proxy complete
+ 
+11-27-15 01:52:31 | GET detected
+11-27-15 01:52:31 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:52:32 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:52:32 | Retry attempt 1 of 3
+11-27-15 01:52:32 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:52:32 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:52:32 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:52:32 | Retry attempt 2 of 3
+11-27-15 01:52:32 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:52:32 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:52:32 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:52:32 | Retry attempt 3 of 3
+11-27-15 01:52:32 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:52:32 | Removing session value
+11-27-15 01:52:32 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:52:32 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:52:32 | Proxy complete
+ 
+11-27-15 01:52:38 | GET detected
+11-27-15 01:52:38 | Using session token
+11-27-15 01:52:38 | Ok to proxy
+11-27-15 01:52:38 | Proxy complete
+ 
+11-27-15 02:03:38 | GET detected
+11-27-15 02:03:38 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-27-15 02:04:54 | GET detected
+11-27-15 02:04:54 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-27-15 02:05:04 | GET detected
+11-27-15 02:05:04 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-27-15 02:05:42 | GET detected
+11-27-15 02:05:42 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-27-15 02:05:53 | GET detected
+11-27-15 02:05:53 | http://js.arcgis.com Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 02:05:54 | Ok to proxy
+11-27-15 02:05:54 | Proxy complete
+ 
+11-27-15 02:05:57 | GET detected
+11-27-15 02:05:57 | http://js.arcgis.com Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 02:05:57 | Ok to proxy
+11-27-15 02:05:57 | Proxy complete
+ 
+11-27-15 02:06:08 | GET detected
+11-27-15 02:06:08 | http://js.arcgis.com Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 02:06:09 | Ok to proxy
+11-27-15 02:06:09 | Proxy complete
+ 
+11-27-15 02:06:17 | GET detected
+11-27-15 02:06:17 | http://js.arcgis.com Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 02:06:17 | Ok to proxy
+11-27-15 02:06:17 | Proxy complete
+ 
+11-27-15 02:06:47 | GET detected
+11-27-15 02:06:47 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-27-15 02:07:15 | GET detected
+11-27-15 02:07:15 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-27-15 02:07:55 | GET detected
+11-27-15 02:07:55 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-27-15 02:08:17 | GET detected
+11-27-15 02:08:17 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-27-15 02:10:57 | GET detected
+11-27-15 02:10:57 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-27-15 02:16:09 | GET detected
+11-27-15 02:16:09 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-27-15 02:17:36 | GET detected
+11-27-15 02:17:36 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-27-15 02:19:17 | GET detected
+11-27-15 02:19:17 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-27-15 02:20:32 | GET detected
+11-27-15 02:20:32 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-27-15 02:20:57 | GET detected
+11-27-15 02:20:57 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-27-15 02:21:23 | GET detected
+11-27-15 02:21:23 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-27-15 02:21:40 | GET detected
+11-27-15 02:21:40 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.

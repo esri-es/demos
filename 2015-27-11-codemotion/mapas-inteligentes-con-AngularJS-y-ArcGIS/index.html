@@ -37,8 +37,10 @@
       </select>
 
       <esri-map id="map" center="map.center" zoom="map.zoom" basemap="{{map.basemap}}" load="onMapLoad">
+        <esri-feature-layer url="http://services1.arcgis.com/8MFSmLQvO5AV2Ytj/arcgis/rest/services/Estaciones_de_Metro_Madrid/FeatureServer/0"></esri-feature-layer>
         <esri-feature-layer ng-repeat="url in selectedLayers" url="{{url}}"></esri-feature-layer>
       </esri-map>
+
       <div id="customLayers">Capas:
         <span ng-repeat="layer in layers">
           <input type="checkbox" ng-model="selected" ng-change="toggleLayer(layer.url)" /> {{layer.name}}
@@ -49,6 +51,13 @@
       <div id="analysis-tool"></div>
     </div>
   </div>
+  <div class="row">
+    <div class="col-md-8">
+      <h1>Datos sociodemográficos</h1>
+      <esri-map id="map2" webmap-id="23190b9e52be4d4a8c7a0e8714398c10" center="map.center" zoom="map.zoom"></esri-map>
+    </div>
+  </div>
+
 
 </div>
 
