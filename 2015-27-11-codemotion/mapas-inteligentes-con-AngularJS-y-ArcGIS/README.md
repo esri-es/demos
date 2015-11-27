@@ -84,3 +84,13 @@ Añadimos la posibilidad de marcar puntos de interés sobre el mapa
 ```bash
 git checkout -f step-5
 ```
+
+## 6) Añadimos estilos y widget de análisis
+
+Para ir terminando vamos añadiendo estilos básicos a nuestra aplicación además de incluir el widget de análisis
+
+[Ver cambios](https://github.com/esri-es/demos/commit/1275e1a3b54bdb3d609ef1dc4d543a64cc37afdc)
+
+```bash
+git checkout -f step-6
+```
