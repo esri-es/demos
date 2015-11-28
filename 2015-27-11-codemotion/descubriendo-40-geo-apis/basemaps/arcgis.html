@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html>  
-<head> 
+<html>
+<head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <!--The viewport meta tag is used to improve the presentation and behavior of the samples 
     on iOS devices-->
   <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"/>
   <title></title>
 
-  <link rel="stylesheet" href="http://js.arcgis.com/3.14/dijit/themes/claro/claro.css">    
+  <link rel="stylesheet" href="http://js.arcgis.com/3.14/dijit/themes/claro/claro.css">
   <link rel="stylesheet" href="http://js.arcgis.com/3.14/esri/css/esri.css">
-  <style> 
+  <style>
     html, body { height: 100%; width: 100%; margin: 0; padding: 0; }
     #map{
       padding:0;
     }
-  </style> 
-  
+  </style>
+
   <script src="http://js.arcgis.com/3.14/"></script>
-  <script> 
+  <script>
     var map;
     require([
       "esri/map", "esri/dijit/BasemapGallery", "esri/arcgis/utils",
@@ -26,15 +26,15 @@
       "dijit/layout/BorderContainer", "dijit/layout/ContentPane", "dijit/TitlePane",
       "dojo/domReady!"
     ], function(
-      Map, BasemapGallery, arcgisUtils,
-      parser
-    ) {
+            Map, BasemapGallery, arcgisUtils,
+            parser
+            ) {
       parser.parse();
 
       map = new Map("mapDiv", {
         center: [
-            -3.688510, // Longitud
-            40.453010  // Latitud
+          -3.688510, // Longitud
+          40.453010  // Latitud
         ],
         zoom: 16,
         basemap: "satellite"
@@ -46,35 +46,35 @@
         map: map
       }, "basemapGallery");
       basemapGallery.startup();
-      
+
       basemapGallery.on("error", function(msg) {
         console.log("basemap gallery error:  ", msg);
       });
     });
-  </script> 
-</head> 
+  </script>
+</head>
 
-<body class="claro"> 
-  <div data-dojo-type="dijit/layout/BorderContainer" 
-       data-dojo-props="design:'headline', gutters:false" 
-       style="width:100%;height:100%;margin:0;">
+<body class="claro">
+<div data-dojo-type="dijit/layout/BorderContainer"
+     data-dojo-props="design:'headline', gutters:false"
+     style="width:100%;height:100%;margin:0;">
 
-    <div id="mapDiv" 
-         data-dojo-type="dijit/layout/ContentPane" 
-         data-dojo-props="region:'center'" 
-         style="padding:0;">
+  <div id="mapDiv"
+       data-dojo-type="dijit/layout/ContentPane"
+       data-dojo-props="region:'center'"
+       style="padding:0;">
 
-      <div style="position:absolute; left:70px; top:10px; z-Index:999;">
-        <div data-dojo-type="dijit/TitlePane" 
-             data-dojo-props="title:'Switch Basemap', closable:false, open:false">
-          <div data-dojo-type="dijit/layout/ContentPane" style="width:380px; height:280px; overflow:auto;">
-            <div id="basemapGallery"></div>
-          </div>
+    <div style="position:absolute; left:70px; top:10px; z-Index:999;">
+      <div data-dojo-type="dijit/TitlePane"
+           data-dojo-props="title:'Switch Basemap', closable:false, open:false">
+        <div data-dojo-type="dijit/layout/ContentPane" style="width:380px; height:280px; overflow:auto;">
+          <div id="basemapGallery"></div>
         </div>
       </div>
-
     </div>
+
   </div>
-</body> 
+</div>
+</body>
 
 </html>

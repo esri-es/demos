@@ -1,123 +1,123 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
-    <title></title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+  <title></title>
 
-    <link rel="stylesheet" href="http://js.arcgis.com/3.14/esri/css/esri.css">
-    <style>
-      html, body, #map { 
-        height: 100%; width: 100%;
-        margin: 0; padding: 0;
+  <link rel="stylesheet" href="http://js.arcgis.com/3.14/esri/css/esri.css">
+  <style>
+    html, body, #map {
+      height: 100%; width: 100%;
+      margin: 0; padding: 0;
 
-      } 
+    }
 
-      #basemapsDIV {
-	      position: absolute;
-	      top: 12px;
-	      left: 70px;
-	      padding: 12px;
-	      background-color: rgba(0, 0, 0, 0.5);
-	      color: white;
-		    }
-      
-    </style>
+    #basemapsDIV {
+      position: absolute;
+      top: 12px;
+      left: 70px;
+      padding: 12px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+    }
 
-    <script src="http://js.arcgis.com/3.14/"></script>
-    <script>
-      var map, mapbox;
-      require([
-        "esri/map", 
-        "esri/layers/WebTiledLayer",
-        "dojo/dom",
-      	"dojo/on",
-        "dojo/domReady!"
-      ], function(
-        Map, WebTiledLayer, dom, on
-      ) {
-        
-        var token = "pk.eyJ1IjoibWFwYm94IiwiYSI6IlhHVkZmaW8ifQ.hAMX5hSW-QnTeRCMAy9A8Q";
+  </style>
 
-        map = new Map("map", {
-          center: [-3.688510, 40.453010],
-          zoom: 16,
-          logo: false
-        });
+  <script src="http://js.arcgis.com/3.14/"></script>
+  <script>
+    var map, mapbox;
+    require([
+      "esri/map",
+      "esri/layers/WebTiledLayer",
+      "dojo/dom",
+      "dojo/on",
+      "dojo/domReady!"
+    ], function(
+            Map, WebTiledLayer, dom, on
+            ) {
 
-        
-        var app_id = "Tw7Z0wLecmTCWuA2VBXh";
-        var app_code = "MCsHvqvNpTYHplS5JaZjAg";
-				//https://cartodb-basemaps-c.global.ssl.fastly.net/light_nolabels/4/7/7.png
-        //https://cartodb-basemaps-c.global.ssl.fastly.net/dark_nolabels/4/1/7.png
-        var tiledLayer = new WebTiledLayer(
-				"http://2.base.maps.cit.api.here.com/maptile/2.1/maptile/newest/normal.day/${level}/${col}/${row}/256/png8?app_id=" + app_id + "&app_code=" + app_code,
-	        {
-	          "copyright": '<a href="https://developer.here.com/rest-apis/documentation/enterprise-map-tile/topics/examples-base.html">Here</a> basemap powered by <a href="js.arcgis.com">ArcGIS API</a>',
-	          //"subDomains": ["a", "b", "c"]
-	        }
-	      );
+      var token = "pk.eyJ1IjoibWFwYm94IiwiYSI6IlhHVkZmaW8ifQ.hAMX5hSW-QnTeRCMAy9A8Q";
 
-        
-        map.addLayer(tiledLayer);
-
-	        on(dom.byId("changeBasemap"), "change", function (ev) {
-	        var select = ev.target;
-	        var basemap = select.options[select.selectedIndex].value;
-	        var type = select.options[select.selectedIndex].getAttribute("data-type");
-	        var extra = select.options[select.selectedIndex].getAttribute("data-extra");
-	        var style = select.options[select.selectedIndex].getAttribute("data-style");
-
-	        map.removeAllLayers();
-
-	        var layer = "http://2.base.maps.cit.api.here.com/maptile/2.1/"+type+"/newest/" + basemap + "/${level}/${col}/${row}/256/png8?app_id=" + app_id + "&app_code=" + app_code;
-
-	        if(style){
-	        	layer += "&style=" + style;
-	        }
-	        if(extra){
-	        	layer += extra;
-	        }
-
-	        var tiledLayer = new WebTiledLayer(
-	        	layer,
-	        	{
-		          "copyright": '<a href="https://developer.here.com/rest-apis/documentation/enterprise-map-tile/topics/examples-base.html">Here</a> basemap powered by <a href="js.arcgis.com">ArcGIS API</a>',//
-		        }
-		      );
-
-	        map.addLayer(tiledLayer);
-	      });
+      map = new Map("map", {
+        center: [-3.688510, 40.453010],
+        zoom: 16,
+        logo: false
       });
-    </script>
-  </head>
-  <body class="nihilo">
-    <div id="map" ></div>
-    <div id="basemapsDIV">
-	    <select id="changeBasemap">
-	      <option value="normal.day" data-type="maptile">Normal Day Tile</option>
-	      <option value="normal.day.grey" data-type="basetile">Normal Day Grey Tile</option>
-	      <option value="normal.day.transit" data-type="basetile">Normal Day Transit Map Tile</option>
-	      <option value="reduced.day" data-type="basetile">Reduced Day Tile</option>
-	      <option value="pedestrian.day" data-type="basetile">Pedestrian Day Tile</option>
-	      <option value="normal.day" data-type="maptile" data-style="fleet">Fleet Tile</option>
-				<option value="normal.day" data-type="trucktile" data-style="fleet">Truck Tile</option>
-	      <option value="normal.day" data-type="truckonlytile" data-style="fleet">Truck Tile (info only)</option>
-	      <option value="normal.day" data-type="maptile" data-extra="&congestion">Congestion information Tiles</option>
-	      <option value="normal.day" data-type="trucktile" data-extra="&congestion">Truck Tile with congestion</option>
-	      <option value="normal.day" data-type="basetile" data-extra="&congestion">Base Map Day Tile</option>
-	      <option value="normal.day" data-type="labeltile">Label tile Day Tile</option>
-	      <option value="normal.day" data-type="streettile">Street tile Day Tile</option>
-	      <option value="normal.day" data-type="maptile" data-extra="&lg=ENG&lg2=CHI">Dual Label Tile</option>
-	      <option value="normal.day" data-type="maptile" data-extra="&pois">POI Map Tile</option>
-	      <option value="normal.day" data-type="maptile" data-extra="&pois=000000001">POI Map Tile (filtered: Historial Monuments)</option>
-	      <option value="normal.day" data-type="maptile" data-extra="&style=dreamworks">Custom Map Style Tile (dreamworks)</option>
-	      <option value="normal.day" data-type="maptile" data-extra="&style=alps">Custom Map Style Tile (alps)</option>
-	      <option value="normal.day" data-type="maptile" data-extra="&style=wings">Custom Map Style Tile (wings)</option>
-	      <option value="normal.day" data-type="maptile" data-extra="&style=flame">Custom Map Style Tile (flame)</option>
-	      <option value="normal.day" data-type="maptile" data-extra="&style=mini">Custom Map Style Tile (mini)</option>
-	    </select>
-	   </div>
-  </body>
+
+
+      var app_id = "Tw7Z0wLecmTCWuA2VBXh";
+      var app_code = "MCsHvqvNpTYHplS5JaZjAg";
+      //https://cartodb-basemaps-c.global.ssl.fastly.net/light_nolabels/4/7/7.png
+      //https://cartodb-basemaps-c.global.ssl.fastly.net/dark_nolabels/4/1/7.png
+      var tiledLayer = new WebTiledLayer(
+              "http://2.base.maps.cit.api.here.com/maptile/2.1/maptile/newest/normal.day/${level}/${col}/${row}/256/png8?app_id=" + app_id + "&app_code=" + app_code,
+              {
+                "copyright": '<a href="https://developer.here.com/rest-apis/documentation/enterprise-map-tile/topics/examples-base.html">Here</a> basemap powered by <a href="js.arcgis.com">ArcGIS API</a>',
+                //"subDomains": ["a", "b", "c"]
+              }
+      );
+
+
+      map.addLayer(tiledLayer);
+
+      on(dom.byId("changeBasemap"), "change", function (ev) {
+        var select = ev.target;
+        var basemap = select.options[select.selectedIndex].value;
+        var type = select.options[select.selectedIndex].getAttribute("data-type");
+        var extra = select.options[select.selectedIndex].getAttribute("data-extra");
+        var style = select.options[select.selectedIndex].getAttribute("data-style");
+
+        map.removeAllLayers();
+
+        var layer = "http://2.base.maps.cit.api.here.com/maptile/2.1/"+type+"/newest/" + basemap + "/${level}/${col}/${row}/256/png8?app_id=" + app_id + "&app_code=" + app_code;
+
+        if(style){
+          layer += "&style=" + style;
+        }
+        if(extra){
+          layer += extra;
+        }
+
+        var tiledLayer = new WebTiledLayer(
+                layer,
+                {
+                  "copyright": '<a href="https://developer.here.com/rest-apis/documentation/enterprise-map-tile/topics/examples-base.html">Here</a> basemap powered by <a href="js.arcgis.com">ArcGIS API</a>',//
+                }
+        );
+
+        map.addLayer(tiledLayer);
+      });
+    });
+  </script>
+</head>
+<body class="nihilo">
+<div id="map" ></div>
+<div id="basemapsDIV">
+  <select id="changeBasemap">
+    <option value="normal.day" data-type="maptile">Normal Day Tile</option>
+    <option value="normal.day.grey" data-type="basetile">Normal Day Grey Tile</option>
+    <option value="normal.day.transit" data-type="basetile">Normal Day Transit Map Tile</option>
+    <option value="reduced.day" data-type="basetile">Reduced Day Tile</option>
+    <option value="pedestrian.day" data-type="basetile">Pedestrian Day Tile</option>
+    <option value="normal.day" data-type="maptile" data-style="fleet">Fleet Tile</option>
+    <option value="normal.day" data-type="trucktile" data-style="fleet">Truck Tile</option>
+    <option value="normal.day" data-type="truckonlytile" data-style="fleet">Truck Tile (info only)</option>
+    <option value="normal.day" data-type="maptile" data-extra="&congestion">Congestion information Tiles</option>
+    <option value="normal.day" data-type="trucktile" data-extra="&congestion">Truck Tile with congestion</option>
+    <option value="normal.day" data-type="basetile" data-extra="&congestion">Base Map Day Tile</option>
+    <option value="normal.day" data-type="labeltile">Label tile Day Tile</option>
+    <option value="normal.day" data-type="streettile">Street tile Day Tile</option>
+    <option value="normal.day" data-type="maptile" data-extra="&lg=ENG&lg2=CHI">Dual Label Tile</option>
+    <option value="normal.day" data-type="maptile" data-extra="&pois">POI Map Tile</option>
+    <option value="normal.day" data-type="maptile" data-extra="&pois=000000001">POI Map Tile (filtered: Historial Monuments)</option>
+    <option value="normal.day" data-type="maptile" data-extra="&style=dreamworks">Custom Map Style Tile (dreamworks)</option>
+    <option value="normal.day" data-type="maptile" data-extra="&style=alps">Custom Map Style Tile (alps)</option>
+    <option value="normal.day" data-type="maptile" data-extra="&style=wings">Custom Map Style Tile (wings)</option>
+    <option value="normal.day" data-type="maptile" data-extra="&style=flame">Custom Map Style Tile (flame)</option>
+    <option value="normal.day" data-type="maptile" data-extra="&style=mini">Custom Map Style Tile (mini)</option>
+  </select>
+</div>
+</body>
 </html>
 

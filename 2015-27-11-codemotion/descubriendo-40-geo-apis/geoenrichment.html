@@ -1,90 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Ejemplo 7: Cargar un webmap</title>
-    <meta name="description" content="Los <a href='https://doc.arcgis.com/es/arcgis-online/reference/what-is-web-map.htm'>webmaps</a> en definitiva son ficheros JSON que incluyen <a href='http://resources.arcgis.com/en/help/arcgis-web-map-json/index.html#//02qt00000007000000'>la configuración de un mapa</a> (capas incluidas, mapa base, marcadores, etc.). En este ejemplo vemos cómo cargar <a href='http://hhkaos2.maps.arcgis.com/home/webmap/viewer.html?webmap=64c9b7fe34304c0fae24e8d9edc86924'>este webmap</a>." />
+  <title>Ejemplo 7: Cargar un webmap</title>
+  <meta name="description" content="Los <a href='https://doc.arcgis.com/es/arcgis-online/reference/what-is-web-map.htm'>webmaps</a> en definitiva son ficheros JSON que incluyen <a href='http://resources.arcgis.com/en/help/arcgis-web-map-json/index.html#//02qt00000007000000'>la configuración de un mapa</a> (capas incluidas, mapa base, marcadores, etc.). En este ejemplo vemos cómo cargar <a href='http://hhkaos2.maps.arcgis.com/home/webmap/viewer.html?webmap=64c9b7fe34304c0fae24e8d9edc86924'>este webmap</a>." />
 
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.14/esri/css/esri.css">
-    <link rel="stylesheet" href="http://js.arcgis.com/3.14/dijit/themes/claro/claro.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <style>
-      html, body, .container, #mapDiv {
-    height:100%;
-    width:100%;
-    margin:0;
-    padding:0;
-    margin:0;
-    font-family: "Open Sans";
-}
+  <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.14/esri/css/esri.css">
+  <link rel="stylesheet" href="http://js.arcgis.com/3.14/dijit/themes/claro/claro.css">
 
-#layerListPane{
-         width: 25%;
-    float: right;
-    position: absolute;
-    z-index: 99;
-    right: 20px;
-    overflow-y: scroll;
-    height: 100%;
-    top: 20px;
-}
-#esriLayerList{
+  <style>
+    html, body, .container, #mapDiv {
+      height:100%;
+      width:100%;
+      margin:0;
+      padding:0;
+      margin:0;
+      font-family: "Open Sans";
+    }
+
+    #layerListPane{
+      width: 25%;
+      float: right;
+      position: absolute;
+      z-index: 99;
+      right: 20px;
+      overflow-y: scroll;
+      height: 100%;
+      top: 20px;
+    }
+    #esriLayerList{
       position: relative;
-    height: 100%;
-    overflow: scroll;
-}
-.esriLayer{
-  background-color: rgba(255,255,255,.75);
-}
-.esriLayerList .esriList{
-    border-top:none;
-}
-.esriLayerList .esriTitle {
-  background-color: rgba(0, 0, 0, 0);
-  border-bottom:none;
-}
-.esriLayerList .esriList ul{
-  background-color: rgba(0, 0, 0, 0);
-}
+      height: 100%;
+      overflow: scroll;
+    }
+    .esriLayer{
+      background-color: rgba(255,255,255,.75);
+    }
+    .esriLayerList .esriList{
+      border-top:none;
+    }
+    .esriLayerList .esriTitle {
+      background-color: rgba(0, 0, 0, 0);
+      border-bottom:none;
+    }
+    .esriLayerList .esriList ul{
+      background-color: rgba(0, 0, 0, 0);
+    }
 
-    </style>
+  </style>
 
-    
-    <script src="http://js.arcgis.com/3.14/"></script>
-    <script>
-        require([
-            "esri/map",
-            "esri/arcgis/utils",
-            "esri/geometry/Point",
-            "esri/dijit/LayerList",
-            "dojo/domReady!"
-        ], function(Map, arcgisUtils, Point, LayerList){
-            arcgisUtils.createMap("23190b9e52be4d4a8c7a0e8714398c10", "mapDiv").then(function (response) {
-                map = response.map;
 
-                //map.centerAt(new Point(-3.688510, 40.453010))
+  <script src="http://js.arcgis.com/3.14/"></script>
+  <script>
+    require([
+      "esri/map",
+      "esri/arcgis/utils",
+      "esri/geometry/Point",
+      "esri/dijit/LayerList",
+      "dojo/domReady!"
+    ], function(Map, arcgisUtils, Point, LayerList){
+      arcgisUtils.createMap("23190b9e52be4d4a8c7a0e8714398c10", "mapDiv").then(function (response) {
+        map = response.map;
 
-                var myWidget = new LayerList({
-                   map: response.map,
-                   subLayers: false,
-                   layers: arcgisUtils.getLayerList(response) 
-                },"layerList");
-                myWidget.startup();
-            });
-        });
-    </script>
+        //map.centerAt(new Point(-3.688510, 40.453010))
+
+        var myWidget = new LayerList({
+          map: response.map,
+          subLayers: false,
+          layers: arcgisUtils.getLayerList(response)
+        },"layerList");
+        myWidget.startup();
+      });
+    });
+  </script>
 </head>
 
 <body class="claro">
-  
-  <div class="container" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'headline',gutters:false">
-    <div id="layerListPane" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'right'">
-        <div id="layerList"></div>
-    </div>
-    <div id="mapDiv" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'"></div>
+
+<div class="container" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'headline',gutters:false">
+  <div id="layerListPane" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'right'">
+    <div id="layerList"></div>
   </div>
-  
+  <div id="mapDiv" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'"></div>
+</div>
+
 </body>
 </html>

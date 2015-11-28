@@ -1,61 +1,61 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Comparador de Geocodificadores</title>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="http://js.arcgis.com/3.13/esri/css/esri.css">
-    <link rel="stylesheet" href="http://esri-es.github.io/JavascriptAPI/src/tutoriales/css/tutorial_2.css">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Comparador de Geocodificadores</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://js.arcgis.com/3.13/esri/css/esri.css">
+  <link rel="stylesheet" href="http://esri-es.github.io/JavascriptAPI/src/tutoriales/css/tutorial_2.css">
 
-    <script src="http://js.arcgis.com/3.13/"></script>
-    <style type="text/css">
+  <script src="http://js.arcgis.com/3.13/"></script>
+  <style type="text/css">
     #search {
-		display: block;
-		position: absolute;
-		z-index: 3;
-		top: 20px;
-		left: 75px;
-	}
-	.arcgisSearch .searchGroup .searchInput{
-		border: 0;
-		font-size: 12px;
-		padding: 4px 10px;
-		width: 350px;
-	}
-	.arcgisSearch .searchBtn{
-		border: 0;
-		background-color: white;
-		padding: 4px;
-	}
-	.arcgisSearch .searchMenu{
-		border:0;
-		font-size: 12px;
-	}
-	.arcgisSearch .hasValue .searchClear,
-	.arcgisSearch .searchClose,
-	.arcgisSearch .searchSpinner{
-		height: 24px;
-  		line-height: 24px;
-	}
-  #basemapsDIV {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    padding: 12px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-  }
+      display: block;
+      position: absolute;
+      z-index: 3;
+      top: 20px;
+      left: 75px;
+    }
+    .arcgisSearch .searchGroup .searchInput{
+      border: 0;
+      font-size: 12px;
+      padding: 4px 10px;
+      width: 350px;
+    }
+    .arcgisSearch .searchBtn{
+      border: 0;
+      background-color: white;
+      padding: 4px;
+    }
+    .arcgisSearch .searchMenu{
+      border:0;
+      font-size: 12px;
+    }
+    .arcgisSearch .hasValue .searchClear,
+    .arcgisSearch .searchClose,
+    .arcgisSearch .searchSpinner{
+      height: 24px;
+      line-height: 24px;
+    }
+    #basemapsDIV {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      padding: 12px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+    }
 
   </style>
   <script>
     require([
       "esri/map",
       "esri/dijit/Search",
-      "esri/layers/GraphicsLayer", 	
-      "esri/geometry/Point", 	
-      "esri/symbols/PictureMarkerSymbol", 	
+      "esri/layers/GraphicsLayer",
+      "esri/geometry/Point",
+      "esri/symbols/PictureMarkerSymbol",
       "esri/graphic",
       "esri/request",
       "esri/dijit/PopupTemplate",
@@ -63,8 +63,8 @@
       "dojo/on",
       "dojo/domReady!"
     ], function(
-      Map, Search, GraphicsLayer, Point, PictureMarkerSymbol, Graphic, esriRequest, PopupTemplate, dom, on
-    ) {
+            Map, Search, GraphicsLayer, Point, PictureMarkerSymbol, Graphic, esriRequest, PopupTemplate, dom, on
+            ) {
       // Creamos un mapa
       // Generamos un nuevo mapa con un mapa base tipo callejero
       // Otros tipos: "satellite", "hybrid", "topo", "gray", "oceans",
@@ -78,12 +78,12 @@
         madrid:   { lng: -3.6272849, lat: 40.4323080, zoom: 16}
       }
       on(dom.byId("changeBasemap"), "change", function (ev) {
-          var select = ev.target;
-          var value = select.options[select.selectedIndex].value;
+        var select = ev.target;
+        var value = select.options[select.selectedIndex].value;
 
-          map.centerAndZoom(new Point(bookmarks[value].lng, bookmarks[value].lat), bookmarks[value].zoom)
+        map.centerAndZoom(new Point(bookmarks[value].lng, bookmarks[value].lat), bookmarks[value].zoom)
       });
-      
+
 
       map = new Map("map", {
         center: [-1.874, 38.999],
@@ -91,18 +91,18 @@
         basemap: "streets"
       });
 
-    	var capaGrafica = new GraphicsLayer(); 
-    	map.addLayer(capaGrafica);
+      var capaGrafica = new GraphicsLayer();
+      map.addLayer(capaGrafica);
 
       var osmPin= "https://googledrive.com/host/0Bzgk_dG_CbQBfmY1VmRIUkdHXy1sQzlNaERucXRXSmVwQURLU0loamVCOEs4SnZ3bG8wbjQ/osm-pin.png",
 
-      	googlePin= "https://cf99156c19601d08d1c158cab33ca0689a1b008c.googledrive.com/host/0Bzgk_dG_CbQBfmY1VmRIUkdHXy1sQzlNaERucXRXSmVwQURLU0loamVCOEs4SnZ3bG8wbjQ/google-pin.png",
+              googlePin= "https://cf99156c19601d08d1c158cab33ca0689a1b008c.googledrive.com/host/0Bzgk_dG_CbQBfmY1VmRIUkdHXy1sQzlNaERucXRXSmVwQURLU0loamVCOEs4SnZ3bG8wbjQ/google-pin.png",
 
-      	esriPin= "https://googledrive.com/host/0Bzgk_dG_CbQBfmY1VmRIUkdHXy1sQzlNaERucXRXSmVwQURLU0loamVCOEs4SnZ3bG8wbjQ/arcgis-pin.png";
+              esriPin= "https://googledrive.com/host/0Bzgk_dG_CbQBfmY1VmRIUkdHXy1sQzlNaERucXRXSmVwQURLU0loamVCOEs4SnZ3bG8wbjQ/arcgis-pin.png";
 
       esriConfig.defaults.io.corsEnabledServers.push("spreadsheets.google.com");
       var requestHandle = esriRequest({
-          "url": "https://spreadsheets.google.com/feeds/list/1_2iKEGe5DvKdk1wAyGdaT8IdUGyf3WesH58oNAEm3cU/od6/public/full?alt=json"
+        "url": "https://spreadsheets.google.com/feeds/list/1_2iKEGe5DvKdk1wAyGdaT8IdUGyf3WesH58oNAEm3cU/od6/public/full?alt=json"
       });
 
       var is_valid = function(latLong){
@@ -114,72 +114,72 @@
           false;
         }
       };
-      
+
       requestHandle.then(function(text){
-        var n = text.feed.entry.length, latLong, loc, symbol;
-        var template = new PopupTemplate({
-          title: "{service}",
-          description:"{title}"
-        });
-      
-        for(i = 0; i < n; i++){
-          
-          latLong = text.feed.entry[i].gsx$googlegeocoder.$t.split(",");
-          
-          if(is_valid(latLong)){
-            //console.log("Google=",latLong);
-        	  capaGrafica.add(
-        	  	new Graphic(
-        	  		new Point(latLong[1], latLong[0]), 
-        	  		new PictureMarkerSymbol(googlePin, 14, 24),
-        		  	{title: text.feed.entry[i].gsx$direccion.$t, service:"Google" },
-        		  	template
-        	  	)
-        	  );
-          }else{
-            console.log("Invalid Google latlong=",latLong);
-          }
+                var n = text.feed.entry.length, latLong, loc, symbol;
+                var template = new PopupTemplate({
+                  title: "{service}",
+                  description:"{title}"
+                });
+
+                for(i = 0; i < n; i++){
+
+                  latLong = text.feed.entry[i].gsx$googlegeocoder.$t.split(",");
+
+                  if(is_valid(latLong)){
+                    //console.log("Google=",latLong);
+                    capaGrafica.add(
+                            new Graphic(
+                                    new Point(latLong[1], latLong[0]),
+                                    new PictureMarkerSymbol(googlePin, 14, 24),
+                                    {title: text.feed.entry[i].gsx$direccion.$t, service:"Google" },
+                                    template
+                            )
+                    );
+                  }else{
+                    console.log("Invalid Google latlong=",latLong);
+                  }
 
 
-          latLong = text.feed.entry[i].gsx$esrigeocoder.$t.split(",");
-          //console.log("Esri=",text.feed.entry[i].gsx$direccion.$t);
-          if(is_valid(latLong)){
-      		  capaGrafica.add(
-      		  	new Graphic(
-      		  		new Point(latLong[1], latLong[0]), 
-      		  		new PictureMarkerSymbol(esriPin, 12, 24),
-      			  	{title: text.feed.entry[i].gsx$direccion.$t, service:"ArcGIS" },
-      			  	template
-      		  	)
-      		  );
-          }else{
-            console.log("Invalid Esri latlong=",latLong);
-          }
+                  latLong = text.feed.entry[i].gsx$esrigeocoder.$t.split(",");
+                  //console.log("Esri=",text.feed.entry[i].gsx$direccion.$t);
+                  if(is_valid(latLong)){
+                    capaGrafica.add(
+                            new Graphic(
+                                    new Point(latLong[1], latLong[0]),
+                                    new PictureMarkerSymbol(esriPin, 12, 24),
+                                    {title: text.feed.entry[i].gsx$direccion.$t, service:"ArcGIS" },
+                                    template
+                            )
+                    );
+                  }else{
+                    console.log("Invalid Esri latlong=",latLong);
+                  }
 
 
-    		  latLong = text.feed.entry[i].gsx$osmgeocoder.$t.split(",");
-    		  //console.log("OSM=",latLong);
-          if(is_valid(latLong)){
-            capaGrafica.add(
-      		  	new Graphic(
-      		  		new Point(latLong[1], latLong[0]), 
-      		  		new PictureMarkerSymbol(osmPin, 16, 24),
-      			  	{title: text.feed.entry[i].gsx$direccion.$t, service:"Open StreetMap" },
-      			  	template
-      		  	)
-      	    );
-          }else{
-            console.log("Invalid OSM latlong=",latLong);
-          }
-        }
-      },
-      
-      function(error){
-          alert("An error occurred: " + error);
-      });
-      
-      
-	    var s = new Search({
+                  latLong = text.feed.entry[i].gsx$osmgeocoder.$t.split(",");
+                  //console.log("OSM=",latLong);
+                  if(is_valid(latLong)){
+                    capaGrafica.add(
+                            new Graphic(
+                                    new Point(latLong[1], latLong[0]),
+                                    new PictureMarkerSymbol(osmPin, 16, 24),
+                                    {title: text.feed.entry[i].gsx$direccion.$t, service:"Open StreetMap" },
+                                    template
+                            )
+                    );
+                  }else{
+                    console.log("Invalid OSM latlong=",latLong);
+                  }
+                }
+              },
+
+              function(error){
+                alert("An error occurred: " + error);
+              });
+
+
+      var s = new Search({
         map: map
       }, "search");
       s.startup();
@@ -187,19 +187,19 @@
   </script>
 </head>
 <body>
-  <div id="search"></div>
-  <div id="map"></div>
-  <a href="https://github.com/esri-es/demos/tree/gh-pages/2015-27-11-codemotion/descubriendo-40-geo-apis"><img style="position: absolute; top: 0px; right: 0; border: 0; z-index:5" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
-  
-  <div id="basemapsDIV">
-    <select id="changeBasemap">
-        <option value="granada">Compare</option>
-        <option value="granada">OSM & Google > ArcGIS</option>
-        <option value="nerja">Google > ArcGIS > OSM</option>
-        <option value="nules">OSM > Google = ArcGIS</option>
-        <option value="hellin">Google & ArcGIS > OSM</option>
-        <option value="madrid">Google = ArcGIS = OSM</option>
-    </select>
-  </div>
+<div id="search"></div>
+<div id="map"></div>
+<a href="https://github.com/esri-es/demos/tree/gh-pages/2015-27-11-codemotion/descubriendo-40-geo-apis"><img style="position: absolute; top: 0px; right: 0; border: 0; z-index:5" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+
+<div id="basemapsDIV">
+  <select id="changeBasemap">
+    <option value="granada">Compare</option>
+    <option value="granada">OSM & Google > ArcGIS</option>
+    <option value="nerja">Google > ArcGIS > OSM</option>
+    <option value="nules">OSM > Google = ArcGIS</option>
+    <option value="hellin">Google & ArcGIS > OSM</option>
+    <option value="madrid">Google = ArcGIS = OSM</option>
+  </select>
+</div>
 </body>
 </html>

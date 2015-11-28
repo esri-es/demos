@@ -1,121 +1,121 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
-    <title></title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+  <title></title>
 
-    <link rel="stylesheet" href="http://js.arcgis.com/3.14/esri/css/esri.css">
-    <style>
-      html, body, #map { 
-        height: 100%; width: 100%;
-        margin: 0; padding: 0;
+  <link rel="stylesheet" href="http://js.arcgis.com/3.14/esri/css/esri.css">
+  <style>
+    html, body, #map {
+      height: 100%; width: 100%;
+      margin: 0; padding: 0;
 
-      } 
+    }
 
-      #basemapsDIV {
-	      position: absolute;
-	      top: 12px;
-	      left: 70px;
-	      padding: 12px;
-	      background-color: rgba(0, 0, 0, 0.5);
-	      color: white;
-		    }
-      
-    </style>
+    #basemapsDIV {
+      position: absolute;
+      top: 12px;
+      left: 70px;
+      padding: 12px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+    }
 
-    <script src="http://js.arcgis.com/3.14/"></script>
-    <script>
-      var map, mapbox;
-      require([
-        "esri/map", 
-        "esri/layers/WebTiledLayer",
-        "dojo/dom",
-      	"dojo/on",
-        "dojo/domReady!"
-      ], function(
-        Map, WebTiledLayer, dom, on
-      ) {
-        
-        var token = "pk.eyJ1IjoibWFwYm94IiwiYSI6IlhHVkZmaW8ifQ.hAMX5hSW-QnTeRCMAy9A8Q";
+  </style>
 
-        map = new Map("map", {
-          center: [-3.688510, 40.453010],
-          zoom: 16
-        });
+  <script src="http://js.arcgis.com/3.14/"></script>
+  <script>
+    var map, mapbox;
+    require([
+      "esri/map",
+      "esri/layers/WebTiledLayer",
+      "dojo/dom",
+      "dojo/on",
+      "dojo/domReady!"
+    ], function(
+            Map, WebTiledLayer, dom, on
+            ) {
 
-        
-        mapbox = {
-        	streets: "mapbox.streets",
-        	dark: "mapbox.dark",
-        	light: "mapbox.light",
-        	satellite: "mapbox.satellite",
-        	satelliteStreets: "mapbox.streets-satellite",
-        	wheatpaste: "mapbox.wheatpaste",
-        	streetsBasic: "mapbox.streets-basic",
-        	comic: "mapbox.comic",
-        	outdoors: "mapbox.outdoors",
-        	runBikeHike: "mapbox.run-bike-hike",
-        	pencil: "mapbox.pencil",
-        	pirates: "mapbox.pirates",
-        	emerald: "mapbox.emerald",
-        	highContrast: "mapbox.high-contrast",
-        }
+      var token = "pk.eyJ1IjoibWFwYm94IiwiYSI6IlhHVkZmaW8ifQ.hAMX5hSW-QnTeRCMAy9A8Q";
+
+      map = new Map("map", {
+        center: [-3.688510, 40.453010],
+        zoom: 16
+      });
+
+
+      mapbox = {
+        streets: "mapbox.streets",
+        dark: "mapbox.dark",
+        light: "mapbox.light",
+        satellite: "mapbox.satellite",
+        satelliteStreets: "mapbox.streets-satellite",
+        wheatpaste: "mapbox.wheatpaste",
+        streetsBasic: "mapbox.streets-basic",
+        comic: "mapbox.comic",
+        outdoors: "mapbox.outdoors",
+        runBikeHike: "mapbox.run-bike-hike",
+        pencil: "mapbox.pencil",
+        pirates: "mapbox.pirates",
+        emerald: "mapbox.emerald",
+        highContrast: "mapbox.high-contrast",
+      }
+
+      var tiledLayer = new WebTiledLayer(
+              "https://${subDomain}.tiles.mapbox.com/v4/" + mapbox.streets + "/${level}/${col}/${row}.png?access_token=" + token ,
+              {
+                "copyright": "Mapbox",
+                "id": "Open Cycle Map",
+                "subDomains": ["a", "b", "c"]
+              }
+      );
+
+
+      map.addLayer(tiledLayer);
+
+      on(dom.byId("changeBasemap"), "change", function (ev) {
+        var select = ev.target;
+        var basemap = select.options[select.selectedIndex].value;
+
+        map.removeAllLayers();
 
         var tiledLayer = new WebTiledLayer(
-        	"https://${subDomain}.tiles.mapbox.com/v4/" + mapbox.streets + "/${level}/${col}/${row}.png?access_token=" + token , 
-	        {
-	          "copyright": "Mapbox",
-	          "id": "Open Cycle Map",
-	          "subDomains": ["a", "b", "c"]
-	        }
-	      );
 
-        
+                "https://${subDomain}.tiles.mapbox.com/v4/" + mapbox[basemap] + "/${level}/${col}/${row}.png?access_token=" + token ,
+                {
+                  "copyright": "Mapbox",
+                  "id": "Open Cycle Map",
+                  "subDomains": ["a", "b", "c"]
+                }
+        );
+
         map.addLayer(tiledLayer);
-
-	        on(dom.byId("changeBasemap"), "change", function (ev) {
-	        var select = ev.target;
-	        var basemap = select.options[select.selectedIndex].value;
-
-	        map.removeAllLayers();
-
-	        var tiledLayer = new WebTiledLayer(
-	        	
-	        	"https://${subDomain}.tiles.mapbox.com/v4/" + mapbox[basemap] + "/${level}/${col}/${row}.png?access_token=" + token ,
-	        	{
-		          "copyright": "Mapbox",
-		          "id": "Open Cycle Map",
-		          "subDomains": ["a", "b", "c"]
-		        }
-		      );
-
-	        map.addLayer(tiledLayer);
-	      });
       });
-    </script>
-  </head>
-  <body class="nihilo">
-    <div id="map" ></div>
-    <div id="basemapsDIV">
-	    <select id="changeBasemap">
-	      <option value="streets">Streets</option>
-	      <option value="dark">Dark</option>
-	      <option value="light">Light</option>
-	      <option value="satellite">Satellite</option>
-	      <option value="satelliteStreets">Satellite Streets</option>
-	      <option value="wheatpaste">Wheatpaste</option>
-	      <option value="streetsBasic">Streets Classic</option>
-	      <option value="comic">Comic!</option>
-	      <option value="outdoors">Outdoors</option>
-	      <option value="runBikeHike">Run, Bike, and Hike</option>
-	      <option value="pencil">Pencil</option>
-	      <option value="pirates">Pirates</option>
-	      <option value="emerald">Emerald</option>
-	      <option value="highContrast">High Constrast</option>
+    });
+  </script>
+</head>
+<body class="nihilo">
+<div id="map" ></div>
+<div id="basemapsDIV">
+  <select id="changeBasemap">
+    <option value="streets">Streets</option>
+    <option value="dark">Dark</option>
+    <option value="light">Light</option>
+    <option value="satellite">Satellite</option>
+    <option value="satelliteStreets">Satellite Streets</option>
+    <option value="wheatpaste">Wheatpaste</option>
+    <option value="streetsBasic">Streets Classic</option>
+    <option value="comic">Comic!</option>
+    <option value="outdoors">Outdoors</option>
+    <option value="runBikeHike">Run, Bike, and Hike</option>
+    <option value="pencil">Pencil</option>
+    <option value="pirates">Pirates</option>
+    <option value="emerald">Emerald</option>
+    <option value="highContrast">High Constrast</option>
 
-	    </select>
-	   </div>
-  </body>
+  </select>
+</div>
+</body>
 </html>
 

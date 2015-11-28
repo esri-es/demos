@@ -34,27 +34,27 @@
       "esri/layers/WebTiledLayer",
       "dojo/domReady!"
     ], function(
-      Map,
-      GeometryService,
-      BufferParameters,
-      SimpleLineSymbol,
-      SimpleFillSymbol,
-      SimpleMarkerSymbol,
-      Color,
-      Graphic,
-      QueryTask,
-      Query,
-      urlUtils,
-      esriConfig,
-      RelationParameters,
-      graphicsUtils,
-      webMercatorUtils,
-      on,
-      SpatialReference,
-      array,
-      InfoTemplate,
-      WebTiledLayer
-    ) {
+            Map,
+            GeometryService,
+            BufferParameters,
+            SimpleLineSymbol,
+            SimpleFillSymbol,
+            SimpleMarkerSymbol,
+            Color,
+            Graphic,
+            QueryTask,
+            Query,
+            urlUtils,
+            esriConfig,
+            RelationParameters,
+            graphicsUtils,
+            webMercatorUtils,
+            on,
+            SpatialReference,
+            array,
+            InfoTemplate,
+            WebTiledLayer
+            ) {
 
       $APP.map = new Map("mapDiv", {
         center: [-3.462, 38.662],
@@ -64,15 +64,15 @@
       var token = "pk.eyJ1IjoibWFwYm94IiwiYSI6IlhHVkZmaW8ifQ.hAMX5hSW-QnTeRCMAy9A8Q";
 
       var tiledLayer = new WebTiledLayer(
-          "https://${subDomain}.tiles.mapbox.com/v4/mapbox.streets/${level}/${col}/${row}.png?access_token=" + token , 
-          {
-            "copyright": "Mapbox",
-            "id": "Open Cycle Map",
-            "subDomains": ["a", "b", "c"]
-          }
-        );
+              "https://${subDomain}.tiles.mapbox.com/v4/mapbox.streets/${level}/${col}/${row}.png?access_token=" + token ,
+              {
+                "copyright": "Mapbox",
+                "id": "Open Cycle Map",
+                "subDomains": ["a", "b", "c"]
+              }
+      );
 
-        
+
       $APP.map.addLayer(tiledLayer);
 
       // Configuramos el proxy
@@ -103,13 +103,13 @@
         gsvc.buffer(params, function(bufferGeometries){
 
           var symbol = new SimpleFillSymbol(
-                SimpleLineSymbol.STYLE_SOLID,
-                new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([0, 0, 0, 1]), 1),
-                new Color([255, 0, 0, 0.2])
-              ),
-              len = bufferGeometries.length,
-              geometry,
-              graphic;
+                          SimpleLineSymbol.STYLE_SOLID,
+                          new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([0, 0, 0, 1]), 1),
+                          new Color([255, 0, 0, 0.2])
+                  ),
+                  len = bufferGeometries.length,
+                  geometry,
+                  graphic;
 
           $APP.bufferGeometries = bufferGeometries;
           for(i = 0; i< len ; i++){
@@ -132,9 +132,9 @@
 
           // Creamos el cuadrado rojo para mostrar los conductores
           var pointSymbol = new SimpleMarkerSymbol(
-            SimpleMarkerSymbol.STYLE_CIRCLE, 10,
-            new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([0, 0, 0]), 1),
-            new Color([255, 0, 0])
+                  SimpleMarkerSymbol.STYLE_CIRCLE, 10,
+                  new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([0, 0, 0]), 1),
+                  new Color([255, 0, 0])
           );
 
           baseGraphics = [];
@@ -144,8 +144,8 @@
             f = data.features[i];
             var graphic = new Graphic(f.geometry,pointSymbol, f.attributes);
             graphic.setInfoTemplate(new InfoTemplate(
-              "Pasajero: ",
-              "${Nombre}: ${Origen} -> ${Destino}"
+                    "Pasajero: ",
+                    "${Nombre}: ${Origen} -> ${Destino}"
             ));
             $APP.map.graphics.add(graphic);
             baseGraphics.push(graphic);
@@ -170,9 +170,9 @@
 
           // create a Green Square symbol
           var symbol = new SimpleMarkerSymbol(
-            SimpleMarkerSymbol.STYLE_CIRCLE, 12,
-            new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([0, 0, 0]), 1),
-            new Color([0, 255, 0])
+                  SimpleMarkerSymbol.STYLE_CIRCLE, 12,
+                  new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([0, 0, 0]), 1),
+                  new Color([0, 255, 0])
           );
 
           array.forEach(relations, function(relation) {
@@ -192,51 +192,51 @@
   </script>
 </head>
 <body class="claro">
-  <div id="mapDiv"></div>
-  <a href="#" id="loadPassengers">Load passenger with same destination</a>
-  <a href="#" id="searchPassengers">Search passengers closer than 5km</a>
-  <a href="#" id="showPassengers">Show matching passengers</a>
-  <div id="results" style="display:none"></div>
-  <style type="text/css">
-    html, body, #mapDiv {
-      padding: 0;
-      margin: 0;
-      height: 100%;
-      z-index: 99;
-    }
-    #results{
-      position: absolute;
-      bottom: 60px;
-      right: 10px;
-      background-color: rgba(255,255,255,0.75);
-      
-      padding: 1em 2em 2em;
-      line-height: 1.5em
-    }
-    #loadPassengers,
-    #searchPassengers,
-    #showPassengers{
-      position: absolute;
-      top: 10px;
-      left: 70px;
-      display: block;
-      color: #333;
-      background-color: rgba(255,255,255,.7);
-      padding: 10px;
-      text-decoration: none;
-      border-radius: 5px;
-      border: 1px solid #999;
-      box-shadow: 0 0 11px #999;
-      width: 270px;
-      text-align:center
-    }
-    #searchPassengers{
-      top: 70px;
-    }
-    #showPassengers{
-      top: 130px;
-    }
-  </style>
-  <a href="https://github.com/esri-es/demos/tree/gh-pages/2015-27-11-codemotion/descubriendo-40-geo-apis"><img style="position: absolute; top: 0px; right: 0; border: 0; z-index:5" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
-  </body>
+<div id="mapDiv"></div>
+<a href="#" id="loadPassengers">Load passenger with same destination</a>
+<a href="#" id="searchPassengers">Search passengers closer than 5km</a>
+<a href="#" id="showPassengers">Show matching passengers</a>
+<div id="results" style="display:none"></div>
+<style type="text/css">
+  html, body, #mapDiv {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    z-index: 99;
+  }
+  #results{
+    position: absolute;
+    bottom: 60px;
+    right: 10px;
+    background-color: rgba(255,255,255,0.75);
+
+    padding: 1em 2em 2em;
+    line-height: 1.5em
+  }
+  #loadPassengers,
+  #searchPassengers,
+  #showPassengers{
+    position: absolute;
+    top: 10px;
+    left: 70px;
+    display: block;
+    color: #333;
+    background-color: rgba(255,255,255,.7);
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid #999;
+    box-shadow: 0 0 11px #999;
+    width: 270px;
+    text-align:center
+  }
+  #searchPassengers{
+    top: 70px;
+  }
+  #showPassengers{
+    top: 130px;
+  }
+</style>
+<a href="https://github.com/esri-es/demos/tree/gh-pages/2015-27-11-codemotion/descubriendo-40-geo-apis"><img style="position: absolute; top: 0px; right: 0; border: 0; z-index:5" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+</body>
 </html>

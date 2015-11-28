@@ -1,97 +1,97 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
-    <title></title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+  <title></title>
 
-    <link rel="stylesheet" href="http://js.arcgis.com/3.14/esri/css/esri.css">
-    <style>
-      html, body, #map { 
-        height: 100%; width: 100%;
-        margin: 0; padding: 0;
+  <link rel="stylesheet" href="http://js.arcgis.com/3.14/esri/css/esri.css">
+  <style>
+    html, body, #map {
+      height: 100%; width: 100%;
+      margin: 0; padding: 0;
 
-      } 
+    }
 
-      #basemapsDIV {
-	      position: absolute;
-	      top: 12px;
-	      left: 70px;
-	      padding: 12px;
-	      background-color: rgba(0, 0, 0, 0.5);
-	      color: white;
-		    }
-      
-    </style>
+    #basemapsDIV {
+      position: absolute;
+      top: 12px;
+      left: 70px;
+      padding: 12px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+    }
 
-    <script src="http://js.arcgis.com/3.14/"></script>
-    <script>
-      var map, mapbox;
-      require([
-        "esri/map", 
-        "esri/layers/WebTiledLayer",
-        "esri/geometry/Point",
-        "dojo/dom",
-      	"dojo/on",
-        "dojo/domReady!"
-      ], function(
-        Map, WebTiledLayer, Point, dom, on
-      ) {
-        
-        var token = "pk.eyJ1IjoibWFwYm94IiwiYSI6IlhHVkZmaW8ifQ.hAMX5hSW-QnTeRCMAy9A8Q";
+  </style>
 
-        map = new Map("map", {
-          center: [-3.688510, 40.453010],
-          zoom: 16,
-          logo: false
-        });
+  <script src="http://js.arcgis.com/3.14/"></script>
+  <script>
+    var map, mapbox;
+    require([
+      "esri/map",
+      "esri/layers/WebTiledLayer",
+      "esri/geometry/Point",
+      "dojo/dom",
+      "dojo/on",
+      "dojo/domReady!"
+    ], function(
+            Map, WebTiledLayer, Point, dom, on
+            ) {
 
-        
-        var tiledLayer = new WebTiledLayer(
-          "http://${subDomain}.tile.stamen.com/toner/${level}/${col}/${row}.png",
-	        {
-	          "copyright": '<a id="home-link" target="_top" href="../">Map tiles</a> by <a target="_top" href="http://stamen.com">Stamen Design</a>, under <a target="_top" href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a target="_top" href="http://openstreetmap.org">OpenStreetMap</a>, under <a target="_top" href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>, powered by <a href="js.arcgis.com">ArcGIS API</a>',
-	          "subDomains": ["a", "b", "c", "d"]
-	        }
-	      );
+      var token = "pk.eyJ1IjoibWFwYm94IiwiYSI6IlhHVkZmaW8ifQ.hAMX5hSW-QnTeRCMAy9A8Q";
 
-        
-        map.addLayer(tiledLayer);
-
-        on(dom.byId("changeBasemap"), "change", function (ev) {
-	        var select = ev.target;
-	        var basemap = select.options[select.selectedIndex].value;
-
-	        map.removeAllLayers();
-
-          if(basemap=="terrain"){
-            //debugger;
-            //map.centerAt(new Point(-74.2605493,40.7029724))
-            map.centerAt(new Point(-74.010, 40.711))
-          }
-
-	        var tiledLayer = new WebTiledLayer(
-	        	"http://${subDomain}.tile.stamen.com/" + basemap + "/${level}/${col}/${row}.png",
-	        	{
-		          "copyright": '<a id="home-link" target="_top" href="../">Map tiles</a> by <a target="_top" href="http://stamen.com">Stamen Design</a>, under <a target="_top" href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a target="_top" href="http://openstreetmap.org">OpenStreetMap</a>, under <a target="_top" href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>, powered by <a href="js.arcgis.com">ArcGIS API</a>',
-            "subDomains": ["a", "b", "c", "d"]
-		        }
-		      );
-
-	        map.addLayer(tiledLayer);
-	      });
+      map = new Map("map", {
+        center: [-3.688510, 40.453010],
+        zoom: 16,
+        logo: false
       });
-    </script>
-  </head>
-  <body class="nihilo">
-    <div id="map" ></div>
-    <div id="basemapsDIV">
-	    <select id="changeBasemap">
-	      <option value="toner">Toner</option>
-        <option value="terrain">Terrain</option>
-        <option value="watercolor">Watercolor</option>
-	    </select>
-	   </div>
-  </body>
+
+
+      var tiledLayer = new WebTiledLayer(
+              "http://${subDomain}.tile.stamen.com/toner/${level}/${col}/${row}.png",
+              {
+                "copyright": '<a id="home-link" target="_top" href="../">Map tiles</a> by <a target="_top" href="http://stamen.com">Stamen Design</a>, under <a target="_top" href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a target="_top" href="http://openstreetmap.org">OpenStreetMap</a>, under <a target="_top" href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>, powered by <a href="js.arcgis.com">ArcGIS API</a>',
+                "subDomains": ["a", "b", "c", "d"]
+              }
+      );
+
+
+      map.addLayer(tiledLayer);
+
+      on(dom.byId("changeBasemap"), "change", function (ev) {
+        var select = ev.target;
+        var basemap = select.options[select.selectedIndex].value;
+
+        map.removeAllLayers();
+
+        if(basemap=="terrain"){
+          //debugger;
+          //map.centerAt(new Point(-74.2605493,40.7029724))
+          map.centerAt(new Point(-74.010, 40.711))
+        }
+
+        var tiledLayer = new WebTiledLayer(
+                "http://${subDomain}.tile.stamen.com/" + basemap + "/${level}/${col}/${row}.png",
+                {
+                  "copyright": '<a id="home-link" target="_top" href="../">Map tiles</a> by <a target="_top" href="http://stamen.com">Stamen Design</a>, under <a target="_top" href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a target="_top" href="http://openstreetmap.org">OpenStreetMap</a>, under <a target="_top" href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>, powered by <a href="js.arcgis.com">ArcGIS API</a>',
+                  "subDomains": ["a", "b", "c", "d"]
+                }
+        );
+
+        map.addLayer(tiledLayer);
+      });
+    });
+  </script>
+</head>
+<body class="nihilo">
+<div id="map" ></div>
+<div id="basemapsDIV">
+  <select id="changeBasemap">
+    <option value="toner">Toner</option>
+    <option value="terrain">Terrain</option>
+    <option value="watercolor">Watercolor</option>
+  </select>
+</div>
+</body>
 </html>
 
