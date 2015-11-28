@@ -50,7 +50,7 @@
           "http://pre-m.avuxiapis.com/tile?t=sights&z=${level}&x=${col}&y=${row}&ut=c53a20151127172746ac4a7a0e&s=clb&o=0.5&appid=avi_aviconf_tmp&appkey=avi_aviconf_tmp_15112717",
             {
               "copyright": "Avuxi",
-              "id": "Open Cycle Map"
+              "id": "Avuxi"
             }
         );
         
@@ -60,13 +60,13 @@
           var select = ev.target;
           var basemap = select.options[select.selectedIndex].value;
 
-          map.removeAllLayers();
-          map.setBasemap("gray")
+          map.removeLayer(map.getLayer("Avuxi"))
+
           var tiledLayer = new WebTiledLayer(
             "http://pre-m.avuxiapis.com/tile?t=" + basemap + "&z=${level}&x=${col}&y=${row}&ut=c53a20151127172746ac4a7a0e&s=clb&o=0.5&appid=avi_aviconf_tmp&appkey=avi_aviconf_tmp_15112717",
             {
               "copyright": "Avuxi",
-              "id": "Open Cycle Map"
+              "id": "Avuxi"
             }
           );
 
