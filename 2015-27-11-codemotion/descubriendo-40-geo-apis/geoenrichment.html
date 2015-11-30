@@ -12,42 +12,42 @@
 
     <style>
       html, body, .container, #mapDiv {
-    height:100%;
-    width:100%;
-    margin:0;
-    padding:0;
-    margin:0;
-    font-family: "Open Sans";
-}
+      height:100%;
+      width:100%;
+      margin:0;
+      padding:0;
+      margin:0;
+      font-family: "Open Sans";
+      }
 
-#layerListPane{
-         width: 25%;
-    float: right;
-    position: absolute;
-    z-index: 99;
-    right: 20px;
-    overflow-y: scroll;
-    height: 100%;
-    top: 20px;
-}
-#esriLayerList{
-      position: relative;
-    height: 100%;
-    overflow: scroll;
-}
-.esriLayer{
-  background-color: rgba(255,255,255,.75);
-}
-.esriLayerList .esriList{
-    border-top:none;
-}
-.esriLayerList .esriTitle {
-  background-color: rgba(0, 0, 0, 0);
-  border-bottom:none;
-}
-.esriLayerList .esriList ul{
-  background-color: rgba(0, 0, 0, 0);
-}
+      #layerListPane{
+               width: 25%;
+          float: right;
+          position: absolute;
+          z-index: 99;
+          right: 20px;
+          overflow-y: scroll;
+          height: 100%;
+          top: 20px;
+      }
+      #esriLayerList{
+            position: relative;
+          height: 100%;
+          overflow: scroll;
+      }
+      .esriLayer{
+        background-color: rgba(255,255,255,.75);
+      }
+      .esriLayerList .esriList{
+          border-top:none;
+      }
+      .esriLayerList .esriTitle {
+        background-color: rgba(0, 0, 0, 0);
+        border-bottom:none;
+      }
+      .esriLayerList .esriList ul{
+        background-color: rgba(0, 0, 0, 0);
+      }
 
     </style>
 
@@ -57,21 +57,24 @@
         require([
             "esri/map",
             "esri/arcgis/utils",
-            "esri/geometry/Point",
-            "esri/dijit/LayerList",
+            "esri/config",
+            "esri/urlUtils",
             "dojo/domReady!"
-        ], function(Map, arcgisUtils, Point, LayerList){
+        ], function(Map, arcgisUtils, esriConfig, urlUtils){
+        
+          urlUtils.addProxyRule({
+            urlPrefix: "demographics2.arcgis.com/",
+            proxyUrl: ""
+          });
+          urlUtils.addProxyRule({
+            urlPrefix: "demographics3.arcgis.com/",
+            proxyUrl: ""
+          });
+        
+          /*esriConfig.defaults.io.proxyUrl = "proxy.php";
+          esriConfig.defaults.io.alwaysUseProxy = true;*/
             arcgisUtils.createMap("23190b9e52be4d4a8c7a0e8714398c10", "mapDiv").then(function (response) {
                 map = response.map;
-
-                //map.centerAt(new Point(-3.688510, 40.453010))
-
-                var myWidget = new LayerList({
-                   map: response.map,
-                   subLayers: false,
-                   layers: arcgisUtils.getLayerList(response) 
-                },"layerList");
-                myWidget.startup();
             });
         });
     </script>
