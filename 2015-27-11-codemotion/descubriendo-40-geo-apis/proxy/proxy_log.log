@@ -1,0 +1,3498 @@
+
+ 
+11-27-15 01:45:28 | GET detected
+11-27-15 01:45:28 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:45:29 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:45:29 | Retry attempt 1 of 3
+11-27-15 01:45:29 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:45:29 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:45:29 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:45:29 | Retry attempt 2 of 3
+11-27-15 01:45:29 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:45:29 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:45:29 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:45:29 | Retry attempt 3 of 3
+11-27-15 01:45:29 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:45:29 | Removing session value
+11-27-15 01:45:29 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:45:29 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:45:29 | Proxy complete
+ 
+11-27-15 01:45:56 | GET detected
+11-27-15 01:45:56 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:45:56 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:45:56 | Retry attempt 1 of 3
+11-27-15 01:45:56 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:45:56 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:45:56 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:45:56 | Retry attempt 2 of 3
+11-27-15 01:45:56 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:45:56 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:45:57 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:45:57 | Retry attempt 3 of 3
+11-27-15 01:45:57 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:45:57 | Removing session value
+11-27-15 01:45:57 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:45:57 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:45:57 | Proxy complete
+ 
+11-27-15 01:46:00 | GET detected
+11-27-15 01:46:00 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:46:00 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:46:00 | Retry attempt 1 of 3
+11-27-15 01:46:00 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:46:00 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:46:00 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:46:00 | Retry attempt 2 of 3
+11-27-15 01:46:00 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:46:00 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:46:01 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:46:01 | Retry attempt 3 of 3
+11-27-15 01:46:01 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:46:01 | Removing session value
+11-27-15 01:46:01 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:46:01 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:46:01 | Proxy complete
+ 
+11-27-15 01:52:17 | GET detected
+11-27-15 01:52:17 | Using session token
+11-27-15 01:52:17 | Ok to proxy
+11-27-15 01:52:17 | Proxy complete
+ 
+11-27-15 01:52:31 | GET detected
+11-27-15 01:52:31 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:52:32 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:52:32 | Retry attempt 1 of 3
+11-27-15 01:52:32 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:52:32 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:52:32 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:52:32 | Retry attempt 2 of 3
+11-27-15 01:52:32 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:52:32 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:52:32 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:52:32 | Retry attempt 3 of 3
+11-27-15 01:52:32 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:52:32 | Removing session value
+11-27-15 01:52:32 |  Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 01:52:32 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":499,"message":"Token Required","details":[]}});
+11-27-15 01:52:32 | Proxy complete
+ 
+11-27-15 01:52:38 | GET detected
+11-27-15 01:52:38 | Using session token
+11-27-15 01:52:38 | Ok to proxy
+11-27-15 01:52:38 | Proxy complete
+ 
+11-27-15 02:03:38 | GET detected
+11-27-15 02:03:38 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-27-15 02:04:54 | GET detected
+11-27-15 02:04:54 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-27-15 02:05:04 | GET detected
+11-27-15 02:05:04 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-27-15 02:05:42 | GET detected
+11-27-15 02:05:42 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-27-15 02:05:53 | GET detected
+11-27-15 02:05:53 | http://js.arcgis.com Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 02:05:54 | Ok to proxy
+11-27-15 02:05:54 | Proxy complete
+ 
+11-27-15 02:05:57 | GET detected
+11-27-15 02:05:57 | http://js.arcgis.com Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 02:05:57 | Ok to proxy
+11-27-15 02:05:57 | Proxy complete
+ 
+11-27-15 02:06:08 | GET detected
+11-27-15 02:06:08 | http://js.arcgis.com Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 02:06:09 | Ok to proxy
+11-27-15 02:06:09 | Proxy complete
+ 
+11-27-15 02:06:17 | GET detected
+11-27-15 02:06:17 | http://js.arcgis.com Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-27-15 02:06:17 | Ok to proxy
+11-27-15 02:06:17 | Proxy complete
+ 
+11-27-15 02:06:47 | GET detected
+11-27-15 02:06:47 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-27-15 02:07:15 | GET detected
+11-27-15 02:07:15 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-27-15 02:07:55 | GET detected
+11-27-15 02:07:55 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-27-15 02:08:17 | GET detected
+11-27-15 02:08:17 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-27-15 02:10:57 | GET detected
+11-27-15 02:10:57 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-27-15 02:16:09 | GET detected
+11-27-15 02:16:09 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-27-15 02:17:36 | GET detected
+11-27-15 02:17:36 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-27-15 02:19:17 | GET detected
+11-27-15 02:19:17 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-27-15 02:20:32 | GET detected
+11-27-15 02:20:32 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-27-15 02:20:57 | GET detected
+11-27-15 02:20:57 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-27-15 02:21:23 | GET detected
+11-27-15 02:21:23 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-27-15 02:21:40 | GET detected
+11-27-15 02:21:40 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-27-15 13:06:19 | GET detected
+11-27-15 13:06:19 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 08:19:20 | GET detected
+11-28-15 08:19:20 | Proxy could not resolve requested url - https://maps.googleapis.com/maps/api/place/textsearch/json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 08:27:51 | GET detected
+11-28-15 08:27:51 | https://maps.googleapis.com Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-28-15 08:27:52 | Ok to proxy
+11-28-15 08:27:52 | Proxy complete
+ 
+11-28-15 08:28:34 | GET detected
+11-28-15 08:28:34 | https://maps.googleapis.com Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-28-15 08:28:34 | Ok to proxy
+11-28-15 08:28:34 | Proxy complete
+ 
+11-28-15 08:28:49 | GET detected
+11-28-15 08:28:49 | https://maps.googleapis.com Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-28-15 08:28:49 | Ok to proxy
+11-28-15 08:28:49 | Proxy complete
+ 
+11-28-15 08:29:28 | GET detected
+11-28-15 08:29:28 | https://maps.googleapis.com Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-28-15 08:29:29 | Ok to proxy
+11-28-15 08:29:29 | Proxy complete
+ 
+11-28-15 08:35:21 | GET detected
+11-28-15 08:35:21 | https://maps.googleapis.com Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-28-15 08:35:22 | Ok to proxy
+11-28-15 08:35:22 | Proxy complete
+ 
+11-28-15 08:35:36 | GET detected
+11-28-15 08:35:36 | https://maps.googleapis.com Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-28-15 08:35:36 | Ok to proxy
+11-28-15 08:35:36 | Proxy complete
+ 
+11-28-15 08:36:37 | GET detected
+11-28-15 08:36:37 | https://maps.googleapis.com Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-28-15 08:36:38 | Ok to proxy
+11-28-15 08:36:38 | Proxy complete
+ 
+11-28-15 08:36:45 | GET detected
+11-28-15 08:36:45 | https://maps.googleapis.com Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-28-15 08:36:45 | Ok to proxy
+11-28-15 08:36:45 | Proxy complete
+ 
+11-28-15 08:37:20 | GET detected
+11-28-15 08:37:20 | https://maps.googleapis.com Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-28-15 08:37:21 | Ok to proxy
+11-28-15 08:37:21 | Proxy complete
+ 
+11-28-15 08:37:26 | GET detected
+11-28-15 08:37:26 | https://maps.googleapis.com Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-28-15 08:37:26 | Ok to proxy
+11-28-15 08:37:26 | Proxy complete
+ 
+11-28-15 08:38:39 | GET detected
+11-28-15 08:38:39 | https://maps.googleapis.com Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-28-15 08:38:40 | Ok to proxy
+11-28-15 08:38:40 | Proxy complete
+ 
+11-28-15 08:39:00 | GET detected
+11-28-15 08:39:00 | https://maps.googleapis.com Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-28-15 08:39:01 | Ok to proxy
+11-28-15 08:39:01 | Proxy complete
+ 
+11-28-15 08:39:11 | GET detected
+11-28-15 08:39:11 | https://maps.googleapis.com Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-28-15 08:39:12 | Ok to proxy
+11-28-15 08:39:12 | Proxy complete
+ 
+11-28-15 08:40:14 | GET detected
+11-28-15 08:40:14 | https://maps.googleapis.com Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-28-15 08:40:15 | Ok to proxy
+11-28-15 08:40:15 | Proxy complete
+ 
+11-28-15 08:44:48 | GET detected
+11-28-15 08:44:48 | https://maps.googleapis.com Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-28-15 08:44:49 | Ok to proxy
+11-28-15 08:44:49 | Proxy complete
+ 
+11-28-15 08:45:37 | GET detected
+11-28-15 08:45:37 | https://maps.googleapis.com Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-28-15 08:45:38 | Ok to proxy
+11-28-15 08:45:38 | Proxy complete
+ 
+11-28-15 08:47:05 | GET detected
+11-28-15 08:47:05 | https://maps.googleapis.com Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-28-15 08:47:06 | Ok to proxy
+11-28-15 08:47:06 | Proxy complete
+ 
+11-28-15 08:48:29 | GET detected
+11-28-15 08:48:29 | https://maps.googleapis.com Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+11-28-15 08:48:29 | Ok to proxy
+11-28-15 08:48:29 | Proxy complete
+ 
+11-28-15 09:31:55 | GET detected
+11-28-15 09:31:55 | Proxy could not resolve requested url - http://api.openstreetmap.fr/xapi//api/0.6/map.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 09:31:57 | GET detected
+11-28-15 09:31:57 | Proxy could not resolve requested url - http://api.openstreetmap.fr/xapi//api/0.6/map.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:08:44 | GET detected
+11-28-15 13:08:44 | Proxy could not resolve requested url - http://www.arcgis.com/sharing/rest/content/items/23190b9e52be4d4a8c7a0e8714398c10.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:08:54 | GET detected
+11-28-15 13:08:54 | Proxy could not resolve requested url - http://www.arcgis.com/sharing/rest/content/items/23190b9e52be4d4a8c7a0e8714398c10.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:09:38 | GET detected
+11-28-15 13:09:38 | Resource using OAuth
+11-28-15 13:09:39 | Exchanging portal token for server-specific token for http://www.arcgis.com
+11-28-15 13:09:40 | Adding token to session
+11-28-15 13:09:40 | Ok to proxy
+11-28-15 13:09:40 | Proxy complete
+ 
+11-28-15 13:09:52 | GET detected
+11-28-15 13:09:52 | Resource using OAuth
+11-28-15 13:09:53 | Exchanging portal token for server-specific token for http://www.arcgis.com
+11-28-15 13:09:53 | Adding token to session
+11-28-15 13:09:53 | Ok to proxy
+11-28-15 13:09:53 | Proxy complete
+ 
+11-28-15 13:10:02 | GET detected
+11-28-15 13:10:02 | Using session token
+11-28-15 13:10:02 | Ok to proxy
+11-28-15 13:10:02 | Proxy complete
+ 
+11-28-15 13:12:32 | GET detected
+11-28-15 13:12:32 | Using session token
+11-28-15 13:12:32 | Ok to proxy
+11-28-15 13:12:32 | Proxy complete
+ 
+11-28-15 13:12:32 | GET detected
+11-28-15 13:12:32 | Using session token
+11-28-15 13:12:32 | Ok to proxy
+11-28-15 13:12:32 | Proxy complete
+ 
+11-28-15 13:12:32 | GET detected
+11-28-15 13:12:32 | Proxy could not resolve requested url - https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:13:11 | GET detected
+11-28-15 13:13:11 | Using session token
+11-28-15 13:13:11 | Ok to proxy
+11-28-15 13:13:11 | Proxy complete
+ 
+11-28-15 13:13:11 | GET detected
+11-28-15 13:13:11 | Using session token
+11-28-15 13:13:12 | Ok to proxy
+11-28-15 13:13:12 | Proxy complete
+ 
+11-28-15 13:13:12 | GET detected
+11-28-15 13:13:12 | Proxy could not resolve requested url - https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:13:22 | GET detected
+11-28-15 13:13:22 | Proxy could not resolve requested url - https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:14:12 | GET detected
+11-28-15 13:14:12 | Using session token
+11-28-15 13:14:13 | Ok to proxy
+11-28-15 13:14:13 | Proxy complete
+ 
+11-28-15 13:14:13 | GET detected
+11-28-15 13:14:13 | Using session token
+11-28-15 13:14:13 | Ok to proxy
+11-28-15 13:14:13 | Proxy complete
+ 
+11-28-15 13:14:13 | GET detected
+11-28-15 13:14:13 | Proxy could not resolve requested url - https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:14:28 | GET detected
+11-28-15 13:14:28 | Using session token
+11-28-15 13:14:29 | Ok to proxy
+11-28-15 13:14:29 | Proxy complete
+ 
+11-28-15 13:14:29 | GET detected
+11-28-15 13:14:29 | Using session token
+11-28-15 13:14:29 | Ok to proxy
+11-28-15 13:14:29 | Proxy complete
+ 
+11-28-15 13:14:29 | GET detected
+11-28-15 13:14:29 | Proxy could not resolve requested url - https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:14:34 | GET detected
+11-28-15 13:14:34 | Proxy could not resolve requested url - https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:14:54 | GET detected
+11-28-15 13:14:54 | Resource using OAuth
+11-28-15 13:14:55 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:14:55 | Ok to proxy
+11-28-15 13:14:55 | Proxy complete
+ 
+11-28-15 13:15:05 | GET detected
+11-28-15 13:15:05 | Using session token
+11-28-15 13:15:06 | Ok to proxy
+11-28-15 13:15:06 | Proxy complete
+ 
+11-28-15 13:15:06 | GET detected
+11-28-15 13:15:06 | Using session token
+11-28-15 13:15:06 | Ok to proxy
+11-28-15 13:15:06 | Proxy complete
+ 
+11-28-15 13:15:06 | GET detected
+11-28-15 13:15:06 | Resource using OAuth
+11-28-15 13:15:07 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:15:08 | Ok to proxy
+11-28-15 13:15:08 | Proxy complete
+ 
+11-28-15 13:15:09 | GET detected
+11-28-15 13:15:09 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:15:09 | GET detected
+11-28-15 13:15:09 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:15:09 | GET detected
+11-28-15 13:15:09 | Proxy could not resolve requested url - http://static.arcgis.com/attribution/Canvas/World_Light_Gray_Base.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:15:09 | GET detected
+11-28-15 13:15:09 | Using session token
+ 
+ 
+ 
+ 
+ 
+11-28-15 13:15:09 | Ok to proxy
+11-28-15 13:15:09 | Proxy complete
+11-28-15 13:15:09 | GET detected
+11-28-15 13:15:09 | Using session token
+ 
+11-28-15 13:15:10 | Ok to proxy
+11-28-15 13:15:10 | Proxy complete
+11-28-15 13:15:10 | GET detected
+11-28-15 13:15:10 | Using session token
+ 
+11-28-15 13:15:11 | Ok to proxy
+11-28-15 13:15:11 | Proxy complete
+11-28-15 13:15:11 | GET detected
+11-28-15 13:15:11 | Using session token
+11-28-15 13:15:11 | Ok to proxy
+11-28-15 13:15:11 | Proxy complete
+11-28-15 13:15:11 | GET detected
+11-28-15 13:15:11 | Using session token
+ 
+ 
+11-28-15 13:15:12 | Ok to proxy
+11-28-15 13:15:12 | Proxy complete
+11-28-15 13:15:12 | GET detected
+11-28-15 13:15:12 | Using session token
+ 
+11-28-15 13:15:12 | Ok to proxy
+11-28-15 13:15:12 | Proxy complete
+11-28-15 13:15:12 | GET detected
+11-28-15 13:15:12 | Using session token
+ 
+11-28-15 13:15:13 | Ok to proxy
+11-28-15 13:15:13 | Proxy complete
+11-28-15 13:15:13 | GET detected
+11-28-15 13:15:13 | Using session token
+ 
+11-28-15 13:15:13 | Ok to proxy
+11-28-15 13:15:13 | Proxy complete
+11-28-15 13:15:13 | GET detected
+11-28-15 13:15:13 | Using session token
+ 
+11-28-15 13:15:13 | Ok to proxy
+11-28-15 13:15:13 | Proxy complete
+11-28-15 13:15:13 | GET detected
+11-28-15 13:15:13 | Using session token
+ 
+11-28-15 13:15:14 | Ok to proxy
+11-28-15 13:15:14 | Proxy complete
+11-28-15 13:15:14 | GET detected
+11-28-15 13:15:14 | Using session token
+ 
+11-28-15 13:15:14 | Ok to proxy
+11-28-15 13:15:14 | Proxy complete
+11-28-15 13:15:14 | GET detected
+11-28-15 13:15:14 | Using session token
+ 
+11-28-15 13:15:15 | Ok to proxy
+11-28-15 13:15:15 | Proxy complete
+11-28-15 13:15:15 | GET detected
+11-28-15 13:15:15 | Using session token
+ 
+11-28-15 13:15:15 | Ok to proxy
+11-28-15 13:15:15 | Proxy complete
+11-28-15 13:15:15 | GET detected
+11-28-15 13:15:15 | Resource using OAuth
+ 
+11-28-15 13:15:16 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:15:17 | Ok to proxy
+11-28-15 13:15:17 | Proxy complete
+11-28-15 13:15:17 | GET detected
+11-28-15 13:15:17 | Resource using OAuth
+ 
+11-28-15 13:15:18 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:15:18 | Ok to proxy
+11-28-15 13:15:18 | Proxy complete
+11-28-15 13:15:18 | GET detected
+11-28-15 13:15:18 | Resource using OAuth
+ 
+11-28-15 13:15:19 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:15:20 | Ok to proxy
+11-28-15 13:15:20 | Proxy complete
+11-28-15 13:15:20 | GET detected
+11-28-15 13:15:20 | Resource using OAuth
+ 
+11-28-15 13:15:20 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:15:21 | Ok to proxy
+11-28-15 13:15:21 | Proxy complete
+11-28-15 13:15:21 | GET detected
+11-28-15 13:15:21 | Proxy could not resolve requested url - http://static.arcgis.com/attribution/Canvas/World_Light_Gray_Base.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-28-15 13:15:21 | GET detected
+11-28-15 13:15:21 | Resource using OAuth
+ 
+ 
+11-28-15 13:15:21 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:15:22 | Ok to proxy
+11-28-15 13:15:22 | Proxy complete
+11-28-15 13:15:22 | GET detected
+11-28-15 13:15:22 | Resource using OAuth
+ 
+11-28-15 13:15:22 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:15:23 | Ok to proxy
+11-28-15 13:15:23 | Proxy complete
+11-28-15 13:15:23 | GET detected
+11-28-15 13:15:23 | Proxy could not resolve requested url - https://tiles.arcgis.com/tiles/4yjifSiIG17X0gW4/arcgis/rest/services/Senior_Population_Global_Dataset/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-28-15 13:15:23 | GET detected
+11-28-15 13:15:23 | Resource using OAuth
+ 
+ 
+11-28-15 13:15:24 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:15:25 | Ok to proxy
+11-28-15 13:15:25 | Proxy complete
+11-28-15 13:15:25 | GET detected
+11-28-15 13:15:25 | Proxy could not resolve requested url - https://demographics2.arcgis.com/arcgis/rest/services/ESP_Demographics_and_Boundaries/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-28-15 13:15:25 | GET detected
+11-28-15 13:15:25 | Proxy could not resolve requested url - https://demographics2.arcgis.com/arcgis/rest/services/ESP_Demographics_and_Boundaries/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-28-15 13:15:25 | GET detected
+11-28-15 13:15:25 | Proxy could not resolve requested url - https://demographics3.arcgis.com/arcgis/rest/services/ES_AIS/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-28-15 13:15:25 | GET detected
+11-28-15 13:15:25 | Proxy could not resolve requested url - https://demographics3.arcgis.com/arcgis/rest/services/ES_AIS/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-28-15 13:15:25 | GET detected
+11-28-15 13:15:25 | Proxy could not resolve requested url - https://demographics3.arcgis.com/arcgis/rest/services/ES_AIS/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:15:25 | GET detected
+11-28-15 13:15:25 | Proxy could not resolve requested url - https://demographics3.arcgis.com/arcgis/rest/services/ES_AIS/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:15:25 | GET detected
+11-28-15 13:15:25 | Proxy could not resolve requested url - https://demographics3.arcgis.com/arcgis/rest/services/ES_AIS/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:15:25 | GET detected
+11-28-15 13:15:25 | Proxy could not resolve requested url - https://demographics3.arcgis.com/arcgis/rest/services/ES_AIS/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:15:25 | GET detected
+11-28-15 13:15:25 | Proxy could not resolve requested url - https://demographics3.arcgis.com/arcgis/rest/services/ES_AIS/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:15:25 | GET detected
+11-28-15 13:15:25 | Proxy could not resolve requested url - https://demographics3.arcgis.com/arcgis/rest/services/ES_AIS/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:15:25 | GET detected
+11-28-15 13:15:25 | Proxy could not resolve requested url - https://demographics3.arcgis.com/arcgis/rest/services/ES_AIS/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:15:25 | GET detected
+11-28-15 13:15:25 | Proxy could not resolve requested url - https://demographics3.arcgis.com/arcgis/rest/services/ES_AIS/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:15:25 | GET detected
+11-28-15 13:15:25 | Proxy could not resolve requested url - http://static.arcgis.com/attribution/Canvas/World_Light_Gray_Reference.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:15:25 | GET detected
+11-28-15 13:15:25 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:15:25 | GET detected
+11-28-15 13:15:25 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:15:25 | GET detected
+ 
+11-28-15 13:15:25 | Resource using OAuth
+ 
+ 
+ 
+ 
+11-28-15 13:15:25 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:15:27 | Ok to proxy
+11-28-15 13:15:27 | Proxy complete
+11-28-15 13:15:27 | GET detected
+11-28-15 13:15:27 | Resource using OAuth
+11-28-15 13:15:27 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:15:28 | Ok to proxy
+11-28-15 13:15:28 | Proxy complete
+11-28-15 13:15:28 | GET detected
+11-28-15 13:15:28 | Resource using OAuth
+11-28-15 13:15:28 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:15:29 | Ok to proxy
+11-28-15 13:15:29 | Proxy complete
+11-28-15 13:15:29 | GET detected
+11-28-15 13:15:29 | Resource using OAuth
+11-28-15 13:15:30 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:15:31 | Ok to proxy
+11-28-15 13:15:31 | Proxy complete
+11-28-15 13:15:31 | GET detected
+11-28-15 13:15:31 | Resource using OAuth
+11-28-15 13:15:32 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:15:33 | Ok to proxy
+11-28-15 13:15:33 | Proxy complete
+11-28-15 13:15:33 | GET detected
+11-28-15 13:15:33 | Resource using OAuth
+11-28-15 13:15:33 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:15:34 | Ok to proxy
+11-28-15 13:15:34 | Proxy complete
+ 
+11-28-15 13:15:40 | GET detected
+11-28-15 13:15:40 | Resource using OAuth
+11-28-15 13:15:41 | Exchanging portal token for server-specific token for http://static.arcgis.com
+11-28-15 13:15:41 | Adding token to session
+11-28-15 13:15:42 | Ok to proxy
+11-28-15 13:15:42 | Proxy complete
+ 
+11-28-15 13:15:49 | GET detected
+11-28-15 13:15:49 | Using session token
+11-28-15 13:15:49 | Ok to proxy
+11-28-15 13:15:49 | Proxy complete
+ 
+11-28-15 13:15:49 | GET detected
+11-28-15 13:15:49 | Using session token
+11-28-15 13:15:49 | Ok to proxy
+11-28-15 13:15:49 | Proxy complete
+ 
+11-28-15 13:15:49 | GET detected
+11-28-15 13:15:49 | Resource using OAuth
+11-28-15 13:15:50 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:15:51 | Ok to proxy
+11-28-15 13:15:51 | Proxy complete
+ 
+11-28-15 13:15:51 | GET detected
+11-28-15 13:15:51 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:15:51 | GET detected
+11-28-15 13:15:51 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:15:51 | GET detected
+11-28-15 13:15:51 | Using session token
+ 
+ 
+ 
+ 
+ 
+11-28-15 13:15:51 | Ok to proxy
+11-28-15 13:15:51 | Proxy complete
+11-28-15 13:15:51 | GET detected
+11-28-15 13:15:51 | Using session token
+ 
+11-28-15 13:15:52 | Ok to proxy
+11-28-15 13:15:52 | Proxy complete
+11-28-15 13:15:52 | GET detected
+11-28-15 13:15:52 | Using session token
+ 
+11-28-15 13:15:52 | Ok to proxy
+11-28-15 13:15:52 | Proxy complete
+11-28-15 13:15:52 | GET detected
+11-28-15 13:15:52 | Using session token
+ 
+11-28-15 13:15:53 | Ok to proxy
+11-28-15 13:15:53 | Proxy complete
+11-28-15 13:15:53 | GET detected
+11-28-15 13:15:53 | Using session token
+11-28-15 13:15:53 | Ok to proxy
+11-28-15 13:15:53 | Proxy complete
+11-28-15 13:15:53 | GET detected
+11-28-15 13:15:53 | Using session token
+ 
+ 
+11-28-15 13:15:54 | Ok to proxy
+11-28-15 13:15:54 | Proxy complete
+11-28-15 13:15:54 | GET detected
+11-28-15 13:15:54 | Using session token
+ 
+11-28-15 13:15:54 | Ok to proxy
+11-28-15 13:15:54 | Proxy complete
+11-28-15 13:15:54 | GET detected
+11-28-15 13:15:54 | Using session token
+ 
+11-28-15 13:15:55 | Ok to proxy
+11-28-15 13:15:55 | Proxy complete
+11-28-15 13:15:55 | GET detected
+11-28-15 13:15:55 | Using session token
+ 
+11-28-15 13:15:55 | Ok to proxy
+11-28-15 13:15:55 | Proxy complete
+11-28-15 13:15:55 | GET detected
+11-28-15 13:15:55 | Using session token
+ 
+11-28-15 13:15:56 | Ok to proxy
+11-28-15 13:15:56 | Proxy complete
+11-28-15 13:15:56 | GET detected
+11-28-15 13:15:56 | Using session token
+ 
+11-28-15 13:15:56 | Ok to proxy
+11-28-15 13:15:56 | Proxy complete
+11-28-15 13:15:56 | GET detected
+11-28-15 13:15:56 | Using session token
+ 
+11-28-15 13:15:57 | Ok to proxy
+11-28-15 13:15:57 | Proxy complete
+11-28-15 13:15:57 | GET detected
+11-28-15 13:15:57 | Using session token
+ 
+11-28-15 13:15:58 | Ok to proxy
+11-28-15 13:15:58 | Proxy complete
+11-28-15 13:15:58 | GET detected
+11-28-15 13:15:58 | Using session token
+ 
+11-28-15 13:15:58 | Ok to proxy
+11-28-15 13:15:58 | Proxy complete
+11-28-15 13:15:58 | GET detected
+11-28-15 13:15:58 | Resource using OAuth
+ 
+11-28-15 13:15:59 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:15:59 | Ok to proxy
+11-28-15 13:15:59 | Proxy complete
+11-28-15 13:15:59 | GET detected
+11-28-15 13:15:59 | Resource using OAuth
+ 
+11-28-15 13:16:00 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:16:00 | Ok to proxy
+11-28-15 13:16:00 | Proxy complete
+11-28-15 13:16:00 | GET detected
+11-28-15 13:16:00 | Resource using OAuth
+ 
+11-28-15 13:16:01 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:16:02 | Ok to proxy
+11-28-15 13:16:02 | Proxy complete
+11-28-15 13:16:02 | GET detected
+11-28-15 13:16:02 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-28-15 13:16:02 | GET detected
+11-28-15 13:16:02 | Resource using OAuth
+ 
+ 
+11-28-15 13:16:02 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:16:03 | Ok to proxy
+11-28-15 13:16:03 | Proxy complete
+11-28-15 13:16:03 | GET detected
+11-28-15 13:16:03 | Resource using OAuth
+ 
+11-28-15 13:16:03 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:16:04 | Ok to proxy
+11-28-15 13:16:04 | Proxy complete
+11-28-15 13:16:04 | GET detected
+11-28-15 13:16:04 | Resource using OAuth
+ 
+11-28-15 13:16:05 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:16:05 | Ok to proxy
+11-28-15 13:16:05 | Proxy complete
+11-28-15 13:16:05 | GET detected
+11-28-15 13:16:05 | Proxy could not resolve requested url - https://tiles.arcgis.com/tiles/4yjifSiIG17X0gW4/arcgis/rest/services/Senior_Population_Global_Dataset/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-28-15 13:16:05 | GET detected
+11-28-15 13:16:05 | Resource using OAuth
+ 
+ 
+11-28-15 13:16:06 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:16:06 | Ok to proxy
+11-28-15 13:16:06 | Proxy complete
+11-28-15 13:16:06 | GET detected
+11-28-15 13:16:06 | Proxy could not resolve requested url - https://demographics2.arcgis.com/arcgis/rest/services/ESP_Demographics_and_Boundaries/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-28-15 13:16:06 | GET detected
+11-28-15 13:16:06 | Proxy could not resolve requested url - https://demographics2.arcgis.com/arcgis/rest/services/ESP_Demographics_and_Boundaries/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-28-15 13:16:06 | GET detected
+11-28-15 13:16:06 | Proxy could not resolve requested url - https://demographics3.arcgis.com/arcgis/rest/services/ES_AIS/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-28-15 13:16:06 | GET detected
+11-28-15 13:16:06 | Proxy could not resolve requested url - https://demographics3.arcgis.com/arcgis/rest/services/ES_AIS/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-28-15 13:16:06 | GET detected
+11-28-15 13:16:06 | Proxy could not resolve requested url - https://demographics3.arcgis.com/arcgis/rest/services/ES_AIS/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+ 
+11-28-15 13:16:06 | GET detected
+11-28-15 13:16:06 | Proxy could not resolve requested url - https://demographics3.arcgis.com/arcgis/rest/services/ES_AIS/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-28-15 13:16:06 | GET detected
+11-28-15 13:16:06 | Proxy could not resolve requested url - https://demographics3.arcgis.com/arcgis/rest/services/ES_AIS/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:16:06 | GET detected
+11-28-15 13:16:06 | Proxy could not resolve requested url - https://demographics3.arcgis.com/arcgis/rest/services/ES_AIS/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:16:06 | GET detected
+11-28-15 13:16:06 | Proxy could not resolve requested url - https://demographics3.arcgis.com/arcgis/rest/services/ES_AIS/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:16:06 | GET detected
+11-28-15 13:16:06 | Proxy could not resolve requested url - https://demographics3.arcgis.com/arcgis/rest/services/ES_AIS/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:16:06 | GET detected
+11-28-15 13:16:06 | Proxy could not resolve requested url - https://demographics3.arcgis.com/arcgis/rest/services/ES_AIS/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:16:06 | GET detected
+11-28-15 13:16:06 | Proxy could not resolve requested url - https://demographics3.arcgis.com/arcgis/rest/services/ES_AIS/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:16:07 | GET detected
+11-28-15 13:16:07 | Using session token
+ 
+ 
+11-28-15 13:16:07 | Ok to proxy
+11-28-15 13:16:07 | Proxy complete
+11-28-15 13:16:07 | GET detected
+11-28-15 13:16:07 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-28-15 13:16:07 | GET detected
+11-28-15 13:16:07 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+ 
+ 
+ 
+ 
+11-28-15 13:16:07 | GET detected
+11-28-15 13:16:07 | Resource using OAuth
+ 
+11-28-15 13:16:07 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:16:08 | Ok to proxy
+11-28-15 13:16:08 | Proxy complete
+11-28-15 13:16:08 | GET detected
+11-28-15 13:16:08 | Resource using OAuth
+11-28-15 13:16:08 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:16:09 | Ok to proxy
+11-28-15 13:16:09 | Proxy complete
+11-28-15 13:16:09 | GET detected
+11-28-15 13:16:09 | Resource using OAuth
+11-28-15 13:16:09 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:16:10 | Ok to proxy
+11-28-15 13:16:10 | Proxy complete
+11-28-15 13:16:10 | GET detected
+11-28-15 13:16:10 | Resource using OAuth
+11-28-15 13:16:10 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:16:11 | Ok to proxy
+11-28-15 13:16:11 | Proxy complete
+11-28-15 13:16:11 | GET detected
+11-28-15 13:16:11 | Resource using OAuth
+11-28-15 13:16:11 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:16:12 | Ok to proxy
+11-28-15 13:16:12 | Proxy complete
+11-28-15 13:16:12 | GET detected
+11-28-15 13:16:12 | Resource using OAuth
+11-28-15 13:16:12 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:16:13 | Ok to proxy
+11-28-15 13:16:13 | Proxy complete
+ 
+11-28-15 13:16:19 | GET detected
+11-28-15 13:16:19 | Proxy could not resolve requested url - https://demographics3.arcgis.com/arcgis/rest/services/ES_AIS/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:16:31 | GET detected
+11-28-15 13:16:31 | Resource using ArcGIS Server security
+11-28-15 13:16:32 | Got token endpoint
+11-28-15 13:16:33 | Adding token to session
+11-28-15 13:16:34 | Ok to proxy
+11-28-15 13:16:34 | Proxy complete
+ 
+11-28-15 13:16:41 | GET detected
+11-28-15 13:16:41 | Using session token
+11-28-15 13:16:41 | Ok to proxy
+11-28-15 13:16:41 | Proxy complete
+ 
+11-28-15 13:16:41 | GET detected
+11-28-15 13:16:41 | Using session token
+11-28-15 13:16:41 | Ok to proxy
+11-28-15 13:16:41 | Proxy complete
+ 
+11-28-15 13:16:41 | GET detected
+11-28-15 13:16:41 | Resource using OAuth
+11-28-15 13:16:42 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:16:43 | Ok to proxy
+11-28-15 13:16:43 | Proxy complete
+ 
+11-28-15 13:16:44 | GET detected
+11-28-15 13:16:44 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:16:44 | GET detected
+11-28-15 13:16:44 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:16:44 | GET detected
+11-28-15 13:16:44 | Using session token
+ 
+ 
+ 
+ 
+ 
+11-28-15 13:16:44 | Ok to proxy
+11-28-15 13:16:44 | Proxy complete
+11-28-15 13:16:44 | GET detected
+11-28-15 13:16:44 | Using session token
+ 
+11-28-15 13:16:45 | Ok to proxy
+11-28-15 13:16:45 | Proxy complete
+11-28-15 13:16:45 | GET detected
+11-28-15 13:16:45 | Using session token
+ 
+11-28-15 13:16:45 | Ok to proxy
+11-28-15 13:16:45 | Proxy complete
+11-28-15 13:16:45 | GET detected
+11-28-15 13:16:45 | Using session token
+ 
+11-28-15 13:16:46 | Ok to proxy
+11-28-15 13:16:46 | Proxy complete
+11-28-15 13:16:46 | GET detected
+11-28-15 13:16:46 | Using session token
+11-28-15 13:16:46 | Ok to proxy
+11-28-15 13:16:46 | Proxy complete
+11-28-15 13:16:46 | GET detected
+11-28-15 13:16:46 | Using session token
+ 
+ 
+11-28-15 13:16:46 | Ok to proxy
+11-28-15 13:16:46 | Proxy complete
+11-28-15 13:16:46 | GET detected
+11-28-15 13:16:46 | Using session token
+ 
+11-28-15 13:16:47 | Ok to proxy
+11-28-15 13:16:47 | Proxy complete
+11-28-15 13:16:47 | GET detected
+11-28-15 13:16:47 | Using session token
+ 
+11-28-15 13:16:47 | Ok to proxy
+11-28-15 13:16:47 | Proxy complete
+11-28-15 13:16:47 | GET detected
+11-28-15 13:16:47 | Using session token
+ 
+11-28-15 13:16:47 | Ok to proxy
+11-28-15 13:16:47 | Proxy complete
+11-28-15 13:16:47 | GET detected
+11-28-15 13:16:47 | Using session token
+ 
+11-28-15 13:16:48 | Ok to proxy
+11-28-15 13:16:48 | Proxy complete
+11-28-15 13:16:48 | GET detected
+11-28-15 13:16:48 | Using session token
+ 
+11-28-15 13:16:48 | Ok to proxy
+11-28-15 13:16:48 | Proxy complete
+11-28-15 13:16:48 | GET detected
+11-28-15 13:16:48 | Using session token
+ 
+11-28-15 13:16:49 | Ok to proxy
+11-28-15 13:16:49 | Proxy complete
+11-28-15 13:16:49 | GET detected
+11-28-15 13:16:49 | Using session token
+ 
+11-28-15 13:16:49 | Ok to proxy
+11-28-15 13:16:49 | Proxy complete
+11-28-15 13:16:49 | GET detected
+11-28-15 13:16:49 | Using session token
+ 
+11-28-15 13:16:50 | Ok to proxy
+11-28-15 13:16:50 | Proxy complete
+11-28-15 13:16:50 | GET detected
+11-28-15 13:16:50 | Resource using OAuth
+ 
+11-28-15 13:16:50 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:16:51 | Ok to proxy
+11-28-15 13:16:51 | Proxy complete
+11-28-15 13:16:51 | GET detected
+11-28-15 13:16:51 | Resource using OAuth
+ 
+11-28-15 13:16:51 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:16:52 | Ok to proxy
+11-28-15 13:16:52 | Proxy complete
+11-28-15 13:16:52 | GET detected
+11-28-15 13:16:52 | Resource using OAuth
+ 
+11-28-15 13:16:52 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:16:53 | Ok to proxy
+11-28-15 13:16:53 | Proxy complete
+11-28-15 13:16:53 | GET detected
+11-28-15 13:16:53 | Resource using OAuth
+ 
+11-28-15 13:16:53 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:16:54 | Ok to proxy
+11-28-15 13:16:54 | Proxy complete
+11-28-15 13:16:54 | GET detected
+11-28-15 13:16:54 | Resource using OAuth
+ 
+11-28-15 13:16:54 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:16:55 | Ok to proxy
+11-28-15 13:16:55 | Proxy complete
+11-28-15 13:16:55 | GET detected
+11-28-15 13:16:55 | Resource using OAuth
+ 
+11-28-15 13:16:55 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:16:56 | Ok to proxy
+11-28-15 13:16:56 | Proxy complete
+11-28-15 13:16:56 | GET detected
+11-28-15 13:16:56 | Resource using OAuth
+ 
+11-28-15 13:16:56 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:16:57 | Ok to proxy
+11-28-15 13:16:57 | Proxy complete
+11-28-15 13:16:57 | GET detected
+11-28-15 13:16:57 | Proxy could not resolve requested url - https://tiles.arcgis.com/tiles/4yjifSiIG17X0gW4/arcgis/rest/services/Senior_Population_Global_Dataset/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-28-15 13:16:57 | GET detected
+11-28-15 13:16:57 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-28-15 13:16:57 | GET detected
+11-28-15 13:16:57 | Resource using ArcGIS Server security
+ 
+ 
+ 
+11-28-15 13:16:58 | Got token endpoint
+11-28-15 13:16:59 | Adding token to session
+11-28-15 13:16:59 | Ok to proxy
+11-28-15 13:16:59 | Proxy complete
+11-28-15 13:16:59 | GET detected
+11-28-15 13:16:59 | Using session token
+ 
+11-28-15 13:17:00 | Ok to proxy
+11-28-15 13:17:00 | Proxy complete
+11-28-15 13:17:00 | GET detected
+11-28-15 13:17:00 | Using session token
+ 
+11-28-15 13:17:01 | Ok to proxy
+11-28-15 13:17:01 | Proxy complete
+11-28-15 13:17:01 | GET detected
+11-28-15 13:17:01 | Using session token
+ 
+11-28-15 13:17:02 | Ok to proxy
+11-28-15 13:17:02 | Proxy complete
+11-28-15 13:17:02 | GET detected
+11-28-15 13:17:02 | Using session token
+ 
+11-28-15 13:17:02 | Ok to proxy
+11-28-15 13:17:02 | Proxy complete
+11-28-15 13:17:02 | GET detected
+11-28-15 13:17:02 | Using session token
+ 
+11-28-15 13:17:03 | Ok to proxy
+11-28-15 13:17:03 | Proxy complete
+11-28-15 13:17:03 | GET detected
+11-28-15 13:17:03 | Using session token
+ 
+11-28-15 13:17:03 | Ok to proxy
+11-28-15 13:17:03 | Proxy complete
+11-28-15 13:17:03 | GET detected
+11-28-15 13:17:03 | Using session token
+11-28-15 13:17:04 | Ok to proxy
+11-28-15 13:17:04 | Proxy complete
+11-28-15 13:17:04 | GET detected
+11-28-15 13:17:04 | Using session token
+11-28-15 13:17:04 | Ok to proxy
+11-28-15 13:17:04 | Proxy complete
+11-28-15 13:17:04 | GET detected
+11-28-15 13:17:04 | Using session token
+11-28-15 13:17:05 | Ok to proxy
+11-28-15 13:17:05 | Proxy complete
+11-28-15 13:17:05 | GET detected
+11-28-15 13:17:05 | Using session token
+11-28-15 13:17:05 | Ok to proxy
+11-28-15 13:17:05 | Proxy complete
+11-28-15 13:17:05 | GET detected
+11-28-15 13:17:05 | Using session token
+11-28-15 13:17:06 | Ok to proxy
+11-28-15 13:17:06 | Proxy complete
+ 
+11-28-15 13:17:06 | GET detected
+11-28-15 13:17:06 | Using session token
+ 
+ 
+ 
+ 
+ 
+11-28-15 13:17:06 | Ok to proxy
+11-28-15 13:17:06 | Proxy complete
+11-28-15 13:17:06 | GET detected
+11-28-15 13:17:06 | Using session token
+ 
+11-28-15 13:17:08 | Ok to proxy
+11-28-15 13:17:08 | Proxy complete
+11-28-15 13:17:08 | GET detected
+11-28-15 13:17:08 | Using session token
+ 
+11-28-15 13:17:11 | Ok to proxy
+11-28-15 13:17:11 | Proxy complete
+11-28-15 13:17:11 | GET detected
+11-28-15 13:17:11 | Using session token
+11-28-15 13:17:13 | Ok to proxy
+ 
+11-28-15 13:17:15 | Proxy complete
+11-28-15 13:17:15 | GET detected
+11-28-15 13:17:15 | Using session token
+11-28-15 13:17:18 | Ok to proxy
+ 
+11-28-15 13:17:21 | Proxy complete
+11-28-15 13:17:21 | GET detected
+11-28-15 13:17:21 | Using session token
+11-28-15 13:17:24 | Ok to proxy
+ 
+11-28-15 13:17:28 | Proxy complete
+11-28-15 13:17:28 | GET detected
+11-28-15 13:17:28 | Using session token
+11-28-15 13:17:30 | Ok to proxy
+ 
+11-28-15 13:17:34 | Proxy complete
+11-28-15 13:17:34 | GET detected
+11-28-15 13:17:34 | Using session token
+11-28-15 13:17:36 | Ok to proxy
+ 
+11-28-15 13:17:39 | Proxy complete
+11-28-15 13:17:39 | GET detected
+11-28-15 13:17:39 | Using session token
+ 
+11-28-15 13:17:44 | Ok to proxy
+11-28-15 13:17:46 | Proxy complete
+11-28-15 13:17:46 | GET detected
+11-28-15 13:17:46 | Using session token
+11-28-15 13:17:49 | Ok to proxy
+ 
+11-28-15 13:17:52 | Proxy complete
+11-28-15 13:17:52 | GET detected
+11-28-15 13:17:52 | Using session token
+11-28-15 13:17:55 | Ok to proxy
+11-28-15 13:17:58 | Proxy complete
+11-28-15 13:17:58 | GET detected
+11-28-15 13:17:58 | Using session token
+ 
+11-28-15 13:18:01 | Ok to proxy
+11-28-15 13:18:04 | Proxy complete
+11-28-15 13:18:04 | GET detected
+11-28-15 13:18:04 | Using session token
+ 
+11-28-15 13:18:05 | Ok to proxy
+11-28-15 13:18:07 | POST detected
+ 
+ 
+11-28-15 13:18:07 | Using session token
+11-28-15 13:18:08 | Ok to proxy
+11-28-15 13:18:08 | Proxy complete
+11-28-15 13:18:08 | GET detected
+11-28-15 13:18:08 | Resource using OAuth
+ 
+11-28-15 13:18:08 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:18:09 | Ok to proxy
+11-28-15 13:18:09 | Proxy complete
+11-28-15 13:18:09 | GET detected
+11-28-15 13:18:09 | Resource using OAuth
+ 
+11-28-15 13:18:10 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:18:10 | Ok to proxy
+11-28-15 13:18:10 | Proxy complete
+11-28-15 13:18:10 | GET detected
+11-28-15 13:18:10 | Resource using OAuth
+ 
+11-28-15 13:18:11 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:18:11 | Ok to proxy
+11-28-15 13:18:11 | Proxy complete
+11-28-15 13:18:11 | GET detected
+11-28-15 13:18:11 | Resource using OAuth
+ 
+11-28-15 13:18:12 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:18:12 | Ok to proxy
+11-28-15 13:18:12 | Proxy complete
+11-28-15 13:18:12 | GET detected
+11-28-15 13:18:12 | Resource using OAuth
+ 
+11-28-15 13:18:13 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:18:13 | Ok to proxy
+11-28-15 13:18:13 | Proxy complete
+11-28-15 13:18:13 | GET detected
+11-28-15 13:18:13 | Using session token
+ 
+11-28-15 13:18:14 | Ok to proxy
+11-28-15 13:18:14 | Proxy complete
+11-28-15 13:18:14 | GET detected
+11-28-15 13:18:14 | Using session token
+ 
+11-28-15 13:18:14 | Ok to proxy
+11-28-15 13:18:14 | Proxy complete
+11-28-15 13:18:14 | GET detected
+11-28-15 13:18:14 | Using session token
+ 
+11-28-15 13:18:15 | Ok to proxy
+11-28-15 13:18:15 | Proxy complete
+11-28-15 13:18:15 | GET detected
+11-28-15 13:18:15 | Using session token
+ 
+11-28-15 13:18:16 | Ok to proxy
+11-28-15 13:18:16 | Proxy complete
+11-28-15 13:18:16 | GET detected
+11-28-15 13:18:16 | Using session token
+ 
+11-28-15 13:18:16 | Ok to proxy
+11-28-15 13:18:16 | Proxy complete
+11-28-15 13:18:16 | GET detected
+11-28-15 13:18:16 | Using session token
+ 
+11-28-15 13:18:17 | Ok to proxy
+11-28-15 13:18:17 | Proxy complete
+11-28-15 13:18:17 | GET detected
+11-28-15 13:18:17 | Using session token
+ 
+11-28-15 13:18:18 | Ok to proxy
+11-28-15 13:18:18 | Proxy complete
+11-28-15 13:18:18 | GET detected
+11-28-15 13:18:18 | Using session token
+ 
+11-28-15 13:18:18 | Ok to proxy
+11-28-15 13:18:18 | Proxy complete
+11-28-15 13:18:18 | GET detected
+11-28-15 13:18:18 | Using session token
+ 
+11-28-15 13:18:19 | Ok to proxy
+11-28-15 13:18:19 | Proxy complete
+11-28-15 13:18:19 | GET detected
+11-28-15 13:18:19 | Using session token
+ 
+11-28-15 13:18:19 | Ok to proxy
+11-28-15 13:18:19 | Proxy complete
+11-28-15 13:18:19 | GET detected
+11-28-15 13:18:19 | Using session token
+ 
+11-28-15 13:18:20 | Ok to proxy
+11-28-15 13:18:20 | Proxy complete
+11-28-15 13:18:20 | GET detected
+11-28-15 13:18:20 | Using session token
+ 
+11-28-15 13:18:21 | Ok to proxy
+11-28-15 13:18:21 | Proxy complete
+11-28-15 13:18:21 | GET detected
+11-28-15 13:18:21 | Using session token
+ 
+11-28-15 13:18:22 | Ok to proxy
+11-28-15 13:18:22 | Proxy complete
+11-28-15 13:18:22 | GET detected
+11-28-15 13:18:22 | Using session token
+ 
+11-28-15 13:18:23 | Ok to proxy
+11-28-15 13:18:23 | Proxy complete
+11-28-15 13:18:23 | GET detected
+11-28-15 13:18:23 | Using session token
+ 
+11-28-15 13:18:24 | Ok to proxy
+11-28-15 13:18:24 | Proxy complete
+11-28-15 13:18:24 | GET detected
+11-28-15 13:18:24 | Using session token
+ 
+11-28-15 13:18:25 | Ok to proxy
+11-28-15 13:18:25 | Proxy complete
+11-28-15 13:18:25 | GET detected
+11-28-15 13:18:25 | Using session token
+ 
+11-28-15 13:18:25 | Ok to proxy
+11-28-15 13:18:25 | Proxy complete
+11-28-15 13:18:25 | GET detected
+11-28-15 13:18:25 | Using session token
+ 
+11-28-15 13:18:26 | Ok to proxy
+11-28-15 13:18:26 | Proxy complete
+11-28-15 13:18:26 | GET detected
+11-28-15 13:18:26 | Using session token
+ 
+11-28-15 13:18:27 | Ok to proxy
+11-28-15 13:18:27 | Proxy complete
+11-28-15 13:18:27 | GET detected
+11-28-15 13:18:27 | Using session token
+ 
+11-28-15 13:18:28 | Ok to proxy
+11-28-15 13:18:28 | Proxy complete
+11-28-15 13:18:28 | GET detected
+11-28-15 13:18:28 | Using session token
+ 
+11-28-15 13:18:29 | Ok to proxy
+11-28-15 13:18:29 | Proxy complete
+11-28-15 13:18:29 | GET detected
+11-28-15 13:18:29 | Using session token
+ 
+11-28-15 13:18:30 | Ok to proxy
+11-28-15 13:18:30 | Proxy complete
+11-28-15 13:18:30 | GET detected
+11-28-15 13:18:30 | Using session token
+ 
+11-28-15 13:18:31 | Ok to proxy
+11-28-15 13:18:31 | Proxy complete
+11-28-15 13:18:31 | GET detected
+11-28-15 13:18:31 | Using session token
+ 
+11-28-15 13:18:31 | Ok to proxy
+11-28-15 13:18:31 | Proxy complete
+11-28-15 13:18:31 | GET detected
+11-28-15 13:18:31 | Using session token
+ 
+11-28-15 13:18:32 | Ok to proxy
+11-28-15 13:18:32 | Proxy complete
+11-28-15 13:18:32 | GET detected
+11-28-15 13:18:32 | Using session token
+ 
+11-28-15 13:18:33 | Ok to proxy
+11-28-15 13:18:33 | Proxy complete
+11-28-15 13:18:33 | GET detected
+11-28-15 13:18:33 | Using session token
+ 
+11-28-15 13:18:34 | Ok to proxy
+11-28-15 13:18:34 | Proxy complete
+11-28-15 13:18:34 | GET detected
+11-28-15 13:18:34 | Using session token
+ 
+11-28-15 13:18:35 | Ok to proxy
+11-28-15 13:18:35 | Proxy complete
+11-28-15 13:18:35 | GET detected
+11-28-15 13:18:35 | Using session token
+ 
+11-28-15 13:18:36 | Ok to proxy
+11-28-15 13:18:36 | Proxy complete
+11-28-15 13:18:36 | GET detected
+11-28-15 13:18:36 | Using session token
+ 
+11-28-15 13:18:37 | Ok to proxy
+11-28-15 13:18:37 | Proxy complete
+11-28-15 13:18:37 | GET detected
+11-28-15 13:18:37 | Using session token
+ 
+11-28-15 13:18:37 | Ok to proxy
+11-28-15 13:18:37 | Proxy complete
+11-28-15 13:18:37 | GET detected
+11-28-15 13:18:37 | Using session token
+ 
+11-28-15 13:18:38 | Ok to proxy
+11-28-15 13:18:38 | Proxy complete
+11-28-15 13:18:38 | GET detected
+11-28-15 13:18:38 | Using session token
+ 
+11-28-15 13:18:39 | Ok to proxy
+11-28-15 13:18:39 | Proxy complete
+11-28-15 13:18:39 | GET detected
+11-28-15 13:18:39 | Using session token
+ 
+11-28-15 13:18:40 | Ok to proxy
+11-28-15 13:18:40 | Proxy complete
+11-28-15 13:18:40 | GET detected
+11-28-15 13:18:40 | Using session token
+ 
+11-28-15 13:18:41 | Ok to proxy
+11-28-15 13:18:41 | Proxy complete
+11-28-15 13:18:41 | GET detected
+11-28-15 13:18:41 | Using session token
+ 
+11-28-15 13:18:42 | Ok to proxy
+11-28-15 13:18:42 | Proxy complete
+11-28-15 13:18:42 | GET detected
+11-28-15 13:18:42 | Using session token
+ 
+11-28-15 13:18:43 | Ok to proxy
+11-28-15 13:18:43 | Proxy complete
+11-28-15 13:18:43 | GET detected
+11-28-15 13:18:43 | Using session token
+ 
+11-28-15 13:18:44 | Ok to proxy
+11-28-15 13:18:44 | Proxy complete
+11-28-15 13:18:44 | GET detected
+11-28-15 13:18:44 | Using session token
+ 
+11-28-15 13:18:44 | Ok to proxy
+11-28-15 13:18:44 | Proxy complete
+11-28-15 13:18:44 | GET detected
+11-28-15 13:18:44 | Using session token
+ 
+11-28-15 13:18:45 | Ok to proxy
+11-28-15 13:18:45 | Proxy complete
+11-28-15 13:18:45 | GET detected
+11-28-15 13:18:45 | Using session token
+ 
+11-28-15 13:18:46 | Ok to proxy
+11-28-15 13:18:46 | Proxy complete
+11-28-15 13:18:46 | GET detected
+11-28-15 13:18:46 | Using session token
+ 
+11-28-15 13:18:47 | Ok to proxy
+11-28-15 13:18:47 | Proxy complete
+11-28-15 13:18:47 | GET detected
+11-28-15 13:18:47 | Using session token
+ 
+11-28-15 13:18:48 | Ok to proxy
+11-28-15 13:18:48 | Proxy complete
+11-28-15 13:18:48 | GET detected
+11-28-15 13:18:48 | Using session token
+ 
+11-28-15 13:18:49 | Ok to proxy
+11-28-15 13:18:49 | Proxy complete
+11-28-15 13:18:49 | GET detected
+11-28-15 13:18:49 | Using session token
+ 
+11-28-15 13:18:50 | Ok to proxy
+11-28-15 13:18:50 | Proxy complete
+11-28-15 13:18:50 | GET detected
+11-28-15 13:18:50 | Using session token
+ 
+11-28-15 13:18:50 | Ok to proxy
+11-28-15 13:18:50 | Proxy complete
+11-28-15 13:18:50 | GET detected
+11-28-15 13:18:50 | Using session token
+ 
+11-28-15 13:18:51 | Ok to proxy
+11-28-15 13:18:51 | Proxy complete
+11-28-15 13:18:51 | GET detected
+11-28-15 13:18:51 | Using session token
+ 
+11-28-15 13:18:52 | Ok to proxy
+11-28-15 13:18:52 | Proxy complete
+11-28-15 13:18:52 | GET detected
+11-28-15 13:18:52 | Using session token
+ 
+11-28-15 13:18:53 | Ok to proxy
+11-28-15 13:18:53 | Proxy complete
+11-28-15 13:18:53 | GET detected
+11-28-15 13:18:53 | Using session token
+ 
+11-28-15 13:18:54 | Ok to proxy
+11-28-15 13:18:54 | Proxy complete
+11-28-15 13:18:54 | GET detected
+11-28-15 13:18:54 | Using session token
+ 
+11-28-15 13:18:55 | Ok to proxy
+11-28-15 13:18:55 | Proxy complete
+11-28-15 13:18:55 | GET detected
+11-28-15 13:18:55 | Using session token
+ 
+11-28-15 13:18:55 | Ok to proxy
+11-28-15 13:18:55 | Proxy complete
+11-28-15 13:18:55 | GET detected
+11-28-15 13:18:55 | Using session token
+ 
+11-28-15 13:18:56 | Ok to proxy
+11-28-15 13:18:56 | Proxy complete
+11-28-15 13:18:56 | GET detected
+11-28-15 13:18:56 | Using session token
+ 
+11-28-15 13:18:57 | Ok to proxy
+11-28-15 13:18:57 | Proxy complete
+11-28-15 13:18:57 | GET detected
+11-28-15 13:18:57 | Using session token
+ 
+11-28-15 13:18:58 | Ok to proxy
+11-28-15 13:18:58 | Proxy complete
+11-28-15 13:18:58 | GET detected
+11-28-15 13:18:58 | Using session token
+ 
+11-28-15 13:18:59 | Ok to proxy
+11-28-15 13:18:59 | Proxy complete
+11-28-15 13:18:59 | GET detected
+11-28-15 13:18:59 | Using session token
+11-28-15 13:19:00 | Ok to proxy
+11-28-15 13:19:00 | Proxy complete
+11-28-15 13:19:00 | GET detected
+11-28-15 13:19:00 | Using session token
+11-28-15 13:19:01 | Ok to proxy
+11-28-15 13:19:01 | Proxy complete
+11-28-15 13:19:01 | GET detected
+11-28-15 13:19:01 | Using session token
+11-28-15 13:19:02 | Ok to proxy
+11-28-15 13:19:02 | Proxy complete
+11-28-15 13:19:02 | GET detected
+11-28-15 13:19:02 | Using session token
+11-28-15 13:19:03 | Ok to proxy
+11-28-15 13:19:03 | Proxy complete
+11-28-15 13:19:03 | GET detected
+11-28-15 13:19:03 | Resource using OAuth
+11-28-15 13:19:03 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:19:04 | Ok to proxy
+11-28-15 13:19:04 | Proxy complete
+ 
+11-28-15 13:28:32 | GET detected
+11-28-15 13:28:32 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:28:57 | GET detected
+11-28-15 13:28:57 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:28:59 | GET detected
+11-28-15 13:28:59 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:29:20 | GET detected
+11-28-15 13:29:20 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:29:29 | GET detected
+11-28-15 13:29:29 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:29:40 | GET detected
+11-28-15 13:29:40 | Using session token
+11-28-15 13:29:41 | Ok to proxy
+11-28-15 13:29:41 | Proxy complete
+ 
+11-28-15 13:30:12 | GET detected
+11-28-15 13:30:12 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:31:01 | GET detected
+11-28-15 13:31:01 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:31:02 | GET detected
+11-28-15 13:31:02 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:31:08 | GET detected
+11-28-15 13:31:08 | Resource using OAuth
+11-28-15 13:31:09 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:31:10 | Ok to proxy
+11-28-15 13:31:10 | Proxy complete
+ 
+11-28-15 13:31:17 | GET detected
+11-28-15 13:31:17 | Using session token
+11-28-15 13:31:19 | Ok to proxy
+11-28-15 13:31:19 | Proxy complete
+ 
+11-28-15 13:31:21 | GET detected
+11-28-15 13:31:21 | Using session token
+11-28-15 13:31:21 | Ok to proxy
+11-28-15 13:31:21 | Proxy complete
+ 
+11-28-15 13:31:21 | GET detected
+11-28-15 13:31:21 | Using session token
+11-28-15 13:31:21 | Ok to proxy
+11-28-15 13:31:21 | Proxy complete
+ 
+11-28-15 13:31:21 | GET detected
+11-28-15 13:31:21 | Resource using OAuth
+11-28-15 13:31:22 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:31:23 | Ok to proxy
+11-28-15 13:31:23 | Proxy complete
+ 
+11-28-15 13:31:23 | GET detected
+11-28-15 13:31:23 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:31:23 | GET detected
+11-28-15 13:31:23 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:31:23 | GET detected
+11-28-15 13:31:23 | Using session token
+ 
+ 
+ 
+ 
+ 
+11-28-15 13:31:24 | Ok to proxy
+11-28-15 13:31:24 | Proxy complete
+11-28-15 13:31:24 | GET detected
+11-28-15 13:31:24 | Using session token
+ 
+11-28-15 13:31:25 | Ok to proxy
+11-28-15 13:31:25 | Proxy complete
+11-28-15 13:31:25 | GET detected
+11-28-15 13:31:25 | Using session token
+ 
+11-28-15 13:31:25 | Ok to proxy
+11-28-15 13:31:25 | Proxy complete
+11-28-15 13:31:25 | GET detected
+11-28-15 13:31:25 | Using session token
+ 
+11-28-15 13:31:26 | Ok to proxy
+11-28-15 13:31:26 | Proxy complete
+11-28-15 13:31:26 | GET detected
+11-28-15 13:31:26 | Using session token
+11-28-15 13:31:26 | Ok to proxy
+11-28-15 13:31:26 | Proxy complete
+11-28-15 13:31:26 | GET detected
+11-28-15 13:31:26 | Using session token
+ 
+ 
+11-28-15 13:31:27 | Ok to proxy
+11-28-15 13:31:27 | Proxy complete
+11-28-15 13:31:27 | GET detected
+11-28-15 13:31:27 | Using session token
+ 
+11-28-15 13:31:27 | Ok to proxy
+11-28-15 13:31:27 | Proxy complete
+11-28-15 13:31:27 | GET detected
+11-28-15 13:31:27 | Using session token
+ 
+11-28-15 13:31:27 | Ok to proxy
+11-28-15 13:31:27 | Proxy complete
+11-28-15 13:31:27 | GET detected
+11-28-15 13:31:27 | Using session token
+ 
+11-28-15 13:31:28 | Ok to proxy
+11-28-15 13:31:28 | Proxy complete
+11-28-15 13:31:28 | GET detected
+11-28-15 13:31:28 | Using session token
+ 
+11-28-15 13:31:28 | Ok to proxy
+11-28-15 13:31:28 | Proxy complete
+11-28-15 13:31:28 | GET detected
+11-28-15 13:31:28 | Using session token
+ 
+11-28-15 13:31:29 | Ok to proxy
+11-28-15 13:31:29 | Proxy complete
+11-28-15 13:31:29 | GET detected
+11-28-15 13:31:29 | Using session token
+ 
+11-28-15 13:31:29 | Ok to proxy
+11-28-15 13:31:29 | Proxy complete
+11-28-15 13:31:29 | GET detected
+11-28-15 13:31:29 | Using session token
+ 
+11-28-15 13:31:30 | Ok to proxy
+11-28-15 13:31:30 | Proxy complete
+11-28-15 13:31:30 | GET detected
+11-28-15 13:31:30 | Using session token
+ 
+11-28-15 13:31:30 | Ok to proxy
+11-28-15 13:31:30 | Proxy complete
+11-28-15 13:31:30 | GET detected
+11-28-15 13:31:30 | Resource using OAuth
+ 
+11-28-15 13:31:31 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:31:32 | Ok to proxy
+11-28-15 13:31:32 | Proxy complete
+11-28-15 13:31:32 | GET detected
+11-28-15 13:31:32 | Resource using OAuth
+ 
+11-28-15 13:31:33 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:31:34 | Ok to proxy
+11-28-15 13:31:34 | Proxy complete
+11-28-15 13:31:34 | GET detected
+11-28-15 13:31:34 | Resource using OAuth
+ 
+11-28-15 13:31:35 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:31:36 | Ok to proxy
+11-28-15 13:31:36 | Proxy complete
+11-28-15 13:31:36 | GET detected
+11-28-15 13:31:36 | Resource using OAuth
+ 
+11-28-15 13:31:36 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:31:37 | Ok to proxy
+11-28-15 13:31:37 | Proxy complete
+11-28-15 13:31:37 | GET detected
+11-28-15 13:31:37 | Resource using OAuth
+ 
+11-28-15 13:31:38 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:31:39 | Ok to proxy
+11-28-15 13:31:39 | Proxy complete
+11-28-15 13:31:39 | GET detected
+11-28-15 13:31:39 | Resource using OAuth
+ 
+11-28-15 13:31:39 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:31:40 | Ok to proxy
+11-28-15 13:31:40 | Proxy complete
+11-28-15 13:31:40 | GET detected
+11-28-15 13:31:40 | Resource using OAuth
+ 
+11-28-15 13:31:41 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:31:42 | Ok to proxy
+11-28-15 13:31:42 | Proxy complete
+11-28-15 13:31:42 | GET detected
+11-28-15 13:31:42 | Proxy could not resolve requested url - https://tiles.arcgis.com/tiles/4yjifSiIG17X0gW4/arcgis/rest/services/Senior_Population_Global_Dataset/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-28-15 13:31:42 | GET detected
+11-28-15 13:31:42 | Using session token
+ 
+ 
+11-28-15 13:31:43 | Ok to proxy
+11-28-15 13:31:43 | Proxy complete
+11-28-15 13:31:43 | GET detected
+11-28-15 13:31:43 | Using session token
+ 
+11-28-15 13:31:44 | Ok to proxy
+11-28-15 13:31:44 | Proxy complete
+11-28-15 13:31:44 | GET detected
+11-28-15 13:31:44 | Using session token
+ 
+11-28-15 13:31:44 | Ok to proxy
+11-28-15 13:31:44 | Proxy complete
+11-28-15 13:31:44 | GET detected
+11-28-15 13:31:44 | Using session token
+ 
+11-28-15 13:31:45 | Ok to proxy
+11-28-15 13:31:45 | Proxy complete
+11-28-15 13:31:45 | GET detected
+11-28-15 13:31:45 | Using session token
+ 
+11-28-15 13:31:46 | Ok to proxy
+11-28-15 13:31:46 | Proxy complete
+11-28-15 13:31:46 | GET detected
+11-28-15 13:31:46 | Using session token
+ 
+11-28-15 13:31:46 | Ok to proxy
+11-28-15 13:31:46 | Proxy complete
+11-28-15 13:31:46 | GET detected
+11-28-15 13:31:46 | Using session token
+ 
+11-28-15 13:31:47 | Ok to proxy
+11-28-15 13:31:47 | Proxy complete
+11-28-15 13:31:47 | GET detected
+11-28-15 13:31:47 | Using session token
+11-28-15 13:31:47 | Ok to proxy
+11-28-15 13:31:47 | Proxy complete
+11-28-15 13:31:47 | GET detected
+11-28-15 13:31:47 | Using session token
+11-28-15 13:31:48 | Ok to proxy
+11-28-15 13:31:48 | Proxy complete
+11-28-15 13:31:48 | GET detected
+11-28-15 13:31:48 | Using session token
+11-28-15 13:31:48 | Ok to proxy
+11-28-15 13:31:48 | Proxy complete
+11-28-15 13:31:48 | GET detected
+11-28-15 13:31:48 | Using session token
+11-28-15 13:31:49 | Ok to proxy
+11-28-15 13:31:49 | Proxy complete
+11-28-15 13:31:49 | GET detected
+11-28-15 13:31:49 | Using session token
+11-28-15 13:31:49 | Ok to proxy
+11-28-15 13:31:49 | Proxy complete
+ 
+11-28-15 13:31:50 | GET detected
+11-28-15 13:31:50 | Using session token
+11-28-15 13:31:50 | Ok to proxy
+11-28-15 13:31:50 | Proxy complete
+ 
+11-28-15 13:31:50 | GET detected
+11-28-15 13:31:50 | Using session token
+11-28-15 13:31:50 | Ok to proxy
+11-28-15 13:31:50 | Proxy complete
+ 
+11-28-15 13:31:50 | GET detected
+11-28-15 13:31:50 | Resource using OAuth
+11-28-15 13:31:51 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:31:52 | Ok to proxy
+11-28-15 13:31:52 | Proxy complete
+ 
+11-28-15 13:31:52 | GET detected
+11-28-15 13:31:52 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:31:52 | GET detected
+11-28-15 13:31:52 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-28-15 13:31:52 | GET detected
+11-28-15 13:31:52 | Using session token
+ 
+ 
+ 
+ 
+ 
+11-28-15 13:31:53 | Ok to proxy
+11-28-15 13:31:53 | Proxy complete
+11-28-15 13:31:53 | GET detected
+11-28-15 13:31:53 | Using session token
+ 
+11-28-15 13:31:54 | Ok to proxy
+11-28-15 13:31:54 | Proxy complete
+11-28-15 13:31:54 | GET detected
+11-28-15 13:31:54 | Using session token
+ 
+11-28-15 13:31:54 | Ok to proxy
+11-28-15 13:31:54 | Proxy complete
+11-28-15 13:31:54 | GET detected
+11-28-15 13:31:54 | Using session token
+ 
+11-28-15 13:31:55 | Ok to proxy
+11-28-15 13:31:55 | Proxy complete
+11-28-15 13:31:55 | GET detected
+11-28-15 13:31:55 | Using session token
+11-28-15 13:31:55 | Ok to proxy
+11-28-15 13:31:55 | Proxy complete
+11-28-15 13:31:55 | GET detected
+11-28-15 13:31:55 | Using session token
+ 
+ 
+11-28-15 13:31:55 | Ok to proxy
+11-28-15 13:31:55 | Proxy complete
+11-28-15 13:31:55 | GET detected
+11-28-15 13:31:55 | Using session token
+ 
+11-28-15 13:31:56 | Ok to proxy
+11-28-15 13:31:56 | Proxy complete
+11-28-15 13:31:56 | GET detected
+11-28-15 13:31:56 | Using session token
+ 
+11-28-15 13:31:57 | Ok to proxy
+11-28-15 13:31:57 | Proxy complete
+11-28-15 13:31:57 | GET detected
+11-28-15 13:31:57 | Using session token
+ 
+11-28-15 13:31:57 | Ok to proxy
+11-28-15 13:31:57 | Proxy complete
+11-28-15 13:31:57 | GET detected
+11-28-15 13:31:57 | Using session token
+ 
+11-28-15 13:31:57 | Ok to proxy
+11-28-15 13:31:57 | Proxy complete
+11-28-15 13:31:57 | GET detected
+11-28-15 13:31:57 | Using session token
+ 
+11-28-15 13:31:58 | Ok to proxy
+11-28-15 13:31:58 | Proxy complete
+11-28-15 13:31:58 | GET detected
+11-28-15 13:31:58 | Using session token
+ 
+11-28-15 13:31:58 | Ok to proxy
+11-28-15 13:31:58 | Proxy complete
+11-28-15 13:31:58 | GET detected
+11-28-15 13:31:58 | Using session token
+ 
+11-28-15 13:31:59 | Ok to proxy
+11-28-15 13:31:59 | Proxy complete
+11-28-15 13:31:59 | GET detected
+11-28-15 13:31:59 | Using session token
+ 
+11-28-15 13:31:59 | Ok to proxy
+11-28-15 13:31:59 | Proxy complete
+11-28-15 13:31:59 | GET detected
+11-28-15 13:31:59 | Resource using OAuth
+ 
+11-28-15 13:32:00 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:32:00 | Ok to proxy
+11-28-15 13:32:00 | Proxy complete
+11-28-15 13:32:00 | GET detected
+11-28-15 13:32:00 | Resource using OAuth
+ 
+11-28-15 13:32:01 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:32:01 | Ok to proxy
+11-28-15 13:32:01 | Proxy complete
+11-28-15 13:32:01 | GET detected
+11-28-15 13:32:01 | Resource using OAuth
+ 
+11-28-15 13:32:02 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:32:03 | Ok to proxy
+11-28-15 13:32:03 | Proxy complete
+11-28-15 13:32:03 | GET detected
+11-28-15 13:32:03 | Resource using OAuth
+ 
+11-28-15 13:32:04 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:32:04 | Ok to proxy
+11-28-15 13:32:04 | Proxy complete
+11-28-15 13:32:05 | GET detected
+11-28-15 13:32:05 | Resource using OAuth
+ 
+11-28-15 13:32:05 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:32:06 | Ok to proxy
+11-28-15 13:32:06 | Proxy complete
+11-28-15 13:32:06 | GET detected
+11-28-15 13:32:06 | Resource using OAuth
+ 
+11-28-15 13:32:07 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:32:07 | Ok to proxy
+11-28-15 13:32:07 | Proxy complete
+11-28-15 13:32:07 | GET detected
+11-28-15 13:32:07 | Resource using OAuth
+ 
+11-28-15 13:32:08 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:32:12 | Ok to proxy
+11-28-15 13:32:12 | Proxy complete
+11-28-15 13:32:12 | GET detected
+11-28-15 13:32:12 | Proxy could not resolve requested url - https://tiles.arcgis.com/tiles/4yjifSiIG17X0gW4/arcgis/rest/services/Senior_Population_Global_Dataset/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-28-15 13:32:12 | GET detected
+11-28-15 13:32:12 | Using session token
+ 
+ 
+11-28-15 13:32:14 | Ok to proxy
+11-28-15 13:32:14 | Proxy complete
+11-28-15 13:32:14 | GET detected
+11-28-15 13:32:14 | Using session token
+ 
+11-28-15 13:32:15 | Ok to proxy
+11-28-15 13:32:15 | Proxy complete
+11-28-15 13:32:15 | GET detected
+11-28-15 13:32:15 | Using session token
+ 
+11-28-15 13:32:15 | Ok to proxy
+11-28-15 13:32:15 | Proxy complete
+11-28-15 13:32:15 | GET detected
+11-28-15 13:32:15 | Using session token
+ 
+11-28-15 13:32:16 | Ok to proxy
+11-28-15 13:32:16 | Proxy complete
+11-28-15 13:32:16 | GET detected
+11-28-15 13:32:16 | Using session token
+ 
+11-28-15 13:32:16 | Ok to proxy
+11-28-15 13:32:16 | Proxy complete
+11-28-15 13:32:16 | GET detected
+11-28-15 13:32:16 | Using session token
+ 
+11-28-15 13:32:17 | Ok to proxy
+11-28-15 13:32:17 | Proxy complete
+11-28-15 13:32:17 | GET detected
+11-28-15 13:32:17 | Using session token
+ 
+11-28-15 13:32:17 | Ok to proxy
+11-28-15 13:32:17 | Proxy complete
+11-28-15 13:32:17 | GET detected
+11-28-15 13:32:17 | Using session token
+11-28-15 13:32:18 | Ok to proxy
+11-28-15 13:32:18 | Proxy complete
+11-28-15 13:32:18 | GET detected
+11-28-15 13:32:18 | Using session token
+11-28-15 13:32:18 | Ok to proxy
+11-28-15 13:32:18 | Proxy complete
+11-28-15 13:32:18 | GET detected
+11-28-15 13:32:18 | Using session token
+11-28-15 13:32:19 | Ok to proxy
+11-28-15 13:32:19 | Proxy complete
+11-28-15 13:32:19 | GET detected
+11-28-15 13:32:19 | Using session token
+11-28-15 13:32:19 | Ok to proxy
+11-28-15 13:32:19 | Proxy complete
+11-28-15 13:32:19 | GET detected
+11-28-15 13:32:19 | Using session token
+11-28-15 13:32:19 | Ok to proxy
+11-28-15 13:32:19 | Proxy complete
+ 
+11-28-15 13:32:20 | GET detected
+11-28-15 13:32:20 | Using session token
+ 
+ 
+ 
+ 
+ 
+11-28-15 13:32:20 | Ok to proxy
+11-28-15 13:32:20 | Proxy complete
+11-28-15 13:32:20 | GET detected
+11-28-15 13:32:20 | Using session token
+ 
+11-28-15 13:32:22 | Ok to proxy
+11-28-15 13:32:22 | Proxy complete
+11-28-15 13:32:22 | GET detected
+11-28-15 13:32:22 | Using session token
+11-28-15 13:32:23 | Ok to proxy
+11-28-15 13:32:23 | Proxy complete
+11-28-15 13:32:23 | GET detected
+11-28-15 13:32:23 | Using session token
+ 
+ 
+11-28-15 13:32:30 | Ok to proxy
+11-28-15 13:32:32 | Proxy complete
+11-28-15 13:32:32 | GET detected
+11-28-15 13:32:32 | Using session token
+ 
+11-28-15 13:32:43 | Ok to proxy
+11-28-15 13:32:45 | Proxy complete
+11-28-15 13:32:45 | GET detected
+11-28-15 13:32:45 | Using session token
+ 
+11-28-15 13:32:51 | Ok to proxy
+11-28-15 13:32:51 | GET detected
+11-28-15 13:32:51 | Using session token
+ 
+11-28-15 13:33:03 | Ok to proxy
+11-28-15 13:33:03 | GET detected
+11-28-15 13:33:03 | Using session token
+11-28-15 13:33:06 | Ok to proxy
+11-28-15 13:33:06 | GET detected
+11-28-15 13:33:06 | Using session token
+11-28-15 13:33:10 | Ok to proxy
+11-28-15 13:33:10 | GET detected
+11-28-15 13:33:10 | Using session token
+11-28-15 13:33:14 | Ok to proxy
+11-28-15 13:33:14 | GET detected
+11-28-15 13:33:14 | Using session token
+11-28-15 13:33:17 | Ok to proxy
+11-28-15 13:33:17 | GET detected
+11-28-15 13:33:17 | Using session token
+11-28-15 13:33:17 | Ok to proxy
+11-28-15 13:33:17 | Proxy complete
+ 
+11-28-15 13:33:17 | GET detected
+11-28-15 13:33:17 | Using session token
+11-28-15 13:33:17 | Ok to proxy
+11-28-15 13:33:17 | Proxy complete
+ 
+11-28-15 13:33:17 | GET detected
+11-28-15 13:33:17 | Resource using OAuth
+11-28-15 13:33:18 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:33:19 | Ok to proxy
+11-28-15 13:33:19 | Proxy complete
+ 
+11-28-15 13:33:19 | GET detected
+11-28-15 13:33:19 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+ 
+11-28-15 13:33:19 | GET detected
+11-28-15 13:33:19 | Using session token
+ 
+ 
+ 
+ 
+11-28-15 13:33:20 | Ok to proxy
+11-28-15 13:33:20 | Proxy complete
+11-28-15 13:33:20 | GET detected
+11-28-15 13:33:20 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-28-15 13:33:20 | GET detected
+11-28-15 13:33:20 | Using session token
+ 
+11-28-15 13:33:20 | Ok to proxy
+11-28-15 13:33:20 | Proxy complete
+11-28-15 13:33:20 | GET detected
+11-28-15 13:33:20 | Using session token
+ 
+ 
+11-28-15 13:33:21 | Ok to proxy
+11-28-15 13:33:21 | Proxy complete
+11-28-15 13:33:21 | GET detected
+11-28-15 13:33:21 | Using session token
+ 
+11-28-15 13:33:21 | Ok to proxy
+11-28-15 13:33:21 | Proxy complete
+11-28-15 13:33:21 | GET detected
+11-28-15 13:33:21 | Using session token
+ 
+11-28-15 13:33:21 | Ok to proxy
+11-28-15 13:33:21 | Proxy complete
+11-28-15 13:33:21 | GET detected
+11-28-15 13:33:21 | Using session token
+ 
+11-28-15 13:33:22 | Ok to proxy
+11-28-15 13:33:22 | Proxy complete
+11-28-15 13:33:22 | GET detected
+11-28-15 13:33:22 | Using session token
+ 
+11-28-15 13:33:22 | Ok to proxy
+11-28-15 13:33:22 | Proxy complete
+11-28-15 13:33:22 | GET detected
+11-28-15 13:33:22 | Using session token
+ 
+11-28-15 13:33:23 | Ok to proxy
+11-28-15 13:33:23 | Proxy complete
+11-28-15 13:33:23 | GET detected
+11-28-15 13:33:23 | Using session token
+ 
+11-28-15 13:33:23 | Ok to proxy
+11-28-15 13:33:23 | Proxy complete
+11-28-15 13:33:23 | GET detected
+11-28-15 13:33:23 | Using session token
+ 
+11-28-15 13:33:23 | Ok to proxy
+11-28-15 13:33:23 | Proxy complete
+11-28-15 13:33:23 | GET detected
+11-28-15 13:33:23 | Using session token
+ 
+11-28-15 13:33:24 | Ok to proxy
+11-28-15 13:33:24 | Proxy complete
+11-28-15 13:33:24 | GET detected
+11-28-15 13:33:24 | Using session token
+ 
+11-28-15 13:33:24 | Ok to proxy
+11-28-15 13:33:24 | Proxy complete
+11-28-15 13:33:24 | GET detected
+11-28-15 13:33:24 | Using session token
+ 
+11-28-15 13:33:25 | Ok to proxy
+11-28-15 13:33:25 | Proxy complete
+11-28-15 13:33:25 | GET detected
+11-28-15 13:33:25 | Using session token
+ 
+11-28-15 13:33:25 | Ok to proxy
+11-28-15 13:33:25 | Proxy complete
+11-28-15 13:33:25 | GET detected
+11-28-15 13:33:25 | Resource using OAuth
+ 
+11-28-15 13:33:26 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:33:27 | Ok to proxy
+11-28-15 13:33:27 | Proxy complete
+11-28-15 13:33:27 | GET detected
+11-28-15 13:33:27 | Resource using OAuth
+ 
+11-28-15 13:33:27 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:33:28 | Ok to proxy
+11-28-15 13:33:28 | Proxy complete
+11-28-15 13:33:28 | GET detected
+11-28-15 13:33:28 | Resource using OAuth
+ 
+11-28-15 13:33:29 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:33:29 | Ok to proxy
+11-28-15 13:33:29 | Proxy complete
+11-28-15 13:33:29 | GET detected
+11-28-15 13:33:29 | Resource using OAuth
+ 
+11-28-15 13:33:30 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:33:31 | Ok to proxy
+11-28-15 13:33:31 | Proxy complete
+11-28-15 13:33:31 | GET detected
+11-28-15 13:33:31 | Resource using OAuth
+ 
+11-28-15 13:33:31 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:33:32 | Ok to proxy
+11-28-15 13:33:32 | Proxy complete
+11-28-15 13:33:32 | GET detected
+11-28-15 13:33:32 | Resource using OAuth
+ 
+11-28-15 13:33:32 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:33:33 | Ok to proxy
+11-28-15 13:33:33 | Proxy complete
+11-28-15 13:33:33 | GET detected
+11-28-15 13:33:33 | Resource using OAuth
+ 
+11-28-15 13:33:34 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-28-15 13:33:34 | Ok to proxy
+11-28-15 13:33:34 | Proxy complete
+11-28-15 13:33:34 | GET detected
+11-28-15 13:33:34 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-28-15 13:33:34 | GET detected
+11-28-15 13:33:34 | Proxy could not resolve requested url - https://tiles.arcgis.com/tiles/4yjifSiIG17X0gW4/arcgis/rest/services/Senior_Population_Global_Dataset/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-28-15 13:33:34 | GET detected
+11-28-15 13:33:34 | Using session token
+ 
+ 
+ 
+11-28-15 13:33:36 | Ok to proxy
+11-28-15 13:33:36 | Proxy complete
+11-28-15 13:33:36 | GET detected
+11-28-15 13:33:36 | Using session token
+ 
+11-28-15 13:33:36 | Ok to proxy
+11-28-15 13:33:36 | Proxy complete
+11-28-15 13:33:36 | GET detected
+11-28-15 13:33:36 | Using session token
+ 
+11-28-15 13:33:37 | Ok to proxy
+11-28-15 13:33:37 | Proxy complete
+11-28-15 13:33:37 | GET detected
+11-28-15 13:33:37 | Using session token
+ 
+11-28-15 13:33:37 | Ok to proxy
+11-28-15 13:33:37 | Proxy complete
+11-28-15 13:33:37 | GET detected
+11-28-15 13:33:37 | Using session token
+ 
+11-28-15 13:33:38 | Ok to proxy
+11-28-15 13:33:38 | Proxy complete
+11-28-15 13:33:38 | GET detected
+11-28-15 13:33:38 | Using session token
+ 
+11-28-15 13:33:38 | Ok to proxy
+11-28-15 13:33:38 | Proxy complete
+11-28-15 13:33:38 | GET detected
+11-28-15 13:33:38 | Using session token
+ 
+11-28-15 13:33:39 | Ok to proxy
+11-28-15 13:33:39 | Proxy complete
+11-28-15 13:33:39 | GET detected
+11-28-15 13:33:39 | Using session token
+11-28-15 13:33:39 | Ok to proxy
+11-28-15 13:33:39 | Proxy complete
+11-28-15 13:33:39 | GET detected
+11-28-15 13:33:39 | Using session token
+11-28-15 13:33:40 | Ok to proxy
+11-28-15 13:33:40 | Proxy complete
+11-28-15 13:33:40 | GET detected
+11-28-15 13:33:40 | Using session token
+11-28-15 13:33:40 | Ok to proxy
+11-28-15 13:33:40 | Proxy complete
+11-28-15 13:33:40 | GET detected
+11-28-15 13:33:40 | Using session token
+11-28-15 13:33:41 | Ok to proxy
+11-28-15 13:33:41 | Proxy complete
+11-28-15 13:33:41 | GET detected
+11-28-15 13:33:41 | Using session token
+11-28-15 13:33:41 | Ok to proxy
+11-28-15 13:33:41 | Proxy complete
+ 
+11-28-15 13:33:41 | GET detected
+11-28-15 13:33:41 | Using session token
+ 
+ 
+ 
+ 
+ 
+11-28-15 13:33:42 | Ok to proxy
+11-28-15 13:33:42 | Proxy complete
+11-28-15 13:33:42 | GET detected
+11-28-15 13:33:42 | Using session token
+ 
+11-28-15 13:33:43 | Ok to proxy
+11-28-15 13:33:43 | Proxy complete
+11-28-15 13:33:43 | GET detected
+11-28-15 13:33:43 | Using session token
+11-28-15 13:33:45 | Ok to proxy
+11-28-15 13:33:45 | Proxy complete
+11-28-15 13:33:45 | GET detected
+11-28-15 13:33:45 | Using session token
+ 
+11-28-15 13:33:46 | Ok to proxy
+ 
+11-28-15 13:33:48 | GET detected
+11-28-15 13:33:48 | Using session token
+11-28-15 13:33:51 | Ok to proxy
+11-28-15 13:33:51 | GET detected
+11-28-15 13:33:51 | Using session token
+ 
+11-28-15 13:33:52 | Ok to proxy
+11-28-15 13:33:52 | GET detected
+11-28-15 13:33:52 | Using session token
+11-28-15 13:33:54 | Ok to proxy
+11-28-15 13:33:54 | GET detected
+11-28-15 13:33:54 | Using session token
+11-28-15 13:33:55 | Ok to proxy
+11-28-15 13:33:55 | GET detected
+11-28-15 13:33:55 | Using session token
+11-28-15 13:33:58 | Ok to proxy
+11-28-15 13:33:58 | GET detected
+11-28-15 13:33:58 | Using session token
+11-28-15 13:33:58 | Ok to proxy
+11-28-15 13:33:58 | Proxy complete
+ 
+11-28-15 13:33:58 | GET detected
+11-28-15 13:33:58 | Using session token
+11-28-15 13:33:59 | Ok to proxy
+11-28-15 13:33:59 | Proxy complete
+ 
+11-28-15 13:34:32 | GET detected
+11-28-15 13:34:32 | Using session token
+11-28-15 13:34:32 | Ok to proxy
+11-28-15 13:34:32 | Proxy complete
+ 
+11-28-15 13:34:32 | GET detected
+11-28-15 13:34:32 | Using session token
+11-28-15 13:34:33 | Ok to proxy
+11-28-15 13:34:33 | Proxy complete
+ 
+11-30-15 14:18:59 | GET detected
+11-30-15 14:18:59 | Using session token
+11-30-15 14:19:00 | Authorization failed : {"error":{"code":498,"message":"Invalid token.","details":[]}}
+11-30-15 14:19:00 | Retry attempt 1 of 3
+11-30-15 14:19:00 | Resource using OAuth
+11-30-15 14:19:01 | Exchanging portal token for server-specific token for http://www.arcgis.com
+11-30-15 14:19:01 | Adding token to session
+11-30-15 14:19:01 | Using session token
+11-30-15 14:19:01 | Ok to proxy
+11-30-15 14:19:01 | Proxy complete
+ 
+11-30-15 14:19:01 | GET detected
+11-30-15 14:19:01 | Using session token
+11-30-15 14:19:02 | Ok to proxy
+11-30-15 14:19:02 | Proxy complete
+ 
+11-30-15 14:19:10 | GET detected
+11-30-15 14:19:10 | Using session token
+11-30-15 14:19:10 | Ok to proxy
+11-30-15 14:19:10 | Proxy complete
+ 
+11-30-15 14:19:10 | GET detected
+11-30-15 14:19:10 | Using session token
+11-30-15 14:19:11 | Ok to proxy
+11-30-15 14:19:11 | Proxy complete
+ 
+11-30-15 14:19:22 | GET detected
+11-30-15 14:19:22 | Using session token
+11-30-15 14:19:22 | Ok to proxy
+11-30-15 14:19:22 | Proxy complete
+ 
+11-30-15 14:19:22 | GET detected
+11-30-15 14:19:22 | Using session token
+11-30-15 14:19:23 | Ok to proxy
+11-30-15 14:19:23 | Proxy complete
+ 
+11-30-15 14:20:04 | GET detected
+11-30-15 14:20:04 | Using session token
+11-30-15 14:20:04 | Ok to proxy
+11-30-15 14:20:04 | Proxy complete
+ 
+11-30-15 14:20:04 | GET detected
+11-30-15 14:20:04 | Using session token
+11-30-15 14:20:04 | Ok to proxy
+11-30-15 14:20:04 | Proxy complete
+ 
+11-30-15 14:20:04 | GET detected
+11-30-15 14:20:04 | Resource using OAuth
+11-30-15 14:20:05 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:20:07 | Ok to proxy
+11-30-15 14:20:07 | Proxy complete
+ 
+11-30-15 14:20:07 | GET detected
+11-30-15 14:20:07 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-30-15 14:20:07 | GET detected
+11-30-15 14:20:07 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-30-15 14:20:07 | GET detected
+11-30-15 14:20:07 | Using session token
+ 
+ 
+ 
+ 
+ 
+11-30-15 14:20:08 | Ok to proxy
+11-30-15 14:20:08 | Proxy complete
+11-30-15 14:20:08 | GET detected
+11-30-15 14:20:08 | Using session token
+ 
+11-30-15 14:20:09 | Ok to proxy
+11-30-15 14:20:09 | Proxy complete
+11-30-15 14:20:09 | GET detected
+11-30-15 14:20:09 | Using session token
+ 
+11-30-15 14:20:09 | Ok to proxy
+11-30-15 14:20:09 | Proxy complete
+11-30-15 14:20:09 | GET detected
+11-30-15 14:20:09 | Using session token
+ 
+11-30-15 14:20:10 | Ok to proxy
+11-30-15 14:20:10 | Proxy complete
+11-30-15 14:20:10 | GET detected
+11-30-15 14:20:10 | Using session token
+ 
+11-30-15 14:20:10 | Ok to proxy
+11-30-15 14:20:10 | Proxy complete
+11-30-15 14:20:10 | GET detected
+11-30-15 14:20:10 | Using session token
+ 
+11-30-15 14:20:11 | Ok to proxy
+11-30-15 14:20:11 | Proxy complete
+11-30-15 14:20:11 | GET detected
+11-30-15 14:20:11 | Using session token
+ 
+11-30-15 14:20:11 | Ok to proxy
+11-30-15 14:20:11 | Proxy complete
+11-30-15 14:20:11 | GET detected
+11-30-15 14:20:11 | Using session token
+ 
+11-30-15 14:20:12 | Ok to proxy
+11-30-15 14:20:12 | Proxy complete
+11-30-15 14:20:12 | GET detected
+11-30-15 14:20:12 | Using session token
+ 
+11-30-15 14:20:12 | Ok to proxy
+11-30-15 14:20:12 | Proxy complete
+11-30-15 14:20:12 | GET detected
+11-30-15 14:20:12 | Using session token
+ 
+11-30-15 14:20:12 | Ok to proxy
+11-30-15 14:20:12 | Proxy complete
+11-30-15 14:20:12 | GET detected
+11-30-15 14:20:12 | Using session token
+ 
+11-30-15 14:20:14 | Ok to proxy
+11-30-15 14:20:14 | Proxy complete
+11-30-15 14:20:14 | GET detected
+11-30-15 14:20:14 | Using session token
+ 
+11-30-15 14:20:14 | Ok to proxy
+11-30-15 14:20:14 | Proxy complete
+11-30-15 14:20:14 | GET detected
+11-30-15 14:20:14 | Using session token
+ 
+11-30-15 14:20:15 | Ok to proxy
+11-30-15 14:20:15 | Proxy complete
+11-30-15 14:20:15 | GET detected
+11-30-15 14:20:15 | Using session token
+ 
+11-30-15 14:20:15 | Ok to proxy
+11-30-15 14:20:15 | Proxy complete
+11-30-15 14:20:15 | GET detected
+11-30-15 14:20:15 | Resource using OAuth
+ 
+11-30-15 14:20:16 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:20:16 | Ok to proxy
+11-30-15 14:20:16 | Proxy complete
+11-30-15 14:20:16 | GET detected
+11-30-15 14:20:16 | Resource using OAuth
+ 
+11-30-15 14:20:17 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:20:17 | Ok to proxy
+11-30-15 14:20:17 | Proxy complete
+11-30-15 14:20:17 | GET detected
+11-30-15 14:20:17 | Resource using OAuth
+ 
+11-30-15 14:20:18 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:20:19 | Ok to proxy
+11-30-15 14:20:19 | Proxy complete
+11-30-15 14:20:19 | GET detected
+11-30-15 14:20:19 | Resource using OAuth
+ 
+11-30-15 14:20:19 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:20:20 | Ok to proxy
+11-30-15 14:20:20 | Proxy complete
+11-30-15 14:20:20 | GET detected
+11-30-15 14:20:20 | Resource using OAuth
+ 
+11-30-15 14:20:20 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:20:21 | Ok to proxy
+11-30-15 14:20:21 | Proxy complete
+11-30-15 14:20:21 | GET detected
+11-30-15 14:20:21 | Resource using OAuth
+ 
+11-30-15 14:20:22 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:20:22 | Ok to proxy
+11-30-15 14:20:22 | Proxy complete
+11-30-15 14:20:22 | GET detected
+11-30-15 14:20:22 | Resource using OAuth
+ 
+11-30-15 14:20:23 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:20:24 | Ok to proxy
+11-30-15 14:20:24 | Proxy complete
+11-30-15 14:20:24 | GET detected
+11-30-15 14:20:24 | Proxy could not resolve requested url - https://tiles.arcgis.com/tiles/4yjifSiIG17X0gW4/arcgis/rest/services/Senior_Population_Global_Dataset/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-30-15 14:20:24 | GET detected
+11-30-15 14:20:24 | Using session token
+ 
+ 
+11-30-15 14:20:24 | Authorization failed : dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({"error":{"code":498,"message":"Invalid Token","details":[]}});
+11-30-15 14:20:24 | Retry attempt 1 of 3
+11-30-15 14:20:24 | Resource using OAuth
+11-30-15 14:20:25 | Exchanging portal token for server-specific token for https://demographics2.arcgis.com
+11-30-15 14:20:25 | Adding token to session
+11-30-15 14:20:25 | Using session token
+11-30-15 14:20:26 | Ok to proxy
+11-30-15 14:20:26 | Proxy complete
+11-30-15 14:20:26 | GET detected
+11-30-15 14:20:26 | Using session token
+ 
+11-30-15 14:20:26 | Ok to proxy
+11-30-15 14:20:26 | Proxy complete
+11-30-15 14:20:26 | GET detected
+11-30-15 14:20:26 | Using session token
+ 
+11-30-15 14:20:29 | Authorization failed : dojo.io.script.jsonp_dojoIoScript3._jsonpCallback({"error":{"code":498,"message":"Invalid Token","details":[]}});
+11-30-15 14:20:29 | Retry attempt 1 of 3
+11-30-15 14:20:29 | Resource using OAuth
+11-30-15 14:20:29 | Exchanging portal token for server-specific token for https://demographics3.arcgis.com
+11-30-15 14:20:30 | Adding token to session
+11-30-15 14:20:30 | Using session token
+11-30-15 14:20:30 | Ok to proxy
+11-30-15 14:20:30 | Proxy complete
+11-30-15 14:20:30 | GET detected
+11-30-15 14:20:30 | Using session token
+ 
+11-30-15 14:20:31 | Ok to proxy
+11-30-15 14:20:31 | Proxy complete
+11-30-15 14:20:31 | GET detected
+11-30-15 14:20:31 | Using session token
+ 
+11-30-15 14:20:32 | Ok to proxy
+11-30-15 14:20:32 | Proxy complete
+11-30-15 14:20:32 | GET detected
+11-30-15 14:20:32 | Using session token
+ 
+11-30-15 14:20:32 | Ok to proxy
+11-30-15 14:20:32 | Proxy complete
+11-30-15 14:20:32 | GET detected
+11-30-15 14:20:32 | Using session token
+ 
+11-30-15 14:20:33 | Ok to proxy
+11-30-15 14:20:33 | Proxy complete
+11-30-15 14:20:33 | GET detected
+11-30-15 14:20:33 | Using session token
+ 
+11-30-15 14:20:33 | Ok to proxy
+11-30-15 14:20:33 | Proxy complete
+11-30-15 14:20:33 | GET detected
+11-30-15 14:20:33 | Using session token
+ 
+11-30-15 14:20:34 | Ok to proxy
+11-30-15 14:20:34 | Proxy complete
+11-30-15 14:20:34 | GET detected
+11-30-15 14:20:34 | Using session token
+ 
+11-30-15 14:20:34 | Ok to proxy
+11-30-15 14:20:34 | Proxy complete
+11-30-15 14:20:34 | GET detected
+11-30-15 14:20:34 | Using session token
+ 
+11-30-15 14:20:35 | Ok to proxy
+11-30-15 14:20:35 | Proxy complete
+11-30-15 14:20:35 | GET detected
+11-30-15 14:20:35 | Using session token
+ 
+11-30-15 14:20:35 | Ok to proxy
+11-30-15 14:20:35 | Proxy complete
+11-30-15 14:20:35 | GET detected
+11-30-15 14:20:35 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/12/1545/2003.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-30-15 14:20:35 | GET detected
+11-30-15 14:20:35 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/12/1545/2004.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-30-15 14:20:35 | GET detected
+11-30-15 14:20:35 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/12/1545/2005.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-30-15 14:20:35 | GET detected
+11-30-15 14:20:35 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/12/1545/2006.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-30-15 14:20:35 | GET detected
+11-30-15 14:20:35 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/12/1545/2007.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-30-15 14:20:35 | GET detected
+11-30-15 14:20:35 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/12/1545/2008.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-30-15 14:20:36 | GET detected
+11-30-15 14:20:36 | Using session token
+ 
+ 
+ 
+ 
+ 
+11-30-15 14:20:36 | Ok to proxy
+11-30-15 14:20:36 | Proxy complete
+11-30-15 14:20:36 | GET detected
+11-30-15 14:20:36 | Using session token
+ 
+11-30-15 14:20:38 | Ok to proxy
+11-30-15 14:20:38 | Proxy complete
+11-30-15 14:20:38 | GET detected
+11-30-15 14:20:38 | Using session token
+11-30-15 14:20:39 | Ok to proxy
+11-30-15 14:20:39 | Proxy complete
+11-30-15 14:20:39 | GET detected
+11-30-15 14:20:39 | Using session token
+ 
+11-30-15 14:20:40 | Ok to proxy
+ 
+11-30-15 14:20:44 | Proxy complete
+11-30-15 14:20:44 | GET detected
+11-30-15 14:20:44 | Using session token
+11-30-15 14:20:45 | Ok to proxy
+11-30-15 14:20:49 | Proxy complete
+11-30-15 14:20:49 | GET detected
+11-30-15 14:20:49 | Using session token
+ 
+11-30-15 14:20:51 | Ok to proxy
+11-30-15 14:20:55 | Proxy complete
+11-30-15 14:20:55 | GET detected
+11-30-15 14:20:55 | Using session token
+ 
+11-30-15 14:20:57 | Ok to proxy
+11-30-15 14:21:02 | Proxy complete
+11-30-15 14:21:02 | GET detected
+11-30-15 14:21:02 | Using session token
+ 
+11-30-15 14:21:04 | Ok to proxy
+ 
+11-30-15 14:21:08 | Proxy complete
+11-30-15 14:21:08 | GET detected
+11-30-15 14:21:08 | Using session token
+11-30-15 14:21:09 | Ok to proxy
+11-30-15 14:21:12 | Proxy complete
+11-30-15 14:21:12 | GET detected
+11-30-15 14:21:13 | Using session token
+ 
+11-30-15 14:21:14 | Ok to proxy
+11-30-15 14:21:18 | Proxy complete
+11-30-15 14:21:18 | GET detected
+11-30-15 14:21:18 | Using session token
+11-30-15 14:21:19 | Ok to proxy
+ 
+11-30-15 14:21:25 | Proxy complete
+11-30-15 14:21:25 | GET detected
+11-30-15 14:21:25 | Using session token
+11-30-15 14:21:27 | Ok to proxy
+ 
+11-30-15 14:21:30 | Proxy complete
+11-30-15 14:21:30 | GET detected
+11-30-15 14:21:30 | Using session token
+11-30-15 14:21:32 | Ok to proxy
+ 
+11-30-15 14:21:36 | Proxy complete
+11-30-15 14:21:36 | POST detected
+11-30-15 14:21:36 | Using session token
+ 
+11-30-15 14:21:37 | Ok to proxy
+11-30-15 14:21:37 | Proxy complete
+11-30-15 14:21:37 | GET detected
+11-30-15 14:21:37 | Resource using OAuth
+ 
+ 
+11-30-15 14:21:37 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:21:38 | Ok to proxy
+11-30-15 14:21:38 | Proxy complete
+11-30-15 14:21:38 | GET detected
+11-30-15 14:21:38 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/12/1545/2003.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-30-15 14:21:38 | GET detected
+11-30-15 14:21:38 | Resource using OAuth
+ 
+ 
+11-30-15 14:21:39 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:21:40 | Ok to proxy
+11-30-15 14:21:40 | Proxy complete
+11-30-15 14:21:40 | GET detected
+11-30-15 14:21:40 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/12/1545/2004.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-30-15 14:21:40 | GET detected
+11-30-15 14:21:40 | Resource using OAuth
+ 
+ 
+11-30-15 14:21:40 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:21:41 | Ok to proxy
+11-30-15 14:21:41 | Proxy complete
+11-30-15 14:21:41 | GET detected
+11-30-15 14:21:41 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/12/1545/2005.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-30-15 14:21:41 | GET detected
+11-30-15 14:21:41 | Using session token
+ 
+ 
+11-30-15 14:21:41 | Ok to proxy
+11-30-15 14:21:41 | Proxy complete
+11-30-15 14:21:41 | GET detected
+11-30-15 14:21:41 | Using session token
+ 
+11-30-15 14:21:42 | Ok to proxy
+11-30-15 14:21:42 | Proxy complete
+11-30-15 14:21:42 | GET detected
+11-30-15 14:21:42 | Using session token
+ 
+11-30-15 14:21:43 | Ok to proxy
+11-30-15 14:21:43 | Proxy complete
+11-30-15 14:21:43 | GET detected
+11-30-15 14:21:43 | Using session token
+ 
+11-30-15 14:21:44 | Ok to proxy
+11-30-15 14:21:44 | Proxy complete
+11-30-15 14:21:44 | GET detected
+11-30-15 14:21:44 | Using session token
+ 
+11-30-15 14:21:44 | Ok to proxy
+11-30-15 14:21:44 | Proxy complete
+11-30-15 14:21:44 | GET detected
+11-30-15 14:21:44 | Using session token
+ 
+11-30-15 14:21:45 | Ok to proxy
+11-30-15 14:21:45 | Proxy complete
+11-30-15 14:21:45 | GET detected
+11-30-15 14:21:45 | Using session token
+ 
+11-30-15 14:21:45 | Ok to proxy
+11-30-15 14:21:45 | Proxy complete
+11-30-15 14:21:45 | GET detected
+11-30-15 14:21:45 | Using session token
+ 
+11-30-15 14:21:46 | Ok to proxy
+11-30-15 14:21:46 | Proxy complete
+11-30-15 14:21:46 | GET detected
+11-30-15 14:21:46 | Using session token
+ 
+11-30-15 14:21:46 | Ok to proxy
+11-30-15 14:21:46 | Proxy complete
+11-30-15 14:21:46 | GET detected
+11-30-15 14:21:46 | Using session token
+ 
+11-30-15 14:21:47 | Ok to proxy
+11-30-15 14:21:47 | Proxy complete
+11-30-15 14:21:47 | GET detected
+11-30-15 14:21:47 | Using session token
+ 
+11-30-15 14:21:48 | Ok to proxy
+11-30-15 14:21:48 | Proxy complete
+11-30-15 14:21:48 | GET detected
+11-30-15 14:21:48 | Using session token
+ 
+11-30-15 14:21:49 | Ok to proxy
+11-30-15 14:21:49 | Proxy complete
+11-30-15 14:21:49 | GET detected
+11-30-15 14:21:49 | Using session token
+ 
+11-30-15 14:21:50 | Ok to proxy
+11-30-15 14:21:50 | Proxy complete
+11-30-15 14:21:50 | GET detected
+11-30-15 14:21:50 | Using session token
+ 
+11-30-15 14:21:50 | Ok to proxy
+11-30-15 14:21:50 | Proxy complete
+11-30-15 14:21:50 | GET detected
+11-30-15 14:21:50 | Using session token
+ 
+11-30-15 14:21:51 | Ok to proxy
+11-30-15 14:21:51 | Proxy complete
+11-30-15 14:21:51 | GET detected
+11-30-15 14:21:51 | Using session token
+ 
+11-30-15 14:21:53 | Ok to proxy
+11-30-15 14:21:53 | Proxy complete
+11-30-15 14:21:53 | GET detected
+11-30-15 14:21:53 | Using session token
+ 
+11-30-15 14:21:53 | Ok to proxy
+11-30-15 14:21:53 | Proxy complete
+11-30-15 14:21:53 | GET detected
+11-30-15 14:21:53 | Using session token
+ 
+11-30-15 14:21:54 | Ok to proxy
+11-30-15 14:21:54 | Proxy complete
+11-30-15 14:21:54 | GET detected
+11-30-15 14:21:54 | Using session token
+ 
+11-30-15 14:21:55 | Ok to proxy
+11-30-15 14:21:55 | Proxy complete
+11-30-15 14:21:55 | GET detected
+11-30-15 14:21:55 | Using session token
+ 
+11-30-15 14:21:56 | Ok to proxy
+11-30-15 14:21:56 | Proxy complete
+11-30-15 14:21:56 | GET detected
+11-30-15 14:21:56 | Using session token
+ 
+11-30-15 14:21:57 | Ok to proxy
+11-30-15 14:21:57 | Proxy complete
+11-30-15 14:21:57 | GET detected
+11-30-15 14:21:57 | Using session token
+ 
+11-30-15 14:21:58 | Ok to proxy
+11-30-15 14:21:58 | Proxy complete
+11-30-15 14:21:58 | GET detected
+11-30-15 14:21:58 | Using session token
+ 
+11-30-15 14:21:59 | Ok to proxy
+11-30-15 14:21:59 | Proxy complete
+11-30-15 14:21:59 | GET detected
+11-30-15 14:21:59 | Using session token
+ 
+11-30-15 14:22:00 | Ok to proxy
+11-30-15 14:22:00 | Proxy complete
+11-30-15 14:22:00 | GET detected
+11-30-15 14:22:00 | Using session token
+ 
+11-30-15 14:22:00 | Ok to proxy
+11-30-15 14:22:00 | Proxy complete
+11-30-15 14:22:00 | GET detected
+11-30-15 14:22:00 | Using session token
+ 
+11-30-15 14:22:01 | Ok to proxy
+11-30-15 14:22:01 | Proxy complete
+11-30-15 14:22:01 | GET detected
+11-30-15 14:22:01 | Using session token
+ 
+11-30-15 14:22:02 | Ok to proxy
+11-30-15 14:22:02 | Proxy complete
+11-30-15 14:22:02 | GET detected
+11-30-15 14:22:02 | Using session token
+ 
+11-30-15 14:22:03 | Ok to proxy
+11-30-15 14:22:03 | Proxy complete
+11-30-15 14:22:03 | GET detected
+11-30-15 14:22:03 | Using session token
+ 
+11-30-15 14:22:04 | Ok to proxy
+11-30-15 14:22:04 | Proxy complete
+11-30-15 14:22:04 | GET detected
+11-30-15 14:22:04 | Using session token
+ 
+11-30-15 14:22:05 | Ok to proxy
+11-30-15 14:22:05 | Proxy complete
+11-30-15 14:22:05 | GET detected
+11-30-15 14:22:05 | Using session token
+ 
+11-30-15 14:22:07 | Ok to proxy
+11-30-15 14:22:07 | Proxy complete
+11-30-15 14:22:07 | GET detected
+11-30-15 14:22:07 | Using session token
+ 
+11-30-15 14:22:08 | Ok to proxy
+11-30-15 14:22:08 | Proxy complete
+11-30-15 14:22:08 | GET detected
+11-30-15 14:22:08 | Using session token
+ 
+11-30-15 14:22:09 | Ok to proxy
+11-30-15 14:22:09 | Proxy complete
+11-30-15 14:22:09 | GET detected
+11-30-15 14:22:09 | Using session token
+ 
+11-30-15 14:22:10 | Ok to proxy
+11-30-15 14:22:10 | Proxy complete
+11-30-15 14:22:10 | GET detected
+11-30-15 14:22:10 | Using session token
+ 
+11-30-15 14:22:11 | Ok to proxy
+11-30-15 14:22:11 | Proxy complete
+11-30-15 14:22:11 | GET detected
+11-30-15 14:22:11 | Using session token
+ 
+11-30-15 14:22:11 | Ok to proxy
+11-30-15 14:22:11 | Proxy complete
+11-30-15 14:22:11 | GET detected
+11-30-15 14:22:11 | Using session token
+ 
+11-30-15 14:22:12 | Ok to proxy
+11-30-15 14:22:12 | Proxy complete
+11-30-15 14:22:12 | GET detected
+11-30-15 14:22:12 | Using session token
+ 
+11-30-15 14:22:13 | Ok to proxy
+11-30-15 14:22:13 | Proxy complete
+11-30-15 14:22:13 | GET detected
+11-30-15 14:22:13 | Using session token
+ 
+11-30-15 14:22:14 | Ok to proxy
+11-30-15 14:22:14 | Proxy complete
+11-30-15 14:22:14 | GET detected
+11-30-15 14:22:14 | Using session token
+ 
+11-30-15 14:22:15 | Ok to proxy
+11-30-15 14:22:15 | Proxy complete
+11-30-15 14:22:15 | GET detected
+11-30-15 14:22:15 | Using session token
+ 
+11-30-15 14:22:16 | Ok to proxy
+11-30-15 14:22:16 | Proxy complete
+11-30-15 14:22:16 | GET detected
+11-30-15 14:22:16 | Using session token
+ 
+11-30-15 14:22:17 | Ok to proxy
+11-30-15 14:22:17 | Proxy complete
+11-30-15 14:22:17 | GET detected
+11-30-15 14:22:17 | Using session token
+ 
+11-30-15 14:22:18 | Ok to proxy
+11-30-15 14:22:18 | Proxy complete
+11-30-15 14:22:18 | GET detected
+11-30-15 14:22:18 | Using session token
+ 
+11-30-15 14:22:18 | Ok to proxy
+11-30-15 14:22:18 | Proxy complete
+11-30-15 14:22:18 | GET detected
+11-30-15 14:22:18 | Using session token
+ 
+11-30-15 14:22:19 | Ok to proxy
+11-30-15 14:22:19 | Proxy complete
+11-30-15 14:22:19 | GET detected
+11-30-15 14:22:19 | Using session token
+ 
+11-30-15 14:22:20 | Ok to proxy
+11-30-15 14:22:20 | Proxy complete
+11-30-15 14:22:20 | GET detected
+11-30-15 14:22:20 | Using session token
+ 
+11-30-15 14:22:21 | Ok to proxy
+11-30-15 14:22:21 | Proxy complete
+11-30-15 14:22:21 | GET detected
+11-30-15 14:22:21 | Using session token
+ 
+11-30-15 14:22:22 | Ok to proxy
+11-30-15 14:22:22 | Proxy complete
+11-30-15 14:22:22 | GET detected
+11-30-15 14:22:22 | Using session token
+ 
+11-30-15 14:22:23 | Ok to proxy
+11-30-15 14:22:23 | Proxy complete
+11-30-15 14:22:23 | GET detected
+11-30-15 14:22:23 | Using session token
+ 
+11-30-15 14:22:24 | Ok to proxy
+11-30-15 14:22:24 | Proxy complete
+11-30-15 14:22:24 | GET detected
+11-30-15 14:22:24 | Using session token
+ 
+11-30-15 14:22:25 | Ok to proxy
+11-30-15 14:22:25 | Proxy complete
+11-30-15 14:22:25 | GET detected
+11-30-15 14:22:25 | Using session token
+ 
+11-30-15 14:22:25 | Ok to proxy
+11-30-15 14:22:25 | Proxy complete
+11-30-15 14:22:25 | GET detected
+11-30-15 14:22:25 | Using session token
+ 
+11-30-15 14:22:26 | Ok to proxy
+11-30-15 14:22:26 | Proxy complete
+11-30-15 14:22:26 | GET detected
+11-30-15 14:22:26 | Using session token
+ 
+11-30-15 14:22:27 | Ok to proxy
+11-30-15 14:22:27 | Proxy complete
+11-30-15 14:22:27 | GET detected
+11-30-15 14:22:27 | Using session token
+ 
+11-30-15 14:22:28 | Ok to proxy
+11-30-15 14:22:28 | Proxy complete
+11-30-15 14:22:28 | GET detected
+11-30-15 14:22:28 | Using session token
+ 
+11-30-15 14:22:29 | Ok to proxy
+11-30-15 14:22:29 | Proxy complete
+11-30-15 14:22:29 | GET detected
+11-30-15 14:22:29 | Using session token
+ 
+11-30-15 14:22:30 | Ok to proxy
+11-30-15 14:22:30 | Proxy complete
+11-30-15 14:22:30 | GET detected
+11-30-15 14:22:30 | Using session token
+ 
+11-30-15 14:22:31 | Ok to proxy
+11-30-15 14:22:31 | Proxy complete
+11-30-15 14:22:31 | GET detected
+11-30-15 14:22:31 | Using session token
+ 
+11-30-15 14:22:32 | Ok to proxy
+11-30-15 14:22:32 | Proxy complete
+11-30-15 14:22:32 | GET detected
+11-30-15 14:22:32 | Using session token
+ 
+11-30-15 14:22:33 | Ok to proxy
+11-30-15 14:22:33 | Proxy complete
+11-30-15 14:22:33 | GET detected
+11-30-15 14:22:33 | Resource using OAuth
+ 
+11-30-15 14:22:33 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:22:34 | Ok to proxy
+11-30-15 14:22:34 | Proxy complete
+11-30-15 14:22:34 | GET detected
+11-30-15 14:22:34 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/12/1545/2006.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-30-15 14:22:34 | GET detected
+11-30-15 14:22:34 | Resource using OAuth
+11-30-15 14:22:35 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:22:35 | Ok to proxy
+11-30-15 14:22:35 | Proxy complete
+11-30-15 14:22:35 | GET detected
+11-30-15 14:22:35 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/12/1545/2007.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-30-15 14:22:35 | GET detected
+11-30-15 14:22:35 | Resource using OAuth
+11-30-15 14:22:36 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:22:36 | Ok to proxy
+11-30-15 14:22:36 | Proxy complete
+11-30-15 14:22:36 | GET detected
+11-30-15 14:22:36 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/12/1545/2008.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-30-15 14:22:36 | GET detected
+11-30-15 14:22:36 | Using session token
+11-30-15 14:22:38 | Ok to proxy
+11-30-15 14:22:38 | Proxy complete
+ 
+11-30-15 14:23:04 | GET detected
+11-30-15 14:23:04 | Proxy could not resolve requested url - http://js.arcgis.com/3.14compact/esri/dijit/analysis/help/helpmap.json.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-30-15 14:32:07 | GET detected
+11-30-15 14:32:07 | Using session token
+11-30-15 14:32:08 | Ok to proxy
+11-30-15 14:32:08 | Proxy complete
+ 
+11-30-15 14:32:11 | POST detected
+11-30-15 14:32:11 | Using session token
+11-30-15 14:32:11 | Ok to proxy
+11-30-15 14:32:11 | Proxy complete
+ 
+11-30-15 14:32:11 | GET detected
+11-30-15 14:32:11 | Using session token
+ 
+11-30-15 14:32:12 | Ok to proxy
+11-30-15 14:32:12 | Proxy complete
+11-30-15 14:32:12 | GET detected
+11-30-15 14:32:12 | Using session token
+11-30-15 14:32:13 | Ok to proxy
+11-30-15 14:32:13 | Proxy complete
+ 
+11-30-15 14:32:16 | POST detected
+11-30-15 14:32:16 | Using session token
+ 
+ 
+ 
+ 
+ 
+ 
+11-30-15 14:32:17 | Ok to proxy
+11-30-15 14:32:17 | Proxy complete
+11-30-15 14:32:17 | POST detected
+11-30-15 14:32:17 | Using session token
+11-30-15 14:32:17 | Ok to proxy
+11-30-15 14:32:17 | Proxy complete
+11-30-15 14:32:17 | GET detected
+11-30-15 14:32:17 | Resource using OAuth
+ 
+11-30-15 14:32:18 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:32:21 | Ok to proxy
+11-30-15 14:32:21 | Proxy complete
+11-30-15 14:32:22 | GET detected
+11-30-15 14:32:22 | Resource using OAuth
+ 
+11-30-15 14:32:22 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+ 
+11-30-15 14:32:23 | Ok to proxy
+11-30-15 14:32:23 | Proxy complete
+11-30-15 14:32:23 | GET detected
+11-30-15 14:32:23 | Resource using OAuth
+11-30-15 14:32:24 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:32:25 | Ok to proxy
+11-30-15 14:32:25 | Proxy complete
+11-30-15 14:32:25 | GET detected
+11-30-15 14:32:25 | Resource using OAuth
+11-30-15 14:32:25 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:32:26 | Ok to proxy
+11-30-15 14:32:26 | Proxy complete
+11-30-15 14:32:26 | GET detected
+11-30-15 14:32:26 | Resource using OAuth
+11-30-15 14:32:27 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:32:28 | Ok to proxy
+11-30-15 14:32:28 | Proxy complete
+11-30-15 14:32:28 | GET detected
+11-30-15 14:32:28 | Resource using OAuth
+11-30-15 14:32:29 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:32:30 | Ok to proxy
+11-30-15 14:32:30 | Proxy complete
+11-30-15 14:32:30 | GET detected
+11-30-15 14:32:30 | Using session token
+11-30-15 14:32:31 | Ok to proxy
+11-30-15 14:32:31 | Proxy complete
+11-30-15 14:32:31 | GET detected
+11-30-15 14:32:31 | Using session token
+11-30-15 14:32:32 | Ok to proxy
+11-30-15 14:32:32 | Proxy complete
+ 
+11-30-15 14:32:32 | GET detected
+11-30-15 14:32:32 | Using session token
+11-30-15 14:32:32 | Ok to proxy
+11-30-15 14:32:32 | Proxy complete
+ 
+11-30-15 14:32:32 | GET detected
+11-30-15 14:32:32 | Resource using OAuth
+11-30-15 14:32:33 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:32:35 | Ok to proxy
+11-30-15 14:32:35 | Proxy complete
+ 
+11-30-15 14:32:35 | GET detected
+11-30-15 14:32:35 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-30-15 14:32:35 | GET detected
+11-30-15 14:32:35 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+
+11-30-15 14:32:35 |  GET detected
+11-30-15 14:32:35 | Using session token
+ 
+ 
+ 
+ 
+11-30-15 14:32:35 | Ok to proxy
+11-30-15 14:32:35 | Proxy complete
+11-30-15 14:32:35 | GET detected
+11-30-15 14:32:35 | Using session token
+ 
+11-30-15 14:32:36 | Ok to proxy
+11-30-15 14:32:36 | Proxy complete
+11-30-15 14:32:36 | GET detected
+11-30-15 14:32:36 | Using session token
+ 
+11-30-15 14:32:37 | Ok to proxy
+11-30-15 14:32:37 | Proxy complete
+11-30-15 14:32:37 | GET detected
+11-30-15 14:32:37 | Using session token
+ 
+11-30-15 14:32:37 | Ok to proxy
+11-30-15 14:32:37 | Proxy complete
+11-30-15 14:32:37 | GET detected
+11-30-15 14:32:37 | Using session token
+11-30-15 14:32:38 | Ok to proxy
+11-30-15 14:32:38 | Proxy complete
+11-30-15 14:32:38 | GET detected
+11-30-15 14:32:38 | Using session token
+ 
+ 
+11-30-15 14:32:38 | Ok to proxy
+11-30-15 14:32:38 | Proxy complete
+11-30-15 14:32:38 | GET detected
+11-30-15 14:32:38 | Using session token
+ 
+11-30-15 14:32:38 | Ok to proxy
+11-30-15 14:32:38 | Proxy complete
+11-30-15 14:32:38 | GET detected
+11-30-15 14:32:38 | Using session token
+ 
+11-30-15 14:32:39 | Ok to proxy
+11-30-15 14:32:39 | Proxy complete
+11-30-15 14:32:39 | GET detected
+11-30-15 14:32:39 | Using session token
+ 
+11-30-15 14:32:39 | Ok to proxy
+11-30-15 14:32:39 | Proxy complete
+11-30-15 14:32:39 | GET detected
+11-30-15 14:32:39 | Using session token
+ 
+11-30-15 14:32:39 | Ok to proxy
+11-30-15 14:32:39 | Proxy complete
+11-30-15 14:32:39 | GET detected
+11-30-15 14:32:39 | Using session token
+ 
+11-30-15 14:32:40 | Ok to proxy
+11-30-15 14:32:40 | Proxy complete
+11-30-15 14:32:40 | GET detected
+11-30-15 14:32:40 | Using session token
+ 
+11-30-15 14:32:40 | Ok to proxy
+11-30-15 14:32:40 | Proxy complete
+11-30-15 14:32:40 | GET detected
+11-30-15 14:32:40 | Using session token
+ 
+11-30-15 14:32:41 | Ok to proxy
+11-30-15 14:32:41 | Proxy complete
+11-30-15 14:32:41 | GET detected
+11-30-15 14:32:41 | Using session token
+ 
+11-30-15 14:32:41 | Ok to proxy
+11-30-15 14:32:41 | Proxy complete
+11-30-15 14:32:41 | GET detected
+11-30-15 14:32:41 | Resource using OAuth
+ 
+11-30-15 14:32:42 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:32:45 | Ok to proxy
+11-30-15 14:32:45 | Proxy complete
+11-30-15 14:32:45 | GET detected
+11-30-15 14:32:45 | Resource using OAuth
+ 
+11-30-15 14:32:45 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:32:46 | Ok to proxy
+11-30-15 14:32:46 | Proxy complete
+11-30-15 14:32:46 | GET detected
+11-30-15 14:32:46 | Resource using OAuth
+ 
+11-30-15 14:32:47 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:32:48 | Ok to proxy
+11-30-15 14:32:48 | Proxy complete
+11-30-15 14:32:48 | GET detected
+11-30-15 14:32:48 | Resource using OAuth
+ 
+11-30-15 14:32:49 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:32:50 | Ok to proxy
+11-30-15 14:32:50 | Proxy complete
+11-30-15 14:32:50 | GET detected
+11-30-15 14:32:50 | Resource using OAuth
+ 
+11-30-15 14:32:50 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:32:51 | Ok to proxy
+11-30-15 14:32:51 | Proxy complete
+11-30-15 14:32:51 | GET detected
+11-30-15 14:32:51 | Resource using OAuth
+ 
+11-30-15 14:32:52 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:32:53 | Ok to proxy
+11-30-15 14:32:53 | Proxy complete
+11-30-15 14:32:53 | GET detected
+11-30-15 14:32:53 | Resource using OAuth
+ 
+11-30-15 14:32:53 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:32:54 | Ok to proxy
+11-30-15 14:32:54 | Proxy complete
+11-30-15 14:32:54 | GET detected
+11-30-15 14:32:54 | Proxy could not resolve requested url - https://tiles.arcgis.com/tiles/4yjifSiIG17X0gW4/arcgis/rest/services/Senior_Population_Global_Dataset/MapServer.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-30-15 14:32:54 | GET detected
+11-30-15 14:32:54 | Using session token
+ 
+ 
+ 
+ 
+11-30-15 14:32:55 | Ok to proxy
+11-30-15 14:32:55 | Proxy complete
+11-30-15 14:32:55 | GET detected
+11-30-15 14:32:55 | Using session token
+ 
+11-30-15 14:32:55 | Ok to proxy
+11-30-15 14:32:55 | Proxy complete
+11-30-15 14:32:55 | GET detected
+11-30-15 14:32:55 | Using session token
+ 
+11-30-15 14:32:57 | Ok to proxy
+11-30-15 14:32:57 | Proxy complete
+11-30-15 14:32:57 | GET detected
+11-30-15 14:32:57 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-30-15 14:32:57 | GET detected
+11-30-15 14:32:57 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-30-15 14:32:57 | GET detected
+11-30-15 14:32:57 | Using session token
+ 
+11-30-15 14:32:57 | Ok to proxy
+11-30-15 14:32:57 | Proxy complete
+11-30-15 14:32:57 | GET detected
+11-30-15 14:32:57 | Using session token
+ 
+11-30-15 14:32:58 | Ok to proxy
+11-30-15 14:32:58 | Proxy complete
+11-30-15 14:32:58 | GET detected
+11-30-15 14:32:58 | Using session token
+ 
+11-30-15 14:32:58 | Ok to proxy
+11-30-15 14:32:58 | Proxy complete
+11-30-15 14:32:58 | GET detected
+11-30-15 14:32:58 | Using session token
+ 
+11-30-15 14:32:59 | Ok to proxy
+11-30-15 14:32:59 | Proxy complete
+11-30-15 14:32:59 | GET detected
+11-30-15 14:32:59 | Using session token
+ 
+11-30-15 14:33:00 | Ok to proxy
+11-30-15 14:33:00 | Proxy complete
+11-30-15 14:33:00 | GET detected
+11-30-15 14:33:00 | Using session token
+ 
+11-30-15 14:33:00 | Ok to proxy
+11-30-15 14:33:00 | Proxy complete
+11-30-15 14:33:00 | GET detected
+11-30-15 14:33:00 | Using session token
+ 
+11-30-15 14:33:01 | Ok to proxy
+11-30-15 14:33:01 | Proxy complete
+11-30-15 14:33:01 | GET detected
+11-30-15 14:33:01 | Using session token
+ 
+11-30-15 14:33:01 | Ok to proxy
+11-30-15 14:33:01 | Proxy complete
+11-30-15 14:33:01 | GET detected
+11-30-15 14:33:01 | Using session token
+ 
+11-30-15 14:33:01 | Ok to proxy
+11-30-15 14:33:01 | Proxy complete
+11-30-15 14:33:01 | GET detected
+11-30-15 14:33:01 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/12/1545/2003.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-30-15 14:33:01 | GET detected
+11-30-15 14:33:01 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/12/1545/2004.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-30-15 14:33:01 | GET detected
+11-30-15 14:33:01 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/12/1545/2005.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-30-15 14:33:01 | GET detected
+11-30-15 14:33:01 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/12/1545/2006.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-30-15 14:33:01 | GET detected
+11-30-15 14:33:01 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/12/1545/2007.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-30-15 14:33:01 | GET detected
+11-30-15 14:33:01 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/12/1545/2008.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-30-15 14:33:02 | GET detected
+11-30-15 14:33:02 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/12/1543/2003.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-30-15 14:33:02 | GET detected
+11-30-15 14:33:02 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/12/1543/2004.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-30-15 14:33:02 | GET detected
+11-30-15 14:33:02 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/12/1543/2005.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-30-15 14:33:02 | GET detected
+11-30-15 14:33:02 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/12/1543/2006.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-30-15 14:33:02 | GET detected
+ 
+11-30-15 14:33:02 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/12/1543/2007.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-30-15 14:33:02 | GET detected
+11-30-15 14:33:02 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/12/1543/2008.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-30-15 14:33:02 | GET detected
+11-30-15 14:33:02 | Using session token
+ 
+ 
+ 
+ 
+ 
+11-30-15 14:33:02 | Ok to proxy
+11-30-15 14:33:02 | Proxy complete
+11-30-15 14:33:02 | GET detected
+11-30-15 14:33:02 | Using session token
+ 
+11-30-15 14:33:03 | Ok to proxy
+11-30-15 14:33:03 | Proxy complete
+11-30-15 14:33:03 | GET detected
+11-30-15 14:33:03 | Using session token
+11-30-15 14:33:05 | Ok to proxy
+11-30-15 14:33:05 | Proxy complete
+11-30-15 14:33:05 | GET detected
+11-30-15 14:33:05 | Using session token
+ 
+11-30-15 14:33:06 | Ok to proxy
+ 
+11-30-15 14:33:10 | Proxy complete
+11-30-15 14:33:10 | GET detected
+11-30-15 14:33:10 | Using session token
+11-30-15 14:33:12 | Ok to proxy
+11-30-15 14:33:15 | Proxy complete
+11-30-15 14:33:15 | GET detected
+11-30-15 14:33:15 | Using session token
+ 
+11-30-15 14:33:16 | Ok to proxy
+11-30-15 14:33:21 | Proxy complete
+11-30-15 14:33:21 | GET detected
+11-30-15 14:33:21 | Using session token
+ 
+11-30-15 14:33:23 | Ok to proxy
+11-30-15 14:33:28 | Proxy complete
+11-30-15 14:33:28 | GET detected
+11-30-15 14:33:28 | Using session token
+ 
+11-30-15 14:33:30 | Ok to proxy
+11-30-15 14:33:33 | Proxy complete
+11-30-15 14:33:33 | GET detected
+11-30-15 14:33:33 | Using session token
+ 
+11-30-15 14:33:35 | Ok to proxy
+11-30-15 14:33:40 | Proxy complete
+11-30-15 14:33:40 | GET detected
+11-30-15 14:33:40 | Using session token
+ 
+11-30-15 14:33:42 | Ok to proxy
+11-30-15 14:33:45 | Proxy complete
+11-30-15 14:33:45 | GET detected
+11-30-15 14:33:45 | Using session token
+ 
+11-30-15 14:33:46 | Ok to proxy
+11-30-15 14:33:52 | Proxy complete
+11-30-15 14:33:52 | GET detected
+11-30-15 14:33:52 | Using session token
+11-30-15 14:33:53 | Ok to proxy
+ 
+11-30-15 14:33:54 | GET detected
+11-30-15 14:33:54 | Using session token
+11-30-15 14:33:55 | Ok to proxy
+11-30-15 14:33:55 | POST detected
+11-30-15 14:33:55 | Using session token
+11-30-15 14:33:56 | Ok to proxy
+11-30-15 14:33:56 | Proxy complete
+11-30-15 14:33:56 | GET detected
+11-30-15 14:33:56 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/12/1543/2003.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-30-15 14:33:56 | GET detected
+11-30-15 14:33:56 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/12/1543/2004.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-30-15 14:33:57 | GET detected
+11-30-15 14:33:57 | Using session token
+11-30-15 14:33:57 | Ok to proxy
+11-30-15 14:33:57 | Proxy complete
+ 
+11-30-15 14:33:57 | GET detected
+11-30-15 14:33:57 | Using session token
+11-30-15 14:33:57 | Ok to proxy
+11-30-15 14:33:57 | Proxy complete
+ 
+11-30-15 14:33:57 | GET detected
+11-30-15 14:33:57 | Resource using OAuth
+11-30-15 14:33:58 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:34:00 | Ok to proxy
+11-30-15 14:34:00 | Proxy complete
+ 
+11-30-15 14:34:00 | GET detected
+11-30-15 14:34:00 | Proxy could not resolve requested url - http://localhost/proxy/proxy.php.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+ 
+11-30-15 14:34:00 | GET detected
+ 
+11-30-15 14:34:00 | Using session token
+ 
+ 
+ 
+ 
+11-30-15 14:34:01 | Ok to proxy
+11-30-15 14:34:01 | Proxy complete
+11-30-15 14:34:01 | GET detected
+11-30-15 14:34:01 | Using session token
+ 
+11-30-15 14:34:02 | Ok to proxy
+11-30-15 14:34:02 | Proxy complete
+11-30-15 14:34:02 | GET detected
+11-30-15 14:34:02 | Using session token
+ 
+11-30-15 14:34:02 | Ok to proxy
+11-30-15 14:34:02 | Proxy complete
+11-30-15 14:34:02 | GET detected
+11-30-15 14:34:02 | Using session token
+ 
+11-30-15 14:34:04 | Ok to proxy
+11-30-15 14:34:04 | Proxy complete
+11-30-15 14:34:04 | GET detected
+11-30-15 14:34:04 | Using session token
+11-30-15 14:34:04 | Ok to proxy
+11-30-15 14:34:04 | Proxy complete
+11-30-15 14:34:04 | GET detected
+11-30-15 14:34:04 | Using session token
+ 
+ 
+11-30-15 14:34:04 | Ok to proxy
+11-30-15 14:34:04 | Proxy complete
+11-30-15 14:34:04 | GET detected
+11-30-15 14:34:04 | Using session token
+ 
+11-30-15 14:34:05 | Ok to proxy
+11-30-15 14:34:05 | Proxy complete
+11-30-15 14:34:05 | GET detected
+11-30-15 14:34:05 | Using session token
+ 
+11-30-15 14:34:05 | Ok to proxy
+11-30-15 14:34:05 | Proxy complete
+11-30-15 14:34:05 | GET detected
+11-30-15 14:34:05 | Using session token
+ 
+11-30-15 14:34:05 | Ok to proxy
+11-30-15 14:34:05 | Proxy complete
+11-30-15 14:34:05 | GET detected
+11-30-15 14:34:05 | Using session token
+ 
+11-30-15 14:34:06 | Ok to proxy
+11-30-15 14:34:06 | Proxy complete
+11-30-15 14:34:06 | GET detected
+11-30-15 14:34:06 | Using session token
+ 
+11-30-15 14:34:06 | Ok to proxy
+11-30-15 14:34:06 | Proxy complete
+11-30-15 14:34:06 | GET detected
+11-30-15 14:34:06 | Using session token
+ 
+11-30-15 14:34:07 | Ok to proxy
+11-30-15 14:34:07 | Proxy complete
+11-30-15 14:34:07 | GET detected
+11-30-15 14:34:07 | Using session token
+ 
+11-30-15 14:34:07 | Ok to proxy
+11-30-15 14:34:07 | Proxy complete
+11-30-15 14:34:07 | GET detected
+11-30-15 14:34:07 | Using session token
+ 
+11-30-15 14:34:08 | Ok to proxy
+11-30-15 14:34:08 | Proxy complete
+11-30-15 14:34:08 | GET detected
+11-30-15 14:34:08 | Resource using OAuth
+ 
+11-30-15 14:34:08 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:34:09 | Ok to proxy
+11-30-15 14:34:09 | Proxy complete
+11-30-15 14:34:09 | GET detected
+11-30-15 14:34:09 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/13/3089/4009.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-30-15 14:34:09 | GET detected
+11-30-15 14:34:09 | Resource using OAuth
+ 
+ 
+11-30-15 14:34:10 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:34:11 | Ok to proxy
+11-30-15 14:34:11 | Proxy complete
+11-30-15 14:34:11 | GET detected
+11-30-15 14:34:11 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/13/3089/4010.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-30-15 14:34:11 | GET detected
+11-30-15 14:34:11 | Resource using OAuth
+ 
+ 
+11-30-15 14:34:11 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:34:12 | Ok to proxy
+11-30-15 14:34:12 | Proxy complete
+11-30-15 14:34:12 | GET detected
+11-30-15 14:34:12 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/13/3089/4011.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-30-15 14:34:12 | GET detected
+11-30-15 14:34:12 | Resource using OAuth
+ 
+ 
+11-30-15 14:34:13 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:34:14 | Ok to proxy
+11-30-15 14:34:14 | Proxy complete
+11-30-15 14:34:14 | GET detected
+11-30-15 14:34:14 | https://tiles.arcgis.com Can not determine if OAuth or ArcGIS Server means of authentication.  Check config for errors.
+ 
+11-30-15 14:34:15 | Ok to proxy
+11-30-15 14:34:15 | Proxy complete
+11-30-15 14:34:15 | GET detected
+11-30-15 14:34:15 | Using session token
+ 
+11-30-15 14:34:15 | Ok to proxy
+11-30-15 14:34:15 | Proxy complete
+11-30-15 14:34:15 | GET detected
+11-30-15 14:34:15 | Using session token
+ 
+11-30-15 14:34:16 | Ok to proxy
+11-30-15 14:34:16 | Proxy complete
+11-30-15 14:34:16 | GET detected
+11-30-15 14:34:16 | Using session token
+ 
+11-30-15 14:34:16 | Ok to proxy
+11-30-15 14:34:16 | Proxy complete
+11-30-15 14:34:16 | GET detected
+11-30-15 14:34:16 | Using session token
+ 
+11-30-15 14:34:17 | Ok to proxy
+11-30-15 14:34:17 | Proxy complete
+11-30-15 14:34:17 | GET detected
+11-30-15 14:34:17 | Using session token
+ 
+11-30-15 14:34:17 | Ok to proxy
+11-30-15 14:34:17 | Proxy complete
+11-30-15 14:34:17 | GET detected
+11-30-15 14:34:17 | Using session token
+ 
+11-30-15 14:34:18 | Ok to proxy
+11-30-15 14:34:18 | Proxy complete
+11-30-15 14:34:18 | GET detected
+11-30-15 14:34:18 | Using session token
+ 
+11-30-15 14:34:18 | Ok to proxy
+11-30-15 14:34:18 | Proxy complete
+11-30-15 14:34:18 | GET detected
+11-30-15 14:34:18 | Using session token
+ 
+11-30-15 14:34:19 | Ok to proxy
+11-30-15 14:34:19 | Proxy complete
+11-30-15 14:34:19 | GET detected
+11-30-15 14:34:19 | Using session token
+ 
+11-30-15 14:34:19 | Ok to proxy
+11-30-15 14:34:19 | Proxy complete
+11-30-15 14:34:19 | GET detected
+11-30-15 14:34:19 | Using session token
+ 
+11-30-15 14:34:20 | Ok to proxy
+11-30-15 14:34:20 | Proxy complete
+11-30-15 14:34:20 | GET detected
+11-30-15 14:34:20 | Using session token
+ 
+11-30-15 14:34:20 | Ok to proxy
+11-30-15 14:34:20 | Proxy complete
+11-30-15 14:34:20 | GET detected
+11-30-15 14:34:20 | Using session token
+ 
+11-30-15 14:34:21 | Ok to proxy
+11-30-15 14:34:21 | Proxy complete
+11-30-15 14:34:21 | GET detected
+11-30-15 14:34:21 | Resource using OAuth
+ 
+11-30-15 14:34:21 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:34:22 | Ok to proxy
+11-30-15 14:34:22 | Proxy complete
+11-30-15 14:34:22 | GET detected
+11-30-15 14:34:22 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/13/3089/4012.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-30-15 14:34:22 | GET detected
+11-30-15 14:34:22 | Resource using OAuth
+ 
+ 
+11-30-15 14:34:23 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:34:24 | Ok to proxy
+11-30-15 14:34:24 | Proxy complete
+11-30-15 14:34:24 | GET detected
+11-30-15 14:34:24 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/13/3089/4013.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-30-15 14:34:24 | GET detected
+11-30-15 14:34:24 | Resource using OAuth
+ 
+ 
+11-30-15 14:34:24 | Exchanging portal token for server-specific token for https://services.arcgisonline.com
+11-30-15 14:34:25 | Ok to proxy
+11-30-15 14:34:25 | Proxy complete
+11-30-15 14:34:25 | GET detected
+11-30-15 14:34:25 | Proxy could not resolve requested url - https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/13/3089/4014.  Possible solution would be to update 'mustMatch', 'matchAll' or 'url' property in the configuration file.
+11-30-15 14:34:25 | GET detected
+11-30-15 14:34:25 | Using session token
+ 
+ 
+11-30-15 14:34:26 | Ok to proxy
+11-30-15 14:34:26 | Proxy complete
+11-30-15 14:34:26 | GET detected
+11-30-15 14:34:26 | Using session token
+ 
+11-30-15 14:34:27 | Ok to proxy
+11-30-15 14:34:27 | Proxy complete
+11-30-15 14:34:27 | GET detected
+11-30-15 14:34:27 | Using session token
+11-30-15 14:34:29 | Ok to proxy
+11-30-15 14:34:29 | Proxy complete
+11-30-15 14:34:29 | GET detected
+11-30-15 14:34:29 | Using session token
+ 
+11-30-15 14:34:30 | Ok to proxy
+ 
+11-30-15 14:34:33 | Proxy complete
+11-30-15 14:34:33 | GET detected
+11-30-15 14:34:33 | Using session token
+11-30-15 14:34:34 | Ok to proxy
+11-30-15 14:34:39 | Proxy complete
+11-30-15 14:34:39 | GET detected
+11-30-15 14:34:39 | Using session token
+ 
+11-30-15 14:34:40 | Ok to proxy
+ 
+11-30-15 14:34:45 | Proxy complete
+11-30-15 14:34:45 | GET detected
+11-30-15 14:34:45 | Using session token
+11-30-15 14:34:47 | Ok to proxy
+11-30-15 14:34:47 | GET detected
+11-30-15 14:34:47 | Using session token
+11-30-15 14:34:48 | Ok to proxy
+11-30-15 14:34:48 | GET detected
+11-30-15 14:34:48 | Using session token
+11-30-15 14:34:50 | Ok to proxy
+11-30-15 14:34:50 | GET detected
+11-30-15 14:34:50 | Using session token
+11-30-15 14:34:51 | Ok to proxy
+11-30-15 14:34:51 | GET detected
+11-30-15 14:34:51 | Using session token
+11-30-15 14:34:53 | Ok to proxy
+ 
+11-30-15 14:47:29 | GET detected
+11-30-15 14:47:29 | Using session token
+11-30-15 14:47:31 | Ok to proxy
+11-30-15 14:47:31 | Proxy complete

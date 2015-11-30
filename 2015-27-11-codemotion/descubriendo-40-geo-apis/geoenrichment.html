@@ -71,11 +71,11 @@
             proxyUrl: ""
           });
         
-          /*esriConfig.defaults.io.proxyUrl = "proxy.php";
-          esriConfig.defaults.io.alwaysUseProxy = true;*/
-            arcgisUtils.createMap("23190b9e52be4d4a8c7a0e8714398c10", "mapDiv").then(function (response) {
-                map = response.map;
-            });
+          esriConfig.defaults.io.proxyUrl = "proxy.php";
+          /*esriConfig.defaults.io.alwaysUseProxy = true;*/
+          arcgisUtils.createMap("23190b9e52be4d4a8c7a0e8714398c10", "mapDiv").then(function (response) {
+              map = response.map;
+          });
         });
     </script>
 </head>
