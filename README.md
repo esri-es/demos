@@ -17,6 +17,8 @@ Demos compilation
   * [New popup](http://ycabon.github.io/presentations/2015-berlin-js-api4-whats-new/demos/popup/popup.html)
   * [Load local scene](http://ycabon.github.io/presentations/2015-berlin-js-api4-whats-new/demos/webscene/local.html)
   * [Load webscene](http://ycabon.github.io/presentations/2015-berlin-js-api4-whats-new/demos/webscene/slides.html)
+* [Jesse van den Kieboom](https://github.com/jkieboom)
+ * [Building 3D web apps (4.0 beta2): Basic 3D map, Elevation, Environment, Feature Layer, Tiled Layer, Tiled layer transparent, navigation, 3D symbology, Webscene loading](https://ycabon.github.io/presentations/2015-berlin-js-api4-building-3d-web-apps/demos/)
 
 ## Others
 * [React + 3D + Shadowns + Animation](http://jsbin.com/togemadodo/1/edit?html,js,output)
