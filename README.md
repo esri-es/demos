@@ -4,9 +4,15 @@ Demos compilation
 # Colleagues demos
 * [Yann Cabon](https://github.com/ycabon/presentations)
   * [Side by side view](http://ycabon.github.io/presentations/2015-berlin-js-api4-whats-new/demos/accessor/side-by-side.html)
-  * [Group layers](https://ycabon.github.io/presentations/2015-berlin-js-api4-whats-new/demos/grouplayer/index.html)
+  * [GroupLayer](https://ycabon.github.io/presentations/2015-berlin-js-api4-whats-new/demos/grouplayer/index.html)
+  * [Citadel - Simbol graphics base on feature properties](view-source:http://ycabon.github.io/presentations/2015-berlin-js-api4-whats-new/demos/visualization/epic-citadel.html)
   * Animations: [Custom](https://ycabon.github.io/presentations/2015-berlin-js-api4-whats-new/demos/animation/random.html), [3D parties libraries](https://ycabon.github.io/presentations/2015-berlin-js-api4-whats-new/demos/animation/tweenjs.html)
+  * [Binding properties with accessors](http://ycabon.github.io/presentations/2015-berlin-js-api4-whats-new/demos/integration/dbind.html)
+  * [Vector tile](http://ycabon.github.io/presentations/2015-berlin-js-api4-whats-new/demos/vectortiles/vectortile.html)
+  * Custom basemap: [2D](view-source:http://ycabon.github.io/presentations/2015-berlin-js-api4-whats-new/demos/basemap/2d-custom.html) - [3D](http://ycabon.github.io/presentations/2015-berlin-js-api4-whats-new/demos/basemap/3d.html)
+  * Padding: [2D](http://ycabon.github.io/presentations/2015-berlin-js-api4-whats-new/demos/padding/2d.html), [2D - Popup custom actions](http://ycabon.github.io/presentations/2015-berlin-js-api4-whats-new/demos/popup/popup-custom-actions.html), [3D](http://ycabon.github.io/presentations/2015-berlin-js-api4-whats-new/demos/padding/3d.html)
 
 ## Others
 * [React + 3D + Shadowns + Animation](http://jsbin.com/togemadodo/1/edit?html,js,output)
 * [Camera recorder](http://output.jsbin.com/donujo)
+* [Basemaps beta](http://basemapsbeta.arcgis.com/preview/app/index.html)
