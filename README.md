@@ -11,6 +11,12 @@ Demos compilation
   * [Vector tile](http://ycabon.github.io/presentations/2015-berlin-js-api4-whats-new/demos/vectortiles/vectortile.html)
   * Custom basemap: [2D](view-source:http://ycabon.github.io/presentations/2015-berlin-js-api4-whats-new/demos/basemap/2d-custom.html) - [3D](http://ycabon.github.io/presentations/2015-berlin-js-api4-whats-new/demos/basemap/3d.html)
   * Padding: [2D](http://ycabon.github.io/presentations/2015-berlin-js-api4-whats-new/demos/padding/2d.html), [2D - Popup custom actions](http://ycabon.github.io/presentations/2015-berlin-js-api4-whats-new/demos/popup/popup-custom-actions.html), [3D](http://ycabon.github.io/presentations/2015-berlin-js-api4-whats-new/demos/padding/3d.html)
+  * [3D Responsive Bootstrap](http://ycabon.github.io/presentations/2015-berlin-js-api4-whats-new/demos/resizing/responsive-bootstrap.html)
+  * [Resize by center and keep extent](http://ycabon.github.io/presentations/2015-berlin-js-api4-whats-new/demos/resizing/manual-resize.html)
+  * [Demo UI responsive](http://ycabon.github.io/presentations/2015-berlin-js-api4-whats-new/demos/ui/responsive.html)
+  * [New popup](http://ycabon.github.io/presentations/2015-berlin-js-api4-whats-new/demos/popup/popup.html)
+  * [Load local scene](http://ycabon.github.io/presentations/2015-berlin-js-api4-whats-new/demos/webscene/local.html)
+  * [Load webscene](http://ycabon.github.io/presentations/2015-berlin-js-api4-whats-new/demos/webscene/slides.html)
 
 ## Others
 * [React + 3D + Shadowns + Animation](http://jsbin.com/togemadodo/1/edit?html,js,output)
