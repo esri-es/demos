@@ -1,0 +1,93 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+  <title></title>
+
+  <link rel="stylesheet" href="http://js.arcgis.com/3.14/esri/css/esri.css">
+  <style>
+    html, body, #map {
+      height: 100%; width: 100%;
+      margin: 0; padding: 0;
+
+    }
+
+    #basemapsDIV {
+      position: absolute;
+      top: 12px;
+      left: 70px;
+      padding: 12px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+    }
+
+  </style>
+
+  <script src="http://js.arcgis.com/3.14/"></script>
+  <script>
+    var map, mapbox;
+    require([
+      "esri/map",
+      "esri/layers/WebTiledLayer",
+      "dojo/dom",
+      "dojo/on",
+      "dojo/domReady!"
+    ], function(
+            Map, WebTiledLayer, dom, on
+            ) {
+
+      var token = "pk.eyJ1IjoibWFwYm94IiwiYSI6IlhHVkZmaW8ifQ.hAMX5hSW-QnTeRCMAy9A8Q";
+
+      map = new Map("map", {
+        center: [-3.688510, 40.453010],
+        zoom: 16,
+        basemap: "gray"
+      });
+
+
+      var tiledLayer = new WebTiledLayer(
+              "http://pre-m.avuxiapis.com/tile?t=sights&z=${level}&x=${col}&y=${row}&ut=c53a20151127172746ac4a7a0e&s=clb&o=0.5&appid=avi_aviconf_tmp&appkey=avi_aviconf_tmp_15112717",
+              {
+                "copyright": "Avuxi",
+                "id": "Avuxi"
+              }
+      );
+
+      map.addLayer(tiledLayer);
+
+      on(dom.byId("changeBasemap"), "change", function (ev) {
+        var select = ev.target;
+        var basemap = select.options[select.selectedIndex].value;
+
+        map.removeLayer(map.getLayer("Avuxi"))
+
+        var tiledLayer = new WebTiledLayer(
+                "http://pre-m.avuxiapis.com/tile?t=" + basemap + "&z=${level}&x=${col}&y=${row}&ut=c53a20151127172746ac4a7a0e&s=clb&o=0.5&appid=avi_aviconf_tmp&appkey=avi_aviconf_tmp_15112717",
+                {
+                  "copyright": "Avuxi",
+                  "id": "Avuxi"
+                }
+        );
+
+        map.addLayer(tiledLayer);
+      });
+    });
+  </script>
+</head>
+<body class="nihilo">
+<div id="map" ></div>
+<div id="basemapsDIV">
+  <select id="changeBasemap">
+    <option value="sights">Sightseen</option>
+    <option value="eating">Eating</option>
+    <option value="shopping">Shopping</option>
+    <option value="partying">Night life</option>
+  </select>
+</div>
+<a href="https://github.com/esri-es/demos/tree/gh-pages/2015-27-11-codemotion/descubriendo-40-geo-apis"><img style="position: absolute; top: 0px; right: 0; border: 0; z-index:5" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+
+</body>
+</html>
+
+
+        

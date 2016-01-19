@@ -1,0 +1,145 @@
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>Ejemplo 14: Mapa de calor con Esri-Leaflet</title>
+  <meta name="description" content="Para aquellos que quieren trabajar con <a href='http://leafletjs.com/'>Leaflet</a> pueden usar <a href='http://esri.github.io/esri-leaflet/'>este plugin</a>. En este ejemplo se muestra un mapa de calor donde se visualizan las áreas con una alta densidad de grafitis en Nueva York." />
+
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/leaflet/0.7.3/leaflet.css" />
+  <script src="//cdn.jsdelivr.net/leaflet/0.7.3/leaflet.js"></script>
+  <script src="//cdn.jsdelivr.net/leaflet.esri/1.0.0/esri-leaflet.js"></script>
+
+  <style>
+    body { margin:0; padding:0; }
+    #map { position: absolute; top:0; bottom:0; right:0; left:0; }
+  </style>
+
+  <!-- Include Leaflet.heat via rawgit.com, do not use in production -->
+  <script src="https://rawgit.com/Leaflet/Leaflet.heat/gh-pages/dist/leaflet-heat.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+</head>
+<body>
+
+<div id="map"></div>
+<script>
+  var map = L.map('map').setView([ 40.41202565,-3.69166374], 14);
+
+  L.esri.basemapLayer('Gray').addTo(map);
+
+  var paintPOIs = function(){
+    var bounds = map.getBounds();
+    var mapTop = bounds.getNorth();
+    mapBottom = bounds.getSouth();
+    mapLeft = bounds.getWest();
+    mapRight = bounds.getEast();
+
+    var url="http://api.openstreetmap.fr/xapi//api/0.6/map?node[amenity=pub][bbox="+mapLeft+","+mapBottom+","+mapRight+","+mapTop+"]"
+    $.ajax({
+      url: url,
+      dataType: "text",
+      type: 'GET',
+      success: function(data, textStatus, jqXHR){
+
+
+
+        L.geoJson(osm2geo(data), {
+          onEachFeature: function (feature, layer) {
+            // does this feature have a property named popupContent?
+            if (feature.properties ) {
+              layer.bindPopup(feature.properties.name);
+            }
+          }
+        }).addTo(map);
+      },
+    });
+  }
+  paintPOIs();
+  map.on("moveend", paintPOIs);
+
+  var osm2geo = function(osm){
+    // Check wether the argument is a Jquery object and act accordingly
+    // Assuming it as a raw server response for now
+    var $xml = jQuery(osm);
+    // Initialize the empty GeoJSON object
+    var geo = {
+      "type" : "FeatureCollection",
+      "features" : []
+    };
+    // setting the bounding box [minX,minY,maxX,maxY]; x -> long, y -> lat
+    function getBounds(bounds){
+      var bbox = new Array;
+      bbox.push(parseFloat(bounds.attr("minlon")));
+      bbox.push(parseFloat(bounds.attr("minlat")));
+      bbox.push(parseFloat(bounds.attr("maxlon")));
+      bbox.push(parseFloat(bounds.attr("maxlat")));
+      return bbox;
+    }
+    geo["bbox"] = getBounds($xml.find("bounds"));
+
+    // Function to set props for a feature
+    function setProps(element){
+      var properties = {};
+      var tags = $(element).find("tag");
+      tags.each(function(index, tag){
+        properties[$(tag).attr("k")] = $(tag).attr("v");
+      });
+      return properties;
+    }
+    // Generic function to create a feature of given type
+    function getFeature(element, type){
+      return {
+        "geometry" : {
+          "type" : type,
+          "coordinates" : []
+        },
+        "type" : "Feature",
+        "properties" : setProps(element)
+      };
+    }
+    // Ways
+    var $ways = $("way", $xml);
+    $ways.each(function(index, ele){
+      var feature = new Object;
+      // List all the nodes
+      var nodes = $(ele).find("nd");
+      // If first and last nd are same, then its a polygon
+      if($(nodes).last().attr("ref") === $(nodes).first().attr("ref")){
+        feature = getFeature(ele, "Polygon");
+        feature.geometry.coordinates.push([]);
+      }else{
+        feature = getFeature(ele, "LineString");
+      }
+      nodes.each(function(index, nd){
+        var node = $xml.find("node[id='"+$(nd).attr("ref")+"']"); // find the node with id ref'ed in way
+        var cords = [parseFloat(node.attr("lon")), parseFloat(node.attr("lat"))]; // get the lat,lon of the node
+        // If polygon push it inside the cords[[]]
+        if(feature.geometry.type === "Polygon"){
+          feature.geometry.coordinates[0].push(cords);
+        }// if just Line push inside cords[]
+        else{
+          feature.geometry.coordinates.push(cords);
+        }
+      });
+      // Save the LineString in the Main object
+      geo.features.push(feature);
+    });
+
+    // Points (POI)
+    var $points = $("node:has('tag')", $xml);
+    $points.each(function(index, ele){
+      var feature = getFeature(ele, "Point");
+      feature.geometry.coordinates.push(parseFloat($(ele).attr('lon')));
+      feature.geometry.coordinates.push(parseFloat($(ele).attr('lat')));
+      // Save the point in Main object
+      geo.features.push(feature);
+    });
+    // Finally return the GeoJSON object
+    return geo;
+
+  };
+</script>
+<a href="https://github.com/esri-es/demos/tree/gh-pages/2015-27-11-codemotion/descubriendo-40-geo-apis"><img style="position: absolute; top: 0px; right: 0; border: 0; z-index:5" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo 7: Cargar un webmap</title>
+    <meta name="description" content="Los <a href='https://doc.arcgis.com/es/arcgis-online/reference/what-is-web-map.htm'>webmaps</a> en definitiva son ficheros JSON que incluyen <a href='http://resources.arcgis.com/en/help/arcgis-web-map-json/index.html#//02qt00000007000000'>la configuración de un mapa</a> (capas incluidas, mapa base, marcadores, etc.). En este ejemplo vemos cómo cargar <a href='http://hhkaos2.maps.arcgis.com/home/webmap/viewer.html?webmap=64c9b7fe34304c0fae24e8d9edc86924'>este webmap</a>." />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.14/esri/css/esri.css">
+    <style>
+      html, body, #mapDiv {
+          height:100%;
+          width:100%;
+          margin:0;
+          padding:0;
+          margin:0;
+          font-family: "Open Sans";
+      }
+
+    </style>
+
+    
+    <script src="http://js.arcgis.com/3.14/"></script>
+    <script>
+        require([
+            "esri/map",
+            "esri/arcgis/utils",
+            "esri/geometry/Point",
+            "dojo/domReady!"
+        ], function(Map, arcgisUtils, Point){
+            arcgisUtils.createMap("55849f02e4c4451ba33fbc54861a0d69", "mapDiv").then(function (response) {
+                map = response.map;
+
+                map.centerAt(new Point(-3.688510, 40.453010))
+            });
+        });
+    </script>
+</head>
+
+<body>
+  
+  <div id="mapDiv"></div>
+  
+</body>
+</html>

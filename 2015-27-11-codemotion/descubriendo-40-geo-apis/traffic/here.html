@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+  <title></title>
+
+  <link rel="stylesheet" href="http://js.arcgis.com/3.14/esri/css/esri.css">
+  <style>
+    html, body, #map {
+      height: 100%; width: 100%;
+      margin: 0; padding: 0;
+
+    }
+
+    #basemapsDIV {
+      position: absolute;
+      top: 12px;
+      left: 70px;
+      padding: 12px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+    }
+
+  </style>
+
+  <script src="http://js.arcgis.com/3.14/"></script>
+  <script>
+    var map, mapbox;
+    require([
+      "esri/map",
+      "esri/layers/WebTiledLayer",
+      "dojo/dom",
+      "dojo/on",
+      "dojo/domReady!"
+    ], function(
+            Map, WebTiledLayer, dom, on
+            ) {
+
+      var token = "pk.eyJ1IjoibWFwYm94IiwiYSI6IlhHVkZmaW8ifQ.hAMX5hSW-QnTeRCMAy9A8Q";
+
+      map = new Map("map", {
+        center: [-3.688510, 40.453010],
+        zoom: 16,
+        logo: false
+      });
+
+
+      var app_id = "Tw7Z0wLecmTCWuA2VBXh";
+      var app_code = "MCsHvqvNpTYHplS5JaZjAg";
+
+      var tiledLayer = new WebTiledLayer(
+              "http://2.base.maps.cit.api.here.com/maptile/2.1/maptile/newest/normal.day/${level}/${col}/${row}/256/png8?app_id=" + app_id + "&app_code=" + app_code,
+              {
+                "copyright": '<a href="https://developer.here.com/rest-apis/documentation/enterprise-map-tile/topics/examples-base.html">Here</a> basemap powered by <a href="js.arcgis.com">ArcGIS API</a>',
+                //"subDomains": ["a", "b", "c"]
+              }
+      );
+
+      var trafficLayer = new WebTiledLayer(
+              "http://tiles.traffic.cit.api.here.com/traffic/6.0/tiles/${level}/${col}/${row}/256/png8?app_id=" + app_id + "&app_code=" + app_code,
+              {
+                "copyright": '<a href="https://developer.here.com/rest-apis/documentation/enterprise-map-tile/topics/examples-base.html">Here</a> basemap powered by <a href="js.arcgis.com">ArcGIS API</a>',
+                //"subDomains": ["a", "b", "c"]
+              }
+      );
+
+
+      map.addLayer(tiledLayer);
+      map.addLayer(trafficLayer);
+
+    });
+  </script>
+</head>
+<body class="nihilo">
+<div id="map" ></div>
+</body>
+</html>
+

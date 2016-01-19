@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+  <title></title>
+
+  <link rel="stylesheet" href="http://js.arcgis.com/3.14/esri/css/esri.css">
+  <style>
+    html, body, #map {
+      height: 100%; width: 100%;
+      margin: 0; padding: 0;
+
+    }
+
+    #basemapsDIV {
+      position: absolute;
+      top: 12px;
+      left: 70px;
+      padding: 12px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+    }
+
+  </style>
+
+  <script src="http://js.arcgis.com/3.14/"></script>
+  <script>
+    var map, mapbox;
+    require([
+      "esri/map",
+      "esri/layers/WebTiledLayer",
+      "dojo/dom",
+      "dojo/on",
+      "dojo/domReady!"
+    ], function(Map, WebTiledLayer, dom, on) {
+
+      var token = "pk.eyJ1IjoibWFwYm94IiwiYSI6IlhHVkZmaW8ifQ.hAMX5hSW-QnTeRCMAy9A8Q";
+
+      map = new Map("map", {
+        center: [-3.688510, 40.453010],
+        zoom: 16,
+        logo: false
+      });
+
+
+      var tiledLayer = new WebTiledLayer(
+
+              "https://cartodb-basemaps-c.global.ssl.fastly.net/light_all/${level}/${col}/${row}.png",
+              {
+                "copyright": '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a> powered by <a href="js.arcgis.com">ArcGIS API</a>'
+              }
+      );
+
+
+      map.addLayer(tiledLayer);
+
+      on(dom.byId("changeBasemap"), "change", function (ev) {
+        var select = ev.target;
+        var basemap = select.options[select.selectedIndex].value;
+        var params = {
+          "copyright": '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a> powered by ArcGIS API'
+        };
+
+
+        if(basemap.indexOf("subDomain")!==-1){
+          params.subDomains = ["a", "b", "c"];
+        }
+
+        map.removeAllLayers();
+
+        var tiledLayer = new WebTiledLayer(basemap,params);
+
+        map.addLayer(tiledLayer);
+      });
+    });
+  </script>
+</head>
+<body class="nihilo">
+<div id="map" ></div>
+<div id="basemapsDIV">
+  <select id="changeBasemap">
+    <option value="https://cartodb-basemaps-c.global.ssl.fastly.net/light_all/${level}/${col}/${row}.png">Positron</option>
+    <option value="https://cartodb-basemaps-c.global.ssl.fastly.net/dark_all/${level}/${col}/${row}.png">Dark Matter</option>
+    <option value="http://${subDomain}.api.cartocdn.com/base-flatblue/${level}/${col}/${row}.png">Flat Blue</option>
+    <option value="http://${subDomain}.api.cartocdn.com/base-dark/${level}/${col}/${row}.png">Dark</option>
+    <option value="http://${subDomain}.api.cartocdn.com/base-light/${level}/${col}/${row}.png">Light</option>
+    <option value="https://cartodb-basemaps-c.global.ssl.fastly.net/light_nolabels/${level}/${col}/${row}.png">Positron (no labels)</option>
+    <option value="https://cartodb-basemaps-c.global.ssl.fastly.net/dark_nolabels/${level}/${col}/${row}.png">Dark Matter (no labels)</option>
+    <option value="https://cartodb-basemaps-c.global.ssl.fastly.net/light_only_labels/${level}/${col}/${row}.png">Positron (only labels)</option>
+    <option value="https://cartodb-basemaps-c.global.ssl.fastly.net/dark_only_labels/${level}/${col}/${row}.png">Dark Matter (only labels)</option>
+  </select>
+</div>
+</body>
+</html>
+

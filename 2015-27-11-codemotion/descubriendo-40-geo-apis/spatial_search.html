@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="Buscando pasajeros en una ruta" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Encontrar pasajeros en ruta</title>
+
+  <link rel="stylesheet" href="http://js.arcgis.com/3.11/esri/css/esri.css">
+  <script src="http://js.arcgis.com/3.11/"></script>
+  <script>
+    var $APP = {};
+
+    require([
+      "esri/map",
+      "esri/tasks/GeometryService",
+      "esri/tasks/BufferParameters",
+      "esri/symbols/SimpleLineSymbol",
+      "esri/symbols/SimpleFillSymbol",
+      "esri/symbols/SimpleMarkerSymbol",
+      "esri/Color",
+      "esri/graphic",
+      "esri/tasks/QueryTask",
+      "esri/tasks/query",
+      "esri/urlUtils",
+      "esri/config",
+      "esri/tasks/RelationParameters",
+      "esri/graphicsUtils",
+      "esri/geometry/webMercatorUtils",
+      "dojo/on",
+      "esri/SpatialReference",
+      "dojo/_base/array",
+      "esri/InfoTemplate",
+      "esri/layers/WebTiledLayer",
+      "dojo/domReady!"
+    ], function(
+            Map,
+            GeometryService,
+            BufferParameters,
+            SimpleLineSymbol,
+            SimpleFillSymbol,
+            SimpleMarkerSymbol,
+            Color,
+            Graphic,
+            QueryTask,
+            Query,
+            urlUtils,
+            esriConfig,
+            RelationParameters,
+            graphicsUtils,
+            webMercatorUtils,
+            on,
+            SpatialReference,
+            array,
+            InfoTemplate,
+            WebTiledLayer
+            ) {
+
+      $APP.map = new Map("mapDiv", {
+        center: [-3.462, 38.662],
+        zoom: 7
+      });
+
+      var token = "pk.eyJ1IjoibWFwYm94IiwiYSI6IlhHVkZmaW8ifQ.hAMX5hSW-QnTeRCMAy9A8Q";
+
+      var tiledLayer = new WebTiledLayer(
+              "https://${subDomain}.tiles.mapbox.com/v4/mapbox.streets/${level}/${col}/${row}.png?access_token=" + token ,
+              {
+                "copyright": "Mapbox",
+                "id": "Open Cycle Map",
+                "subDomains": ["a", "b", "c"]
+              }
+      );
+
+
+      $APP.map.addLayer(tiledLayer);
+
+      // Configuramos el proxy
+      esriConfig.defaults.io.corsEnabledServers.push("tasks.arcgisonline.com");
+      urlUtils.addProxyRule({
+        urlPrefix: "tasks.arcgisonline.com",
+        proxyUrl: "http://desarrolladores.esri.es/code/blablacar/proxy/proxy.php"
+      });
+
+
+      // Solicitamos la ruta para acceder a las geometrías de la polilínea para
+      // para poder crear el buffer
+      var queryTask = new QueryTask("http://services.arcgis.com/Q6ZFRRvMTlsTTFuP/ArcGIS/rest/services/Rutas%20a%20Rutas%20en%20coche/FeatureServer/1");
+      var query = new Query();
+      query.where = "1 = 1";
+      query.returnGeometry = true;
+      query.outFields = ["*"];
+
+      var gsvc = new GeometryService("http://tasks.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer");
+
+      queryTask.execute(query, function(data){
+        var params = new BufferParameters();
+        params.geometries = graphicsUtils.getGeometries(data.features);
+        params.unit = GeometryService.UNIT_KILOMETER;
+        params.distances = [ 5 ]; // Buffer en unidades: metros, km,...
+        params.outSpatialReference = new SpatialReference(102100);
+
+        gsvc.buffer(params, function(bufferGeometries){
+
+          var symbol = new SimpleFillSymbol(
+                          SimpleLineSymbol.STYLE_SOLID,
+                          new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([0, 0, 0, 1]), 1),
+                          new Color([255, 0, 0, 0.2])
+                  ),
+                  len = bufferGeometries.length,
+                  geometry,
+                  graphic;
+
+          $APP.bufferGeometries = bufferGeometries;
+          for(i = 0; i< len ; i++){
+            geometry = bufferGeometries[i];
+            graphic = new Graphic(geometry,symbol);
+            $APP.map.graphics.add(graphic);
+          }
+        });
+      });
+      on(document.getElementById("loadPassengers"), "click", function(){
+        //Filtramos aquellos que conductores dentro del buffer
+        var queryTask = new QueryTask("http://services.arcgis.com/Q6ZFRRvMTlsTTFuP/arcgis/rest/services/Rutas_en_coche/FeatureServer/0");
+        var query = new Query();
+        query.where = "1 = 1";
+        query.returnGeometry = true;
+        query.outFields = ["*"];
+
+        queryTask.execute(query, function(data){
+
+
+          // Creamos el cuadrado rojo para mostrar los conductores
+          var pointSymbol = new SimpleMarkerSymbol(
+                  SimpleMarkerSymbol.STYLE_CIRCLE, 10,
+                  new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([0, 0, 0]), 1),
+                  new Color([255, 0, 0])
+          );
+
+          baseGraphics = [];
+          $APP.passengers = data.features;
+          var len = data.features.length, f;
+          for(i = 0; i < len; i++){
+            f = data.features[i];
+            var graphic = new Graphic(f.geometry,pointSymbol, f.attributes);
+            graphic.setInfoTemplate(new InfoTemplate(
+                    "Pasajero: ",
+                    "${Nombre}: ${Origen} -> ${Destino}"
+            ));
+            $APP.map.graphics.add(graphic);
+            baseGraphics.push(graphic);
+          };
+
+
+        });
+
+
+      });
+
+      on(document.getElementById("searchPassengers"), "click", function(){
+        var p, relationParams = new RelationParameters();
+
+        $APP.results = "";
+        relationParams.geometries1 = graphicsUtils.getGeometries(baseGraphics);
+        relationParams.geometries2 = [webMercatorUtils.webMercatorToGeographic($APP.bufferGeometries[0])];
+        relationParams.relation = RelationParameters.SPATIAL_REL_WITHIN;
+
+        gsvc.relation(relationParams).then(function (relations) {
+          console.log("add relate results", relations);
+
+          // create a Green Square symbol
+          var symbol = new SimpleMarkerSymbol(
+                  SimpleMarkerSymbol.STYLE_CIRCLE, 12,
+                  new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new Color([0, 0, 0]), 1),
+                  new Color([0, 255, 0])
+          );
+
+          array.forEach(relations, function(relation) {
+            console.log(relations)
+            p = $APP.passengers[relation.geometry1Index].attributes;
+            $APP.results += "\n" + p.Nombre + ", " + p.Origen + "<br>";
+            $APP.map.graphics.add(baseGraphics[relation.geometry1Index].setSymbol(symbol))
+          });
+        });
+      });
+
+      on(document.getElementById("showPassengers"), "click", function(){
+        document.getElementById("results").innerHTML = "<p style='font-weight:bold'>Matching passsengers:</p>" + $APP.results;
+        document.getElementById("results").style.display="block"
+      });
+    });
+  </script>
+</head>
+<body class="claro">
+<div id="mapDiv"></div>
+<a href="#" id="loadPassengers">Load passenger with same destination</a>
+<a href="#" id="searchPassengers">Search passengers closer than 5km</a>
+<a href="#" id="showPassengers">Show matching passengers</a>
+<div id="results" style="display:none"></div>
+<style type="text/css">
+  html, body, #mapDiv {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    z-index: 99;
+  }
+  #results{
+    position: absolute;
+    bottom: 60px;
+    right: 10px;
+    background-color: rgba(255,255,255,0.75);
+
+    padding: 1em 2em 2em;
+    line-height: 1.5em
+  }
+  #loadPassengers,
+  #searchPassengers,
+  #showPassengers{
+    position: absolute;
+    top: 10px;
+    left: 70px;
+    display: block;
+    color: #333;
+    background-color: rgba(255,255,255,.7);
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid #999;
+    box-shadow: 0 0 11px #999;
+    width: 270px;
+    text-align:center
+  }
+  #searchPassengers{
+    top: 70px;
+  }
+  #showPassengers{
+    top: 130px;
+  }
+</style>
+<a href="https://github.com/esri-es/demos/tree/gh-pages/2015-27-11-codemotion/descubriendo-40-geo-apis"><img style="position: absolute; top: 0px; right: 0; border: 0; z-index:5" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+</body>
+</html>
