@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+<script src="//fb.me/react-with-addons-0.13.1.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Using React - 4.0 beta 1</title>
+    <link rel="stylesheet" href="http://js.arcgis.com/4.0beta1/esri/css/esri.css">
+    <style>
+      html, body {
+        padding: 0;
+        margin: 0;
+      }
+      
+      #viewDiv {
+        height: 100%;
+      }
+  
+      #react-div {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        padding: 12px;
+        width: 150px;
+        background-color: rgba(103, 169, 102, 1);
+        color: white;
+        font-family: sans-serif;
+        text-align: center;
+        -webkit-box-shadow: 5px 5px 10px 0px rgba(50,50,50,0.75);
+        -moz-box-shadow: 5px 5px 10px 0px rgba(50,50,50,0.75);
+        box-shadow: 5px 5px 10px 0px rgba(50,50,50,0.75);
+      }
+    </style>
+    <script>
+      var dojoConfig = {
+        packages: [{
+          name: "react",
+          location: "//cdnjs.cloudflare.com/ajax/libs/react/0.13.3/",
+          main: "react"
+        }]
+      };
+
+      require([
+	"esri/Map",
+	"esri/views/SceneView",
+	"esri/layers/SceneLayer",
+	"dojo/dom",
+	"dojo/on",
+	"react",
+	"dojo/domReady!"
+], function (Map, SceneView, SceneLayer, dom, on, React) {
+	
+	// Create map
+	var map = new Map({
+	  basemap: "streets"
+	});
+	
+	// Create SceneView
+	var view = new SceneView({
+	  container: "viewDiv",
+	  map: map,
+	  viewpoint: {
+	    target: [10, 53.55],
+	    tilt: 50,
+	    zoom: 16
+	  }
+	});
+	
+	// Set the environment in SceneView
+	view.environment = {
+	  lighting: {
+	    directShadows: true,
+	      date: new Date("Sun Mar 15 2015 09:00:00 GMT+0100 (CET)")
+	  }
+	};
+	
+	// Helper method to add minutes to a date
+	function addMinutes(date, minutes) {
+	  return new Date(date.getTime() + minutes*60000);
+	}
+	
+	// Helper to update the time of day
+	function updateTimeOfDay(date) {
+	  view.environment.lighting.date = date;
+	}
+	
+	// Create the SceneLayer and add to the map
+	var sceneLayer = new SceneLayer({
+	  url: "http://scene.arcgis.com/arcgis/rest/services/Hosted/Building_Hamburg/SceneServer/layers/0"
+	});
+	map.add(sceneLayer);
+	
+	// Create the React component
+	var TimeClock = React.createClass({
+	  getInitialState: function() {
+	    // Define an initial state
+	    return {
+	      date: new Date("Sun Mar 15 2015 09:00:00 GMT+0100 (CET)")
+	    };
+	  },
+	  componentDidMount: function() {
+	    // Watch for updates to the date property
+	    this.props.view.watch('environment.lighting.date', function(val) {
+	      this.setState({ date: val });
+	    }.bind(this));
+	  },
+	  render: function() {
+	    // Return component
+	    return (
+	      <div>
+	        <label>Time: {this.state.date.toTimeString()}</label>
+	      </div>
+	    );
+	  }
+	});
+	
+	// Render the React component and pass the view as a property
+	React.render(<TimeClock view={view} />, document.getElementById('react-div'));
+	
+	// Update the time of day at a set interval
+	setInterval(function() {
+	  updateTimeOfDay(addMinutes(view.environment.lighting.date, 5));
+	}, 50);
+
+});
+    </script>
+  </head>
+  
+  <body>
+    <div id="viewDiv">
+      <div id="react-div"></div>
+    </div>
+    <script src="http://js.arcgis.com/4.0beta1/"></script>
+  </body>
+
+</html>
