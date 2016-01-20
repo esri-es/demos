@@ -19,14 +19,14 @@
 
     require(["esri/map", "esri/layers/FeatureLayer", "dojo/domReady!"], function(Map, FeatureLayer) {
       var map = new Map("mapDiv", {
-        center: [-122.27, 47.58],
-        zoom: 14,
+        center: [-3.697086, 40.425285],
+        zoom: 16,
         basemap: "dark-gray"
       });
 
       // Add a layer to the map
 
-      var codeViolations = new FeatureLayer("http://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/Code_Violation_Cases/FeatureServer/0",{
+      var codeViolations = new FeatureLayer("http://services.arcgis.com/Q6ZFRRvMTlsTTFuP/arcgis/rest/services/alarmas/FeatureServer/0",{
         outFields: ["*"]
       });
       map.addLayer(codeViolations);
