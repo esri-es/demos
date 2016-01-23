@@ -65,10 +65,9 @@
         }, "searchDiv");
 
         /*
-
-        var source = search.get("sources")[0];
         var extent = map.extent;
-        source.searchExtent = [new Extent(extent.toJson())];
+
+        search.sources[0].searchExtent = new Extent(extent);
 
         var sfs = new SimpleFillSymbol().setOutline(
           new SimpleLineSymbol(
@@ -79,8 +78,8 @@
         );
         
         map.graphics.add(new Graphic(extent, sfs));
-
         */
+
         search.startup();        
      });
 
