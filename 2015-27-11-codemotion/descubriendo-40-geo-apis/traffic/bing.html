@@ -57,7 +57,7 @@
       }
 
       var url = "http://dev.virtualearth.net/REST/v1/Traffic/Incidents/"+$("#area").val()+"?key=Ap2XquXVzw7hLotGj1q_Fz8cKui5p3ECQ9zyjp9sRK4ckrZYoPc-9w13KBXex0dP";
-      $.getJSON('http://cors.io/?u='+url,function(response){
+      $.getJSON(url,function(response){
         console.log(response);
         //debugger;
         $("#response").html(syntaxHighlight(response));
