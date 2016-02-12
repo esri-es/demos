@@ -5,7 +5,7 @@
   <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
   <title></title>
 
-  <link rel="stylesheet" href="http://js.arcgis.com/3.14/esri/css/esri.css">
+  <link rel="stylesheet" href="http://js.arcgis.com/3.15/esri/css/esri.css">
   <style>
     html, body, #map {
       height: 100%; width: 100%;
@@ -24,7 +24,7 @@
 
   </style>
 
-  <script src="http://js.arcgis.com/3.14/"></script>
+  <script src="http://js.arcgis.com/3.15/"></script>
   <script>
     var map, mapbox;
     require([
@@ -37,7 +37,7 @@
             Map, WebTiledLayer, dom, on
             ) {
 
-      var token = "pk.eyJ1IjoibWFwYm94IiwiYSI6IlhHVkZmaW8ifQ.hAMX5hSW-QnTeRCMAy9A8Q";
+      var token = "pk.eyJ1IjoiaGhrYW9zIiwiYSI6IjAzdXhyTXMifQ.dmTOV4S7Z2PnWIl702epbA";
 
       map = new Map("map", {
         center: [-3.688510, 40.453010],
@@ -59,7 +59,7 @@
         pencil: "mapbox.pencil",
         pirates: "mapbox.pirates",
         emerald: "mapbox.emerald",
-        highContrast: "mapbox.high-contrast",
+        highContrast: "mapbox.high-contrast"
       }
 
       var tiledLayer = new WebTiledLayer(
