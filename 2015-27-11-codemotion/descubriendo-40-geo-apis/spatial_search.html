@@ -57,24 +57,12 @@
             ) {
 
       $APP.map = new Map("mapDiv", {
+        basemap: 'gray',
         center: [-3.462, 38.662],
         zoom: 7
       });
 
-      var token = "pk.eyJ1IjoibWFwYm94IiwiYSI6IlhHVkZmaW8ifQ.hAMX5hSW-QnTeRCMAy9A8Q";
-
-      var tiledLayer = new WebTiledLayer(
-              "https://${subDomain}.tiles.mapbox.com/v4/mapbox.streets/${level}/${col}/${row}.png?access_token=" + token ,
-              {
-                "copyright": "Mapbox",
-                "id": "Open Cycle Map",
-                "subDomains": ["a", "b", "c"]
-              }
-      );
-
-
-      $APP.map.addLayer(tiledLayer);
-
+      
       // Configuramos el proxy
       esriConfig.defaults.io.corsEnabledServers.push("tasks.arcgisonline.com");
       urlUtils.addProxyRule({

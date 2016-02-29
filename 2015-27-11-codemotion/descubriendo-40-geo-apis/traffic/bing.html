@@ -56,7 +56,7 @@
         }
       }
 
-      var url = "http://dev.virtualearth.net/REST/v1/Traffic/Incidents/"+$("#area").val()+"?key=Ap2XquXVzw7hLotGj1q_Fz8cKui5p3ECQ9zyjp9sRK4ckrZYoPc-9w13KBXex0dP";
+      var url = "http://cors.io/?u=http://dev.virtualearth.net/REST/v1/Traffic/Incidents/"+$("#area").val()+"?key=Ap2XquXVzw7hLotGj1q_Fz8cKui5p3ECQ9zyjp9sRK4ckrZYoPc-9w13KBXex0dP";
       $.getJSON(url,function(response){
         console.log(response);
         //debugger;
