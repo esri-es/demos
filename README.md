@@ -18,7 +18,7 @@ Demos compilation
   * [Load local scene](http://ycabon.github.io/presentations/2015-berlin-js-api4-whats-new/demos/webscene/local.html)
   * [Load webscene](http://ycabon.github.io/presentations/2015-berlin-js-api4-whats-new/demos/webscene/slides.html)
   * DevSummit '16
-   * ArcGIS API for JavaScript, Discover 4.0 - the Next Generation [Slides](https://ycabon.github.io/presentations/2016-devsummit-discover-4.0-the-next-generation/#/) & [Demos] (https://github.com/ycabon/presentations/tree/gh-pages/2016-devsummit-discover-4.0-the-next-generation/demos)
+    * ArcGIS API for JavaScript, Discover 4.0 - the Next Generation [Slides](https://ycabon.github.io/presentations/2016-devsummit-discover-4.0-the-next-generation/#/) & [Demos] (https://github.com/ycabon/presentations/tree/gh-pages/2016-devsummit-discover-4.0-the-next-generation/demos)
 * [Jesse van den Kieboom](https://github.com/jkieboom)
  * [Building 3D web apps (4.0 beta2): Basic 3D map, Elevation, Environment, Feature Layer, Tiled Layer, Tiled layer transparent, navigation, 3D symbology, Webscene loading](https://ycabon.github.io/presentations/2015-berlin-js-api4-building-3d-web-apps/demos/)
 
