@@ -169,7 +169,7 @@
 			</table>
 		</div>
 		<!-- /Content -->
-		
+		<div id="floatingPanelToolbar">Show panel</div>
 		<div id="floatingPanel" class="floatingPanel sectionPanel">
 			<div class="backdrop"></div>
 			<div class="header" aria-hidden="true">
@@ -321,6 +321,26 @@
 			 body{
 			 	background-color: white;
 			 }
+			 #floatingPanelToolbar{
+	 	    position: absolute;
+		    top: 0;
+		    right: 0;
+		    width: 100%;
+		    color: #FFF;
+		    z-index: 10;
+		    cursor: pointer;
+		    text-align: center;
+		    opacity: 0;
+		    display: none;
+		    -webkit-transition: opacity 2.1s;
+				-moz-transition: opacity 2.1s;
+				-ms-transition: opacity 2.1s;
+				-o-transition: opacity 2.1s;
+				transition: opacity 2.1s;
+			}
+			#floatingPanelToolbar:hover{
+				opacity: 1;
+			}
 		</style>
 		
 		<div id="loadingOverlay"></div>

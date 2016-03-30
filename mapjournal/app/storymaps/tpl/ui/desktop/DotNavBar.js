@@ -138,18 +138,27 @@ define([
 				);
 				
 				
+				var toggleSidebar = function(){
+					$("#floatingPanel").slideToggle();
+				    if($('.containerPanelInner').width() == $(window).width()){
+				    	$('.containerPanelInner').animate({width: '65%'});
+				    	$('#floatingPanelToolbar').hide();
+				    }else{
+				    	$('.containerPanelInner').animate({width: '100%'});
+				    	$('#floatingPanelToolbar').show();
+				    }
+				};
 
 				$(document).keypress(function(e) {
 				  //console.log('e.which = ',e.which);
 				  if(e.which == 104) {
 				    // if key pressed == H
-				    $("#floatingPanel").slideToggle();
-				    if($('.containerPanelInner').width() == $(window).width()){
-				    	$('.containerPanelInner').animate({width: '65%'});
-				    }else{
-				    	$('.containerPanelInner').animate({width: '100%'});
-				    }
+				    toggleSidebar();
 				  }
+				});
+
+				$('#floatingPanelToolbar').click(function(){
+					toggleSidebar();
 				});
 				
 				setColor();
