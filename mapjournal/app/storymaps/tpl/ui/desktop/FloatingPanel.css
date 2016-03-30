@@ -88,11 +88,11 @@ body.layout-float-left .floatingPanel .section {
  * Section content
  */
 
-/*
+
 .floatingPanel .section a {
-	color: #EDEDED;
+	color: #FF8C00;
 }
-*/
+
 
 .floatingPanel .section a[data-storymaps] {
 	/*color: #EDEDED;*/
