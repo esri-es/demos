@@ -74,7 +74,7 @@
 		<style>
 			/* CUSTOM CSS RULES */
 		</style>
-		
+		<div id="floatingPanelToolbar">Show panel</div>
 		<!-- Builder top panel is injected here -->
 		<div id="builderPanel" class="hide mainViewAboveMap"></div>
 		
@@ -169,7 +169,6 @@
 			</table>
 		</div>
 		<!-- /Content -->
-		<div id="floatingPanelToolbar">Show panel</div>
 		<div id="floatingPanel" class="floatingPanel sectionPanel">
 			<div class="backdrop"></div>
 			<div class="header" aria-hidden="true">
@@ -344,6 +343,26 @@
 			#floatingPanelToolbar:hover{
 				opacity: 1;
 			}
+
+			.mediaBackContainer{
+		    display: block;
+		    left: inherit;
+		    right: 10px;
+		    width: 100%;
+		    bottom: 0;
+			}
+			.backButton{
+				padding: 2px 21px 0px 15px;
+			}
+			.backArrow {
+		    width: 15px;
+		    height: 15px;
+		    background: url('../../../../resources/tpl/viewer/icons/mainmedia-back.png');
+		    background-size: 100% auto;
+			}
+			.backLbl {
+		    font-size: 1.4rem;
+		  }
 		</style>
 		
 		<div id="loadingOverlay"></div>

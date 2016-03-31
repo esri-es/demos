@@ -103,12 +103,12 @@ body.layout-float-left .floatingPanel .section {
 	/*font-family: 'open_sanssemibold', sans-serif;*/
 	font-weight: normal;
 	font-size: 1.85em;
-	margin-bottom: 10%;
+	margin-bottom: 5%;
 }
 
 .floatingPanel .section:first-child .title {
 	margin-top: 25%;
-	margin-bottom: 10%;
+	margin-bottom: 5%;
 	font-size: 2.5em;
 }
 
@@ -118,7 +118,7 @@ body.layout-float-left .floatingPanel .section {
 
 .floatingPanel .content {
 	opacity: 0.8;
-	margin-top: 10%;
+	margin-top: 5%;
 	/*margin-bottom: 15%;*/
 	font-size: 1.1em;
 	/*overflow: hidden;*/
