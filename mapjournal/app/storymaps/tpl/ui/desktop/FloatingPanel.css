@@ -107,7 +107,7 @@ body.layout-float-left .floatingPanel .section {
 }
 
 .floatingPanel .section:first-child .title {
-	margin-top: 25%;
+	margin-top: 20px !important;
 	margin-bottom: 5%;
 	font-size: 2.5em;
 }
