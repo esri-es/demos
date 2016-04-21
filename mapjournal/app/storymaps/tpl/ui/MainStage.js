@@ -290,9 +290,20 @@ define(["lib-build/tpl!./MainMediaContainerMap",
 						.css(paddingDir, val);
 					
 					// Back button
+					/*
 					$(".mediaBackContainer")
 						.css({ left: 'inherit', right: 'inherit' })
 						.css(posDir, val + mapArea / 2);
+					*/
+					if($("#floatingPanel").position().left !== 0){
+						$(".mediaBackContainer")
+							.css({ left: 'inherit', right: 'inherit' })
+							.css('left', $("#floatingPanel").position().left/2);
+					}else{
+						 $(".mediaBackContainer")
+							.css({ left: 'inherit', right: 'inherit' })
+							.css('left', $("#mainStagePanel").width()/2);
+					}
 					
 					// Help goes over the floating panel when screen too small 
 					if ( bodyWidth <= 1067 )

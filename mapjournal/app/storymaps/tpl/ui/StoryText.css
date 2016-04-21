@@ -223,6 +223,14 @@ p[tabindex='0'] > .image-wrapper {
 	text-align:center;
 	z-index: 30;
 }
+.mediaBackContainer:hover{
+ -webkit-transition: opacity 0.5s linear;
+    -moz-transition: opacity 0.5s linear;
+     -ms-transition: opacity 0.5s linear;
+      -o-transition: opacity 0.5s linear;
+         transition: opacity 0.5s linear;
+	opacity: 1;	
+}
  
 .backButton {
 	display:inline-block; 
