@@ -141,12 +141,17 @@ define([
 				var toggleSidebar = function(){
 					$("#floatingPanel").slideToggle();
 				    if($('.containerPanelInner').width() == $(window).width()){
-				    	$('.containerPanelInner').animate({width: '65%'});
+				    	$('.containerPanelInner').animate({width: '65%'}, function(){
+				    		app.ui.mainStage.updateMainStageWithLayoutSettings();
+				    	});
 				    	$('#floatingPanelToolbar').hide();
 				    }else{
-				    	$('.containerPanelInner').animate({width: '100%'});
+				    	$('.containerPanelInner').animate({width: '100%'}, function(){
+				    		app.ui.mainStage.updateMainStageWithLayoutSettings();
+				    	});
 				    	$('#floatingPanelToolbar').show();
 				    }
+
 				};
 
 				$(document).keypress(function(e) {

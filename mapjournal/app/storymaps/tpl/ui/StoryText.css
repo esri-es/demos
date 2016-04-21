@@ -255,7 +255,7 @@ p[tabindex='0'] > .image-wrapper {
 
 .backLbl {
 	font-size: 1.2em;
-	vertical-align: 6px;
+	vertical-align: 3px;
 	font-family: 'open_sanssemibold', sans-serif;
 	text-transform: uppercase;
 }
