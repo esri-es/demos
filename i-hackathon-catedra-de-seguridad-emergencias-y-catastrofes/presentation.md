@@ -4,7 +4,7 @@
 ### Cátedra de Seguridad Emergencias y Catástrofes
 Raúl Jiménez - Esri España
 
-[bit.ly/umappt](http://bit.ly/umappt)
+[bit.ly/UMAemergencias](http://bit.ly/UMAemergencias)
 
 ---
 
