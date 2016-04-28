@@ -45,7 +45,9 @@ define(["dojo/cookie",
 			switchToBuilder: function() 
 			{
 				if( document.location.search.match(/appid/) )
-					document.location = SocialSharing.cleanURL(document.location.protocol + '//' + document.location.host + document.location.pathname + document.location.search, true) + "&edit" + document.location.hash;
+					//document.location = SocialSharing.cleanURL(document.location.protocol + '//' + document.location.host + document.location.pathname + document.location.search, true) + "&edit" + document.location.hash;
+				
+					document.location = SocialSharing.cleanURL('https://arcgis.com/apps/MapJournal/index.html' + document.location.search, true) + "&edit" + document.location.hash;
 				else if ( document.location.search.slice(-1) == '?' )
 					document.location = SocialSharing.cleanURL(document.location.protocol + '//' + document.location.host + document.location.pathname, true) + "?edit"  + document.location.hash;
 				else
