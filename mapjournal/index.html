@@ -304,66 +304,69 @@
 				margin-left: -17px;
 				margin-top: -20px;
 			}
+			@media (min-width: 800px) {
 
-			body.layout-float-right #floatingPanel{
-				right: 0;
 
-			}
-			.containerPanelInner{
-			    width: 65%;
-			 }
-			 #mainStagePanel{
-				 -webkit-box-shadow: none;
-	       -moz-box-shadow: none;
-	       box-shadow: none;
-			 }
-			 body{
-			 	background-color: white;
-			 }
-			 #floatingPanelToolbar{
-	 	    position: absolute;
-		    top: 0;
-		    right: 0;
-		    width: 100%;
-		    color: #FFF;
-		    z-index: 10;
-		    cursor: pointer;
-		    text-align: center;
-		    opacity: 0;
-		    display: none;
-		    -webkit-transition: opacity 2.1s;
-				-moz-transition: opacity 2.1s;
-				-ms-transition: opacity 2.1s;
-				-o-transition: opacity 2.1s;
-				transition: opacity 2.1s;
-				background-color: rgba(0,0,0,.8);
-    		padding: .5rem;
-    		font-size: 1.2rem;
-			}
-			#floatingPanelToolbar:hover{
-				opacity: 1;
-			}
+				body.layout-float-right #floatingPanel{
+					right: 0;
 
-			.mediaBackContainer{
-		    display: block;
-		    left: inherit;
-		    right: 10px;
-		    width: 100%;
-		    bottom: 0;
-		    height: 0;
+				}
+				.containerPanelInner{
+				    width: 65%;
+				 }
+				 #mainStagePanel{
+					 -webkit-box-shadow: none;
+		       -moz-box-shadow: none;
+		       box-shadow: none;
+				 }
+				 body{
+				 	background-color: white;
+				 }
+				 #floatingPanelToolbar{
+		 	    position: absolute;
+			    top: 0;
+			    right: 0;
+			    width: 100%;
+			    color: #FFF;
+			    z-index: 10;
+			    cursor: pointer;
+			    text-align: center;
+			    opacity: 0;
+			    display: none;
+			    -webkit-transition: opacity 2.1s;
+					-moz-transition: opacity 2.1s;
+					-ms-transition: opacity 2.1s;
+					-o-transition: opacity 2.1s;
+					transition: opacity 2.1s;
+					background-color: rgba(0,0,0,.8);
+	    		padding: .5rem;
+	    		font-size: 1.2rem;
+				}
+				#floatingPanelToolbar:hover{
+					opacity: 1;
+				}
+
+				.mediaBackContainer{
+			    display: block;
+			    left: inherit;
+			    right: 10px;
+			    width: 100%;
+			    bottom: 0;
+			    height: 0;
+				}
+				.backButton{
+					padding: 2px 21px 0px 15px;
+				}
+				.backArrow {
+			    width: 15px;
+			    height: 15px;
+			    background: url('resources/tpl/viewer/icons/mainmedia-back.png');
+			    background-size: 100% auto;
+				}
+				.backLbl {
+			    font-size: 1.4rem;
+			  }
 			}
-			.backButton{
-				padding: 2px 21px 0px 15px;
-			}
-			.backArrow {
-		    width: 15px;
-		    height: 15px;
-		    background: url('resources/tpl/viewer/icons/mainmedia-back.png');
-		    background-size: 100% auto;
-			}
-			.backLbl {
-		    font-size: 1.4rem;
-		  }
 		</style>
 		
 		<div id="loadingOverlay"></div>
