@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html ng-app="demoapp">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+  <script src="//cdn.leafletjs.com/leaflet-1.0.0-b1/leaflet.js"></script>
+
+  <script src="//cdn.jsdelivr.net/leaflet.esri/2.0.0-beta.5/esri-leaflet.js"></script>
+
+  <script src="//tombatossals.github.io/angular-leaflet-directive/dist/angular-leaflet-directive.min.js"></script>
+  <link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-1.0.0-b1/leaflet.css" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+
+  <!-- Include Leaflet.heat via rawgit.com
+  in production you'd be better off hosting this library yourself -->
+
+  <script src="https://rawgit.com/Leaflet/Leaflet.heat/gh-pages/dist/leaflet-heat.js"></script>
+
+  <!-- Load Heatmap Feature Layer from CDN -->
+  <script src="https://cdn.jsdelivr.net/leaflet.esri.heatmap-feature-layer/2.0.0-beta.1/esri-leaflet-heatmap-feature-layer.js"></script>
+
+  <script>
+  var app = angular.module('demoapp', ['leaflet-directive']);
+
+
+  app.controller('BasicCenterController', [ '$scope', 'leafletData', 'leafletMapEvents', function($scope, leafletData, leafletMapEvents) {
+    leafletData.getMap('mymap').then(function(map) {
+      $scope.view = map;
+      // once this async method has returned, its possible to work with the application's map
+      L.esri.featureLayer({
+        url: '//services1.arcgis.com/hcmP7kr0Cx3AcTJk/arcgis/rest/services/Policia_local/FeatureServer/0'
+
+      }).addTo(map);
+      //L.esri.basemapLayer("Gray").addTo(map);
+      /*
+      L.esri.Heat.heatmapFeatureLayer({
+      url: '//services1.arcgis.com/nCKYwcSONQTkPA4K/arcgis/rest/services/ServicioSanitariosGalicia/FeatureServer/1',
+      radius: 28
+    }).addTo(map);
+    */
+
+    //map.on("locationfound", function(e) {
+    // use location to find out which census block they are inside.
+
+    //});
+
+  });
+  $scope.bookmark = {
+    galicia: {
+      lng: -8.4169,
+      lat: 42.6582,
+      zoom: 8
+    },
+    sevilla:{
+      lat: 37.383,
+      lng: -5.993,
+      zoom: 12
+    }
+  };
+
+  angular.extend($scope, {
+    map:{
+      center: $scope.bookmark.sevilla
+    },
+    events: {
+      map: {
+        enable: ['dragend', 'layeradd', 'zoomend'],
+        logic: 'emit'
+      }
+    }
+
+  });
+
+  $scope.tileServices = {
+    osm: {
+      name:'OpenStreetMap',
+      url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+      options: {
+        attribution: 'All maps &copy; <a href="http://www.opencyclemap.org">OpenCycleMap</a>, map data &copy; <a href="http://www.openstreetmap.org">OpenStreetMap</a> (<a href="http://www.openstreetmap.org/copyright">ODbL</a>'
+      }
+    },
+    opencyclemap: {
+      name:'OpenCycleMap',
+      url: 'http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png',
+      options: {
+        attribution: 'All maps &copy; <a href="http://www.opencyclemap.org">OpenCycleMap</a>, map data &copy; <a href="http://www.openstreetmap.org">OpenStreetMap</a> (<a href="http://www.openstreetmap.org/copyright">ODbL</a>'
+      }
+    }
+  };
+  $scope.tiles = $scope.tileServices.osm;
+
+  $scope.changeTiles = function(tiles){
+    $scope.tiles = tiles;
+
+  };
+  $scope.moveTo = function(city) {
+    $scope.map.center.lat = city.lat;
+    $scope.map.center.lng = city.lng;
+    $scope.map.center.zoom = city.zoom;
+  };
+  console.log(leafletMapEvents.getAvailableMapEvents());
+
+  $scope.$on('leafletDirectiveMap.mymap.dragend', loadTable);
+  $scope.$on('leafletDirectiveMap.mymap.layeradd', loadTable);
+  $scope.$on('leafletDirectiveMap.mymap.zoomend', loadTable);
+
+  function loadTable(event){
+    $scope.loading = true;
+    console.log($scope.tiles);
+    try{
+      var bounds = event.currentScope.view.getBounds()
+      L.esri.query({
+        url: 'https://services1.arcgis.com/hcmP7kr0Cx3AcTJk/arcgis/rest/services/Policia_local/FeatureServer/0'
+      }).within(bounds).run(function(error, response){
+        $scope.results = response.features;
+        $scope.loading = false;
+        $scope.$apply()
+      });
+    }catch(e){
+      console.error("Error =", e);
+    }
+  };
+}]);
+</script>
+<style>
+.mb1{
+  margin-bottom: 1rem;
+}
+.mt1{
+  margin-top: 1rem;
+}
+.bg-info{
+  padding: 1rem;
+  margin: .5rem 0;
+}
+</style>
+</head>
+<body ng-controller="BasicCenterController">
+  <div class="container">
+
+    <div class="row mb1">
+      <div class="col-md-12">
+        <h1>Filtro espacial: comisarías de Sevilla</h1>
+      </div>
+    </div>
+
+    <div class="row mb1">
+      <div class="col-md-6">
+
+
+        Latitud: {{map.center.lat | number: 5}}
+        | Longitud: {{map.center.lng | number: 5}}
+      </div>
+      <div class="col-md-6 text-right">
+        <button ng-click="changeTiles(tileServices.osm)" class="btn btn-default">OpenStreetMaps</button>
+        <button ng-click="changeTiles(tileServices.opencyclemap)" class="btn btn-default">OpenCycleMap</button>
+      </div>
+    </div>
+    <div class="row mb1">
+      <div class="col-md-12">
+        <leaflet id= "mymap" center="map.center" tiles="tiles" width="100%" height="480px" ></leaflet>
+        <span ng-model="map.center"></span>
+
+        <p ng-show="loading" class="ng-hide bg-info text-center">Refrescando <i class="fa fa-spinner fa-spin" aria-hidden="true"></i></p>
+
+        <table class="table table-striped table-bordered mt1">
+          <thead>
+            <th></th>
+            <th>Nombre</th>
+            <th>Dirección</th>
+          </thead>
+          <tbody>
+            <tr ng:repeat="i in results">
+              <td ng-click="moveTo({lat: i.geometry.coordinates[1], lng: i.geometry.coordinates[0], zoom: 16})"><i class="fa fa-search-plus" aria-hidden="true"></i></td>
+              <td>{{i.properties.Nombre}}</td>
+              <td>{{i.properties['Dirección']}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
