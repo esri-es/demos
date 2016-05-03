@@ -2,62 +2,39 @@
 <html ng-app="demoapp">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Latest compiled and minified CSS -->
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-  <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
-  <script src="//cdn.leafletjs.com/leaflet-1.0.0-b1/leaflet.js"></script>
 
-  <script src="//cdn.jsdelivr.net/leaflet.esri/2.0.0-beta.5/esri-leaflet.js"></script>
-
-  <script src="//tombatossals.github.io/angular-leaflet-directive/dist/angular-leaflet-directive.min.js"></script>
   <link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-1.0.0-b1/leaflet.css" />
-
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
-
-  <!-- Include Leaflet.heat via rawgit.com
-  in production you'd be better off hosting this library yourself -->
-
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+  <script src="//cdn.leafletjs.com/leaflet-1.0.0-b1/leaflet.js"></script>
+  <script src="//cdn.jsdelivr.net/leaflet.esri/2.0.0-beta.5/esri-leaflet.js"></script>
+  <script src="//tombatossals.github.io/angular-leaflet-directive/dist/angular-leaflet-directive.min.js"></script>
   <script src="https://rawgit.com/Leaflet/Leaflet.heat/gh-pages/dist/leaflet-heat.js"></script>
-
-  <!-- Load Heatmap Feature Layer from CDN -->
   <script src="https://cdn.jsdelivr.net/leaflet.esri.heatmap-feature-layer/2.0.0-beta.1/esri-leaflet-heatmap-feature-layer.js"></script>
 
   <script>
   var app = angular.module('demoapp', ['leaflet-directive']);
 
-
   app.controller('BasicCenterController', [ '$scope', 'leafletData', 'leafletMapEvents', function($scope, leafletData, leafletMapEvents) {
     leafletData.getMap('mymap').then(function(map) {
       $scope.view = map;
-      // once this async method has returned, its possible to work with the application's map
       L.esri.featureLayer({
         url: '//services1.arcgis.com/hcmP7kr0Cx3AcTJk/arcgis/rest/services/Policia_local/FeatureServer/0'
 
       }).addTo(map);
-      //L.esri.basemapLayer("Gray").addTo(map);
+
       /*
       L.esri.Heat.heatmapFeatureLayer({
-      url: '//services1.arcgis.com/nCKYwcSONQTkPA4K/arcgis/rest/services/ServicioSanitariosGalicia/FeatureServer/1',
-      radius: 28
-    }).addTo(map);
-    */
-
-    //map.on("locationfound", function(e) {
-    // use location to find out which census block they are inside.
-
-    //});
-
+        url: '//services1.arcgis.com/nCKYwcSONQTkPA4K/arcgis/rest/services/ServicioSanitariosGalicia/FeatureServer/1',
+        radius: 28
+      }).addTo(map);
+      */
   });
   $scope.bookmark = {
-    galicia: {
-      lng: -8.4169,
-      lat: 42.6582,
-      zoom: 8
-    },
     sevilla:{
       lat: 37.383,
       lng: -5.993,
@@ -94,6 +71,7 @@
       }
     }
   };
+
   $scope.tiles = $scope.tileServices.osm;
 
   $scope.changeTiles = function(tiles){
@@ -105,7 +83,6 @@
     $scope.map.center.lng = city.lng;
     $scope.map.center.zoom = city.zoom;
   };
-  console.log(leafletMapEvents.getAvailableMapEvents());
 
   $scope.$on('leafletDirectiveMap.mymap.dragend', loadTable);
   $scope.$on('leafletDirectiveMap.mymap.layeradd', loadTable);
@@ -178,7 +155,7 @@
           </thead>
           <tbody>
             <tr ng:repeat="i in results">
-              <td ng-click="moveTo({lat: i.geometry.coordinates[1], lng: i.geometry.coordinates[0], zoom: 16})"><i class="fa fa-search-plus" aria-hidden="true"></i></td>
+              <td class="text-center" ng-click="moveTo({lat: i.geometry.coordinates[1], lng: i.geometry.coordinates[0], zoom: 16})"><i class="fa fa-search-plus" aria-hidden="true"></i></td>
               <td>{{i.properties.Nombre}}</td>
               <td>{{i.properties['Dirección']}}</td>
             </tr>
