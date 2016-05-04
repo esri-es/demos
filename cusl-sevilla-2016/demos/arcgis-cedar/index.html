@@ -3,9 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link href="slider/css/slider.css" rel="stylesheet">
 
 
@@ -18,6 +17,28 @@
     margin: 0;
     height: 100%;
     width: 100%;
+  }
+  #titleDiv{
+    position: absolute;
+    top: 10px;
+    left: 16px;
+    z-index: 1;
+    background-color: rgba(255,255,255,.5);
+    right: 16px;
+    padding: 10px;
+  }
+  #titleDiv h1{
+    margin: 0;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .esri-ui-top-left.esri-ui-corner{
+    margin-top: 45px;
+  }
+  .esri-docked-top-right .esri-popup-main{
+    margin-top: 45px;
   }
   #infoDiv,
   #opacity-layer,
@@ -49,8 +70,10 @@
 
   <link rel="stylesheet" href="https://js.arcgis.com/4.0/esri/css/main.css">
 
+  <script type="text/javascript" src="//esri.github.io/cedar/js/d3.min.js"></script>
+  <script type="text/javascript" src="//esri.github.io/cedar/js/vega.js"></script>
+  <script type="text/javascript" src="//esri.github.io/cedar/js/cedar.js"></script>
   <script src="https://js.arcgis.com/4.0/"></script>
-
   <script>
   require([
     "esri/Map",
@@ -59,8 +82,9 @@
     "esri/renderers/SimpleRenderer",
     "esri/symbols/SimpleFillSymbol",
     "esri/widgets/Legend",
+    "esri/widgets/Popup",
     "dojo/domReady!"
-  ], function(Map, SceneView, FeatureLayer, SimpleRenderer, SimpleFillSymbol, Legend) {
+  ], function(Map, SceneView, FeatureLayer, SimpleRenderer, SimpleFillSymbol, Legend,Popup) {
 
     var defaultSym = new SimpleFillSymbol({
       outline: {
@@ -75,7 +99,6 @@
       visualVariables: [{
         type: "color",
         field: "A2013",
-        //normalizationField: "SUPERFICIE",
         stops: [
           {
             value: 2000,
@@ -100,12 +123,14 @@
         ground: "world-elevation"
       });
 
-      var view = new SceneView({
+      view = new SceneView({
         container: "viewDiv",
         map: map,
         scale: 50000000,
         center: [-101.17, 21.78],
-
+        popup: {
+          dockEnabled: true,
+        },
         camera: {
           position: [-17.8181, 28.1178, 14014.7497],
           heading: 354.7629,
@@ -122,76 +147,124 @@
       var featureLayer = new FeatureLayer({
         url: "//services.arcgis.com/hkQNLKNeDVYBjvFE/arcgis/rest/services/Municipios/FeatureServer/0",
         id: "population",
-        visible: false,
+        visible: true,
         renderer: renderer,
         opacity: .5,
         outFields: ["*"],
         popupTemplate: {
-          title: "{MUNICIPIO}, {CODIGO}",
-          content: "{A2013} personas censadas en 2013, superficie {SUPERFICIE} metros cuadrados y un perímetro de {PERIMETRO}.",
-          actions: [{
-            title: "Ver gráfica",
-            id: "show-diagram",
-            className: "esri-icon-chart"
-          }]
-        }
-      });
-
-      view.popup.on("trigger-action", function(evt){
-        // If the zoom-out action is clicked, the following code executes
-        if(evt.action.id === "show-diagram"){
-          console.log("hola");
-        }
-      });
-
-      //
-
-
-      map.add(featureLayer);
-
-      var legend = new Legend({
-        view: view,
-        layerInfos: [
-          {
-            layer: featureLayer,
-            title: "Poverty in the southeast U.S."
-          }]
-        }, "infoDiv");
-
-        var $ = window.$;
-        $('.slider').slider({
-          formater: function(value) {
-            return 'Valor actual: '+value.toFixed(1);
+          title: "Municipio: {MUNICIPIO}",
+          content: "Superficie: {SUPERFICIE} metros<sup>2</sup> | Perímetro: {PERIMETRO} metros<sup>2</sup>.<div id=\"chart\"></div>",
+          fieldInfos: [
+            {
+              fieldName: "SUPERFICIE",
+              format: {
+                digitSeparator: false,
+                places: 0
+              }
+            }, {
+              fieldName: "PERIMETRO",
+              format: {
+                digitSeparator: false,
+                places: 0
+              }
+            }],
+            actions: [{
+              title: "Ver evolución de la población",
+              id: "show-diagram",
+              className: "esri-icon-chart"
+            }]
           }
         });
 
-        $('.slider').on('slide', function(ev){
-          l = map.findLayerById("population")
-          l.opacity = ev.value;
-        });
-        $('#show-layer').change(function(ev){
-          l = map.findLayerById("population")
-          l.visible = $(this).is(":checked");
-          if($(this).is(":checked")){
-            $("#slider-container").css("visibility", "visible");
-          }else{
-            $("#slider-container").css("visibility", "hidden");
+        view.popup.on("trigger-action", function(evt){
+          if(evt.action.id === "show-diagram"){
+            loadChart(view.popup.selectedFeature.attributes.CODIGO);
           }
-        })
+        });
 
-      });
+        map.add(featureLayer);
+
+        var legend = new Legend({
+          view: view,
+          layerInfos: [
+            {
+              layer: featureLayer,
+              title: "Poverty in the southeast U.S."
+            }]
+          }, "infoDiv");
+
+          var $ = window.$;
+          $('.slider').slider({
+            formater: function(value) {
+              return 'Valor actual: '+value.toFixed(1);
+            }
+          });
+
+          $('.slider').on('slide', function(ev){
+            l = map.findLayerById("population")
+            l.opacity = ev.value;
+          });
+          $('#show-layer').change(function(ev){
+            l = map.findLayerById("population")
+            l.visible = $(this).is(":checked");
+            if($(this).is(":checked")){
+              $("#slider-container").css("visibility", "visible");
+            }else{
+              $("#slider-container").css("visibility", "hidden");
+            }
+          })
+
+        });
+
+
+        function loadChart(code){
+          var content = "Población en:<br>",
+          fields = [];
+
+          for (var i = 2012; i> 2006; i--){
+            fields.push("attributes.A"+i);
+            content += ''+i+' = {A'+i+'}<br>';
+          }
+
+          var chart = new Cedar({
+            "type": "grouped",
+
+            "tooltip": {
+              "title": "{MUNICIPIO}",
+              "content": content
+            },
+            "dataset":{
+              "url": "//services.arcgis.com/hkQNLKNeDVYBjvFE/arcgis/rest/services/Municipios/FeatureServer/0",
+              "mappings":{
+                "x": {"field":fields, "label":"Censo"},
+                "y": {"field":"TOTAL_STUD_SUM","label":"Población"},
+                "group":{"field":"MUNICIPIO","label":"Trabuco"}
+
+              }
+          }
+        });
+
+        chart.dataset.query.where = "CODIGO = "+ code;
+        chart.update()
+
+        chart.show({
+          elementId: "#chart",
+          "height": 250,
+        });
+      }
       </script>
     </head>
 
     <body>
+      <div id="titleDiv"><h1>Censo histórico en los municipios de La Palma</h1></div>
       <div id="viewDiv"></div>
       <div id="infoDiv"></div>
       <div id="opacity-layer">
-        <input type="checkbox" id="show-layer"> Superponer capa
+        <input type="checkbox" id="show-layer" checked> Superponer capa
 
 
       </div>
-      <div id="slider-container" style="visibility:hidden">
+      <div id="slider-container">
         Opacidad:
         <input
         type="text" class="span2 slider" value="0.5"
@@ -201,6 +274,9 @@
       </div>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
       <script src="slider/js/bootstrap.slider.js"></script>
+
+
+
 
     </body>
     </html>
