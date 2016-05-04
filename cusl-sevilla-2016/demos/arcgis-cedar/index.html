@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <link href="slider/css/slider.css" rel="stylesheet">
+
+
+  <title>Get started with SceneView - Create a 3D map - 4.0</title>
+  <style>
+  html,
+  body,
+  #viewDiv {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+  }
+  #infoDiv,
+  #opacity-layer,
+  #slider-container{
+    position: absolute;
+    bottom: 16px;
+    background-color: whitesmoke;
+    color: darkslategray;
+    padding: 8px;
+  }
+  #infoDiv {
+    left: 0;
+    max-width: 300px;
+    border-top-right-radius: 5px;
+    color: darkslategray;
+  }
+  #opacity-layer {
+    right: 0;
+    border-top-left-radius: 5px;
+  }
+  #slider-container{
+    display: inline-block;
+    left: 50%;
+    margin-left: -117px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  </style>
+
+  <link rel="stylesheet" href="https://js.arcgis.com/4.0/esri/css/main.css">
+
+  <script src="https://js.arcgis.com/4.0/"></script>
+
+  <script>
+  require([
+    "esri/Map",
+    "esri/views/SceneView",
+    "esri/layers/FeatureLayer",
+    "esri/renderers/SimpleRenderer",
+    "esri/symbols/SimpleFillSymbol",
+    "esri/widgets/Legend",
+    "dojo/domReady!"
+  ], function(Map, SceneView, FeatureLayer, SimpleRenderer, SimpleFillSymbol, Legend) {
+
+    var defaultSym = new SimpleFillSymbol({
+      outline: {
+        color: "lightgray",
+        width: 0.5
+      }
+    });
+
+    var renderer = new SimpleRenderer({
+      symbol: defaultSym,
+      label: "Nº de habitantes por municipio",
+      visualVariables: [{
+        type: "color",
+        field: "A2013",
+        //normalizationField: "SUPERFICIE",
+        stops: [
+          {
+            value: 2000,
+            color: "#725D77",
+            label: ">1000"
+          },
+          {
+            value: 2000,
+            color: "#FFFCD4",
+            label: ">5000"
+          },
+          {
+            value: 10000,
+            color: "#350242",
+            label: ">10000"
+          }]
+        }]
+      });
+
+      map = new Map({
+        basemap: "satellite",
+        ground: "world-elevation"
+      });
+
+      var view = new SceneView({
+        container: "viewDiv",
+        map: map,
+        scale: 50000000,
+        center: [-101.17, 21.78],
+
+        camera: {
+          position: [-17.8181, 28.1178, 14014.7497],
+          heading: 354.7629,
+          tilt: 80.4292
+        },
+        environment:{
+          lighting: {
+            directShadowsEnabled: true,
+            date: new Date("Sun Mar 15 2015 12:00:00 GMT+0100 (CET)")
+          }
+        }
+      });
+
+      var featureLayer = new FeatureLayer({
+        url: "//services.arcgis.com/hkQNLKNeDVYBjvFE/arcgis/rest/services/Municipios/FeatureServer/0",
+        id: "population",
+        visible: false,
+        renderer: renderer,
+        opacity: .5,
+        outFields: ["*"],
+        popupTemplate: {
+          title: "{MUNICIPIO}, {CODIGO}",
+          content: "{A2013} personas censadas en 2013, superficie {SUPERFICIE} metros cuadrados y un perímetro de {PERIMETRO}.",
+          actions: [{
+            title: "Ver gráfica",
+            id: "show-diagram",
+            className: "esri-icon-chart"
+          }]
+        }
+      });
+
+      view.popup.on("trigger-action", function(evt){
+        // If the zoom-out action is clicked, the following code executes
+        if(evt.action.id === "show-diagram"){
+          console.log("hola");
+        }
+      });
+
+      //
+
+
+      map.add(featureLayer);
+
+      var legend = new Legend({
+        view: view,
+        layerInfos: [
+          {
+            layer: featureLayer,
+            title: "Poverty in the southeast U.S."
+          }]
+        }, "infoDiv");
+
+        var $ = window.$;
+        $('.slider').slider({
+          formater: function(value) {
+            return 'Valor actual: '+value.toFixed(1);
+          }
+        });
+
+        $('.slider').on('slide', function(ev){
+          l = map.findLayerById("population")
+          l.opacity = ev.value;
+        });
+        $('#show-layer').change(function(ev){
+          l = map.findLayerById("population")
+          l.visible = $(this).is(":checked");
+          if($(this).is(":checked")){
+            $("#slider-container").css("visibility", "visible");
+          }else{
+            $("#slider-container").css("visibility", "hidden");
+          }
+        })
+
+      });
+      </script>
+    </head>
+
+    <body>
+      <div id="viewDiv"></div>
+      <div id="infoDiv"></div>
+      <div id="opacity-layer">
+        <input type="checkbox" id="show-layer"> Superponer capa
+
+
+      </div>
+      <div id="slider-container" style="visibility:hidden">
+        Opacidad:
+        <input
+        type="text" class="span2 slider" value="0.5"
+        data-slider-min="0" data-slider-max="1" data-slider-step="0.1"
+        data-slider-value="0.5" data-slider-orientation="horizontal"
+        data-slider-selection="none" data-slider-tooltip="show">
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+      <script src="slider/js/bootstrap.slider.js"></script>
+
+    </body>
+    </html>
