@@ -33,6 +33,7 @@
     text-transform: uppercase;
     text-align: center;
   }
+  
 
   .esri-ui-top-left.esri-ui-corner{
     margin-top: 45px;
@@ -66,186 +67,185 @@
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
   }
-  </style>
+</style>
 
-  <link rel="stylesheet" href="https://js.arcgis.com/4.0/esri/css/main.css">
+<link rel="stylesheet" href="https://js.arcgis.com/4.0/esri/css/main.css">
 
-  <script type="text/javascript" src="//esri.github.io/cedar/js/d3.min.js"></script>
-  <script type="text/javascript" src="//esri.github.io/cedar/js/vega.js"></script>
-  <script type="text/javascript" src="//esri.github.io/cedar/js/cedar.js"></script>
-  <script src="https://js.arcgis.com/4.0/"></script>
-  <script>
-  require([
-    "esri/Map",
-    "esri/views/SceneView",
-    "esri/layers/FeatureLayer",
-    "esri/renderers/SimpleRenderer",
-    "esri/symbols/SimpleFillSymbol",
-    "esri/widgets/Legend",
-    "esri/widgets/Popup",
-    "dojo/domReady!"
-  ], function(Map, SceneView, FeatureLayer, SimpleRenderer, SimpleFillSymbol, Legend,Popup) {
+<script type="text/javascript" src="//esri.github.io/cedar/js/d3.min.js"></script>
+<script type="text/javascript" src="//esri.github.io/cedar/js/vega.js"></script>
+<script type="text/javascript" src="//esri.github.io/cedar/js/cedar.js"></script>
+<script src="https://js.arcgis.com/4.0/"></script>
+<script>
+require([
+  "esri/Map",
+  "esri/views/SceneView",
+  "esri/layers/FeatureLayer",
+  "esri/renderers/SimpleRenderer",
+  "esri/symbols/SimpleFillSymbol",
+  "esri/widgets/Legend",
+  "esri/widgets/Popup",
+  "dojo/domReady!"
+], function(Map, SceneView, FeatureLayer, SimpleRenderer, SimpleFillSymbol, Legend,Popup) {
 
-    var defaultSym = new SimpleFillSymbol({
-      outline: {
-        color: "lightgray",
-        width: 0.5
+  var defaultSym = new SimpleFillSymbol({
+    outline: {
+      color: "lightgray",
+      width: 0.5
+    }
+  });
+
+  var renderer = new SimpleRenderer({
+    symbol: defaultSym,
+    label: "Nº de habitantes por municipio",
+    visualVariables: [{
+      type: "color",
+      field: "A2013",
+      stops: [
+        {
+          value: 2000,
+          color: "#725D77",
+          label: ">1000"
+        },
+        {
+          value: 2000,
+          color: "#FFFCD4",
+          label: ">5000"
+        },
+        {
+          value: 10000,
+          color: "#350242",
+          label: ">10000"
+        }]
+      }]
+    });
+
+    map = new Map({
+      basemap: "satellite",
+      ground: "world-elevation"
+    });
+
+    view = new SceneView({
+      container: "viewDiv",
+      map: map,
+      scale: 50000000,
+      center: [-101.17, 21.78],
+      popup: {
+        dockEnabled: true,
+      },
+      camera: {
+        position: [-17.8181, 28.1178, 14014.7497],
+        heading: 354.7629,
+        tilt: 80.4292
+      },
+      environment:{
+        lighting: {
+          directShadowsEnabled: true,
+          date: new Date("Sun Mar 15 2015 12:00:00 GMT+0100 (CET)")
+        }
       }
     });
 
-    var renderer = new SimpleRenderer({
-      symbol: defaultSym,
-      label: "Nº de habitantes por municipio",
-      visualVariables: [{
-        type: "color",
-        field: "A2013",
-        stops: [
+    var featureLayer = new FeatureLayer({
+      url: "//services.arcgis.com/hkQNLKNeDVYBjvFE/arcgis/rest/services/Municipios/FeatureServer/0",
+      id: "population",
+      visible: true,
+      renderer: renderer,
+      opacity: .5,
+      outFields: ["*"],
+      popupTemplate: {
+        title: "Municipio: {MUNICIPIO}",
+        content: "Superficie: {SUPERFICIE} metros<sup>2</sup> | Perímetro: {PERIMETRO} metros<sup>2</sup>.<div id=\"chart\"></div>",
+        fieldInfos: [
           {
-            value: 2000,
-            color: "#725D77",
-            label: ">1000"
-          },
-          {
-            value: 2000,
-            color: "#FFFCD4",
-            label: ">5000"
-          },
-          {
-            value: 10000,
-            color: "#350242",
-            label: ">10000"
+            fieldName: "SUPERFICIE",
+            format: {
+              digitSeparator: false,
+              places: 0
+            }
+          }, {
+            fieldName: "PERIMETRO",
+            format: {
+              digitSeparator: false,
+              places: 0
+            }
+          }],
+          actions: [{
+            title: "Ver evolución de la población",
+            id: "show-diagram",
+            className: "esri-icon-chart"
           }]
-        }]
-      });
-
-      map = new Map({
-        basemap: "satellite",
-        ground: "world-elevation"
-      });
-
-      view = new SceneView({
-        container: "viewDiv",
-        map: map,
-        scale: 50000000,
-        center: [-101.17, 21.78],
-        popup: {
-          dockEnabled: true,
-        },
-        camera: {
-          position: [-17.8181, 28.1178, 14014.7497],
-          heading: 354.7629,
-          tilt: 80.4292
-        },
-        environment:{
-          lighting: {
-            directShadowsEnabled: true,
-            date: new Date("Sun Mar 15 2015 12:00:00 GMT+0100 (CET)")
-          }
         }
       });
 
-      var featureLayer = new FeatureLayer({
-        url: "//services.arcgis.com/hkQNLKNeDVYBjvFE/arcgis/rest/services/Municipios/FeatureServer/0",
-        id: "population",
-        visible: true,
-        renderer: renderer,
-        opacity: .5,
-        outFields: ["*"],
-        popupTemplate: {
-          title: "Municipio: {MUNICIPIO}",
-          content: "Superficie: {SUPERFICIE} metros<sup>2</sup> | Perímetro: {PERIMETRO} metros<sup>2</sup>.<div id=\"chart\"></div>",
-          fieldInfos: [
-            {
-              fieldName: "SUPERFICIE",
-              format: {
-                digitSeparator: false,
-                places: 0
-              }
-            }, {
-              fieldName: "PERIMETRO",
-              format: {
-                digitSeparator: false,
-                places: 0
-              }
-            }],
-            actions: [{
-              title: "Ver evolución de la población",
-              id: "show-diagram",
-              className: "esri-icon-chart"
-            }]
+      view.popup.on("trigger-action", function(evt){
+        if(evt.action.id === "show-diagram"){
+          loadChart(view.popup.selectedFeature.attributes.CODIGO);
+        }
+      });
+
+      map.add(featureLayer);
+
+      var legend = new Legend({
+        view: view,
+        layerInfos: [
+          {
+            layer: featureLayer,
+            title: "Poverty in the southeast U.S."
+          }]
+        }, "infoDiv");
+
+        var $ = window.$;
+        $('.slider').slider({
+          formater: function(value) {
+            return 'Valor actual: '+value.toFixed(1);
           }
         });
 
-        view.popup.on("trigger-action", function(evt){
-          if(evt.action.id === "show-diagram"){
-            loadChart(view.popup.selectedFeature.attributes.CODIGO);
-          }
+        $('.slider').on('slide', function(ev){
+          l = map.findLayerById("population")
+          l.opacity = ev.value;
         });
+        $('#show-layer').change(function(ev){
+          l = map.findLayerById("population")
+          l.visible = $(this).is(":checked");
+          if($(this).is(":checked")){
+            $("#slider-container").css("visibility", "visible");
+          }else{
+            $("#slider-container").css("visibility", "hidden");
+          }
+        })
 
-        map.add(featureLayer);
+      });
 
-        var legend = new Legend({
-          view: view,
-          layerInfos: [
-            {
-              layer: featureLayer,
-              title: "Poverty in the southeast U.S."
-            }]
-          }, "infoDiv");
 
-          var $ = window.$;
-          $('.slider').slider({
-            formater: function(value) {
-              return 'Valor actual: '+value.toFixed(1);
+      function loadChart(code){
+        var content = "Población en:<br>",
+        fields = [];
+
+        for (var i = 2012; i> 2006; i--){
+          fields.push("attributes.A"+i);
+          content += ''+i+' = {A'+i+'}<br>';
+        }
+
+        var chart = new Cedar({
+          "type": "grouped",
+
+          "tooltip": {
+            "title": "{MUNICIPIO}",
+            "content": content
+          },
+          "dataset":{
+            "url": "//services.arcgis.com/hkQNLKNeDVYBjvFE/arcgis/rest/services/Municipios/FeatureServer/0",
+            "mappings":{
+              "x": {"field":fields, "label":"Censo"},
+              "group":{"field":"MUNICIPIO","label":"Trabuco"}
+
             }
-          });
-
-          $('.slider').on('slide', function(ev){
-            l = map.findLayerById("population")
-            l.opacity = ev.value;
-          });
-          $('#show-layer').change(function(ev){
-            l = map.findLayerById("population")
-            l.visible = $(this).is(":checked");
-            if($(this).is(":checked")){
-              $("#slider-container").css("visibility", "visible");
-            }else{
-              $("#slider-container").css("visibility", "hidden");
-            }
-          })
-
-        });
-
-
-        function loadChart(code){
-          var content = "Población en:<br>",
-          fields = [];
-
-          for (var i = 2012; i> 2006; i--){
-            fields.push("attributes.A"+i);
-            content += ''+i+' = {A'+i+'}<br>';
-          }
-
-          var chart = new Cedar({
-            "type": "grouped",
-
-            "tooltip": {
-              "title": "{MUNICIPIO}",
-              "content": content
-            },
-            "dataset":{
-              "url": "//services.arcgis.com/hkQNLKNeDVYBjvFE/arcgis/rest/services/Municipios/FeatureServer/0",
-              "mappings":{
-                "x": {"field":fields, "label":"Censo"},
-                "y": {"field":"TOTAL_STUD_SUM","label":"Población"},
-                "group":{"field":"MUNICIPIO","label":"Trabuco"}
-
-              }
           }
         });
 
         chart.dataset.query.where = "CODIGO = "+ code;
-        chart.update()
+        chart.update();
 
         chart.show({
           elementId: "#chart",
@@ -261,8 +261,6 @@
       <div id="infoDiv"></div>
       <div id="opacity-layer">
         <input type="checkbox" id="show-layer" checked> Superponer capa
-
-
       </div>
       <div id="slider-container">
         Opacidad:
@@ -274,9 +272,5 @@
       </div>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
       <script src="slider/js/bootstrap.slider.js"></script>
-
-
-
-
     </body>
     </html>
