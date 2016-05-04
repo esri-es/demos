@@ -9,6 +9,22 @@ Raúl Jiménez - Esri España
 ---
 
 <!-- .slide: class="section" -->
+## Presentación
+
+* Responsable de desarrolladores y emprendedores de Esri España (2014-hoy)
+* Patrono de la fundación Iniciador (2015-hoy)
+* Coordinador voluntario de Iniciador:
+	* Madrid (2014-hoy)
+	* Granada y Málaga (2009-2011)
+* Voluntario/fundador en varias: asociaciones webmasters (2009-2011) y comunidades Code4Spain (2016-hoy), Startup Weekend de Up Global (2015), grupos de desarrolladores de Google (2010-2012), etc.
+* Emprendedor (2010-2012)
+* Desarrollador (1999-hoy)
+* **Ciudadano (1984-hoy)**
+
+
+---
+
+<!-- .slide: class="section" -->
 ## Herramientas
 
 ---
