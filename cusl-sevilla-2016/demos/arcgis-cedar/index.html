@@ -85,7 +85,7 @@ require([
   "esri/widgets/Legend",
   "esri/widgets/Popup",
   "dojo/domReady!"
-], function(Map, SceneView, FeatureLayer, SimpleRenderer, SimpleFillSymbol, Legend,Popup) {
+], function(Map, SceneView, FeatureLayer, SimpleRenderer, SimpleFillSymbol, Legend, Popup) {
 
   var defaultSym = new SimpleFillSymbol({
     outline: {
@@ -131,7 +131,7 @@ require([
       center: [-101.17, 21.78],
       popup: {
         dockEnabled: true,
-      },
+              },
       camera: {
         position: [-17.8181, 28.1178, 14014.7497],
         heading: 354.7629,
@@ -154,7 +154,7 @@ require([
       outFields: ["*"],
       popupTemplate: {
         title: "Municipio: {MUNICIPIO}",
-        content: "Superficie: {SUPERFICIE} metros<sup>2</sup> | Perímetro: {PERIMETRO} metros<sup>2</sup>.<div id=\"chart\"></div>",
+        content: "Superficie: {SUPERFICIE} metros<sup>2</sup> | Perímetro: {PERIMETRO} metros.<div id=\"chart\"></div>",
         fieldInfos: [
           {
             fieldName: "SUPERFICIE",
@@ -238,7 +238,7 @@ require([
             "url": "//services.arcgis.com/hkQNLKNeDVYBjvFE/arcgis/rest/services/Municipios/FeatureServer/0",
             "mappings":{
               "x": {"field":fields, "label":"Censo"},
-              "group":{"field":"MUNICIPIO","label":"Trabuco"}
+              "group":{"field":"MUNICIPIO","label":"Municipio"}
 
             }
           }

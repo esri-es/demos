@@ -4,68 +4,70 @@
 <body>
 
   <script type="text/javascript" src="//esri.github.io/cedar/js/d3.min.js"></script>
-<script type="text/javascript" src="//esri.github.io/cedar/js/vega.js"></script>
-<script type="text/javascript" src="//esri.github.io/cedar/js/cedar.js"></script>
+  <script type="text/javascript" src="//esri.github.io/cedar/js/vega.js"></script>
+  <script type="text/javascript" src="//esri.github.io/cedar/js/cedar.js"></script>
 
-
-<script>
-/*chart = new Cedar({
+  <script>
+  /*
+  chart = new Cedar({
   "type": "bar",
   "dataset": {
-    "url":"//services.arcgis.com/hkQNLKNeDVYBjvFE/arcgis/rest/services/Municipios/FeatureServer/0",
-    "query": {
-      "orderByFields": "A2013 DESC"
-    },
-    "mappings":{
-      "x": {"field":"MUNICIPIO","label":"US State"},
-      "y": {"field":"A2013","label":"Population"}
-    }
-  }
+  "url":"//services.arcgis.com/hkQNLKNeDVYBjvFE/arcgis/rest/services/Municipios/FeatureServer/0",
+  "query": {
+  "orderByFields": "A2013 DESC"
+},
+"mappings":{
+"x": {"field":"MUNICIPIO","label":"US State"},
+"y": {"field":"A2013","label":"Population"}
+}}
 }).show({
-  elementId: "#chart"
-});*/
-
-var content = "Población en:<br>",
-    fields = [];
-
-for (var i = 2012; i> 2006; i--){
-  fields.push("attributes.A"+i);
-  content += ''+i+' = {A'+i+'}<br>';
-}
-
-var chart = new Cedar({
-	"type": "grouped",
-
-	"tooltip": {
-		"title": "{MUNICIPIO}",
-		"content": content
-	},
-  "query":{
-    "where":"CODIGO = 38007"
-  },
-	"dataset":{
-	  "url": "//services.arcgis.com/hkQNLKNeDVYBjvFE/arcgis/rest/services/Municipios/FeatureServer/0",
-	  "mappings":{
-	    "x": {"field":fields, "label":"Censo"},
-      "y": {"field":"TOTAL_STUD_SUM","label":"Población"},
-	    "group":{"field":"MUNICIPIO","label":"MUNICIPIO"}
-
-	  }
-    /*,
-    }*/
-	}
+elementId: "#chart"
 });
+*/
+  var content = 'Población en:<br>',
+      fields = [];
 
-chart.dataset.query.where = "CODIGO = 38007";
-chart.update()
+  for (var i = 2012; i> 2006; i--){
+    fields.push('attributes.A'+i);
+    content += ''+i+' = {A'+i+'}<br>';
+  }
 
-chart.show({
-	elementId: "#chart2",
-"height": 700,
-});
+  var chart = new Cedar({
+    'type': 'grouped',
+
+    'tooltip': {
+      'title': '{MUNICIPIO}',
+      'content': content
+    },
+    'query':{
+      'where':'CODIGO = 38007'
+    },
+    'dataset':{
+      'url': '//services.arcgis.com/hkQNLKNeDVYBjvFE/arcgis/rest/services/Municipios/FeatureServer/0',
+      'mappings':{
+        'x': {'field':fields, 'label':'Censo'},
+        'group':{'field':'MUNICIPIO','label':'MUNICIPIO'}
+      }
+    }
+  });
+
+  chart.show({
+    elementId: '#chart',
+    'height': 500,
+  });
+
+  chart.dataset.query.where = 'CODIGO = 38007';
+  chart.update()
+  chart.show({
+    elementId: '#chart2',
+    'height': 500,
+  });
+
+  console.log(chart.specification);
 </script>
 
-</body>
-<div id="chart2"></div>
 <div id="chart"></div>
+<div id="chart2"></div>
+
+</body>
 </html>
