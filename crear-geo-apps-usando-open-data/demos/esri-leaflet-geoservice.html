@@ -1,0 +1,58 @@
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>Clustering points</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+  <!-- Load Leaflet from CDN-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/leaflet/1.0.0-rc.1/leaflet.css" />
+  <script src="https://cdn.jsdelivr.net/leaflet/1.0.0-rc.1/leaflet-src.js"></script>
+
+  <!-- Load Esri Leaflet from CDN -->
+  <script src="https://cdn.jsdelivr.net/leaflet.esri/2.0.0/esri-leaflet.js"></script>
+
+  <style>
+    body { margin:0; padding:0; }
+    /*#map { position: absolute; top:0; bottom:0; right:0; left:0; }*/
+    #map, #filteredMap{ height: 100% }  
+    #map, #filteredMap{ width: 50%; float:left; }  
+  </style>
+</head>
+<body>
+
+<!-- Include Leaflet.markercluster via rawgit.com
+in production you'd be better off hosting these libraries yourself -->
+<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/Leaflet/Leaflet.markercluster/v1.0.0-beta.2.0/dist/MarkerCluster.Default.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/Leaflet/Leaflet.markercluster/v1.0.0-beta.2.0/dist/MarkerCluster.css">
+<script src="https://cdn.rawgit.com/Leaflet/Leaflet.markercluster/v1.0.0-beta.2.0/dist/leaflet.markercluster.js"></script>
+
+<!-- Load Clustered Feature Layer from CDN -->
+<script src="https://cdn.jsdelivr.net/leaflet.esri.clustered-feature-layer/2.0.0-beta.1/esri-leaflet-clustered-feature-layer.js"></script>
+
+<div id="map"></div>
+<div id="filteredMap"></div>
+
+<script>
+  var GeoService = "https://services1.arcgis.com/nCKYwcSONQTkPA4K/arcgis/rest/services/LocalesMadridAluche/FeatureServer/0/"
+
+  load('map', GeoService);
+  load('filteredMap', GeoService, "desc_situacion_local like 'Abierto'");
+
+  function load(elem, service, where){
+    var map = L.map(elem).setView([40.391229 , -3.762261], 13);
+
+    L.esri.basemapLayer('Streets').addTo(map);
+    var params = {
+      url: service
+    };
+    if(where){
+      params.where = where;
+      console.log("params=",params)
+    }
+    
+    L.esri.Cluster.clusteredFeatureLayer(params).addTo(map);
+  }
+</script>
+
+</body>
+</html>
