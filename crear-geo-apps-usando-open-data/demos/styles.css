@@ -1,0 +1,23 @@
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+#map, #filteredMap{ height: 100% }  
+#map, #filteredMap{ width: 50%; float:left; }  
+.left, .right{
+      width: 50%;
+      position: fixed;
+      z-index: 9999;
+      background-color: rgba(255,255,255,.6);
+      text-align: center;
+      padding: .5rem 0;
+      margin-top: 0;
+      font-weight: 300;
+     }
+.left{
+
+}
+.right{margin-left: 50%;}
+.separator{height: 100%;width: 4px;background-color: #6c6c6c;z-index: 999999;position: absolute;left: 50%;margin-left: -2px;}
+.leaflet-top .leaflet-control{
+    margin-top: 70px;
+}
