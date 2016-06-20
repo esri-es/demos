@@ -4,45 +4,47 @@
     <meta charset="utf-8">  
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
     <meta name="viewport" content="width=1024, user-scalable=no">  
+    
     <style>  
       html { height: 100% }  
       body { height: 100%; margin: 0; padding: 0;}  
-      #map, #filteredMap{ height: 100% }  
-      #map, #filteredMap{ width: 50%; float:left; }  
-
+      
     </style>  
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />  
+    <link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />  
+    <link rel="stylesheet" href="styles.css" />
     <!--[if lte IE 8]>  
-        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />  
+        <link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />  
     <![endif]-->  
   
-    <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>  
+    <script src="//cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>  
     <script type="text/javascript" src="https://rawgit.com/calvinmetcalf/leaflet-ajax/master/dist/leaflet.ajax.js"></script>  
-    
+
     <title>Leaflet AJAX</title>  
   </head>  
   <body>  
-    <div id="map"></div>  
-    <div id="filteredMap"></div>  
+    <h1 class="left">Without filter</h1>
+    <div id="map"></div>
+    <div class="separator"></div>
+    <h1 class="right">Filtered</h1>
+    <div id="filteredMap"></div>
+
   
     <script type="text/javascript">  
-      var GeoJSON = "http://opendata.esri.es/datasets/d9503b99ef934b16a3cd1e6600a3f9d4_0.geojson"
-      var GeoJSONFiltered = 'http://opendata.esri.es/datasets/d9503b99ef934b16a3cd1e6600a3f9d4_0.geojson?where=desc_situacion_local%20like%20\'%25Abierto%25\'&geometry={"xmin":-425923.0912282507,"ymin":4921809.552119555,"xmax":-410501.9207717372,"ymax":4924675.940680245,"spatialReference":{"wkid":102100}}';
+      // Dataset
+      // //opendata.esri.es/datasets/d9503b99ef934b16a3cd1e6600a3f9d4_0?geometry=-3.831%2C40.383%2C-3.693%2C40.403
+
+      var GeoJSON = "//opendata.esri.es/datasets/d9503b99ef934b16a3cd1e6600a3f9d4_0.geojson"
+      var GeoJSONFiltered = '//opendata.esri.es/datasets/d9503b99ef934b16a3cd1e6600a3f9d4_0.geojson?where=desc_situacion_local%20like%20\'%25Abierto%25\'&geometry={"xmin":-425923.0912282507,"ymin":4921809.552119555,"xmax":-410501.9207717372,"ymax":4924675.940680245,"spatialReference":{"wkid":102100}}';
 
       load('map', GeoJSON);
       load('filteredMap', GeoJSONFiltered);
 
       function load(elem, service){
         var m = L.map(elem).setView([40.391229 , -3.762261], 16);  
-        var osmDataAttr = 'Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';  
-        var osm = L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:osmDataAttr});  
+        var osmDataAttr = 'Map data &copy; <a href="//www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';  
+        var osm = L.tileLayer("//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:osmDataAttr});  
         osm.addTo(m);  
     
-        // Dataset
-        // http://opendata.esri.es/datasets/d9503b99ef934b16a3cd1e6600a3f9d4_0?geometry=-3.831%2C40.383%2C-3.693%2C40.403
-        
-        
-
         //var geojson = new L.GeoJSON.AJAX(GeoJSON, {});  
         var geojson = new L.GeoJSON.AJAX(service, {});  
         

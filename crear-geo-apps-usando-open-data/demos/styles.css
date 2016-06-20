@@ -21,3 +21,7 @@ body{
 .leaflet-top .leaflet-control{
     margin-top: 70px;
 }
+
+.leaflet-left .leaflet-control{
+  margin-top: 70px; 
+}
