@@ -33,8 +33,8 @@
       // Dataset
       // //opendata.esri.es/datasets/d9503b99ef934b16a3cd1e6600a3f9d4_0?geometry=-3.831%2C40.383%2C-3.693%2C40.403
 
-      var GeoJSON = "//opendata.esri.es/datasets/d9503b99ef934b16a3cd1e6600a3f9d4_0.geojson"
-      var GeoJSONFiltered = '//opendata.esri.es/datasets/d9503b99ef934b16a3cd1e6600a3f9d4_0.geojson?where=desc_situacion_local%20like%20\'%25Abierto%25\'&geometry={"xmin":-425923.0912282507,"ymin":4921809.552119555,"xmax":-410501.9207717372,"ymax":4924675.940680245,"spatialReference":{"wkid":102100}}';
+      var GeoJSON = "http://opendata.esri.es/datasets/d9503b99ef934b16a3cd1e6600a3f9d4_0.geojson"
+      var GeoJSONFiltered = 'http://opendata.esri.es/datasets/d9503b99ef934b16a3cd1e6600a3f9d4_0.geojson?where=desc_situacion_local%20like%20\'%25Abierto%25\'&geometry={"xmin":-425923.0912282507,"ymin":4921809.552119555,"xmax":-410501.9207717372,"ymax":4924675.940680245,"spatialReference":{"wkid":102100}}';
 
       load('map', GeoJSON);
       load('filteredMap', GeoJSONFiltered);
