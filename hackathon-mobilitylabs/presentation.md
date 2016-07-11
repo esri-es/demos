@@ -25,6 +25,20 @@ Raúl Jiménez - Esri España
 ---
 
 <!-- .slide: class="section" -->
+## Projected coordinates
+
+![Coordenadas](images/coordenadas_proyectadas.png)
+
+---
+
+<!-- .slide: class="section" -->
+
+
+![Coordenadas](images/yao-ming-utm.jpg)
+
+---
+
+<!-- .slide: class="section" -->
 ## Tools
 
 ---
