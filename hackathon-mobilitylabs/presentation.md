@@ -5,7 +5,7 @@
 ### Hackathon Mobilitylabs
 Raúl Jiménez - Esri España
 
-[bit.ly/UMAemergencias](http://bit.ly/UMAemergencias)
+[bit.ly/mobiEsri](http://bit.ly/mobiEsri)
 
 ---
 
@@ -20,7 +20,7 @@ Raúl Jiménez - Esri España
 <!-- .slide: class="section" -->
 
 
-<!--<iframe src="http://hhkaos2.maps.arcgis.com/apps/MapSeries/index.html?appid=5b3e896aeeaa4601b71359f29ec3f090" style="width:100%; height:700px; border:2px solid white"></iframe>-->
+<iframe src="http://hhkaos2.maps.arcgis.com/apps/MapSeries/index.html?appid=5b3e896aeeaa4601b71359f29ec3f090" style="width:100%; height:700px; border:2px solid white"></iframe>
 
 ---
 
@@ -33,6 +33,7 @@ Raúl Jiménez - Esri España
 ## Github repo:
 
 [esri-es/mobilitylab-emtmadrid](https://github.com/esri-es/mobilitylab-emtmadrid)
+<br>[esri/geodev-hackerlabs](https://github.com/Esri/geodev-hackerlabs)
 
 ![Octocat](images/octocat.png)
 
@@ -136,10 +137,8 @@ OpenStreetMaps, Mapbox, Bing, Stamen, Mapillary, etc.
 
 ## At your disposal
 
-* Raúl Jiménez Ortega
-* @hhkaos at Twitter
-* 664 68 31 79 - 915 59 43 75
-* raul.jimenez@esri.es
+![Raúl](images/raul-jimenez.jpg) ![Carlos](images/carlos-perez.jpg) ![Carlos](images/carlos-herrera.jpg)
+<br>Raúl | Carlos | Carlos
 
 ---
 
