@@ -1,0 +1,212 @@
+"renderer": {
+            "visualVariables": [
+              {
+                "type": "colorInfo",
+                "field": "MEDHINC_CY",
+                "stops": [
+                  {
+                    "value": 30740,
+                    "color": [
+                      255,
+                      252,
+                      212,
+                      255
+                    ],
+                    "label": "< 30,740"
+                  },
+                  {
+                    "value": 37848,
+                    "color": [
+                      231,
+                      174,
+                      157,
+                      255
+                    ],
+                    "label": null
+                  },
+                  {
+                    "value": 44957,
+                    "color": [
+                      206,
+                      96,
+                      101,
+                      255
+                    ],
+                    "label": "44,957"
+                  },
+                  {
+                    "value": 52066,
+                    "color": [
+                      136,
+                      49,
+                      79,
+                      255
+                    ],
+                    "label": null
+                  },
+                  {
+                    "value": 59175,
+                    "color": [
+                      66,
+                      2,
+                      57,
+                      255
+                    ],
+                    "label": "> 59,175"
+                  }
+                ]
+              },
+              {
+                "type": "sizeInfo",
+                "field": "MP06025a_B",
+                "valueUnit": "unknown",
+                "normalizationField": "MP06010a_B",
+                "minSize": {
+                  "type": "sizeInfo",
+                  "expression": "view.scale",
+                  "stops": [
+                    {
+                      "value": 1128,
+                      "size": 12
+                    },
+                    {
+                      "value": 72223,
+                      "size": 12
+                    },
+                    {
+                      "value": 18489298,
+                      "size": 3
+                    },
+                    {
+                      "value": 36978595,
+                      "size": 3
+                    },
+                    {
+                      "value": 591657528,
+                      "size": 1.5
+                    }
+                  ]
+                },
+                "maxSize": {
+                  "type": "sizeInfo",
+                  "expression": "view.scale",
+                  "stops": [
+                    {
+                      "value": 1128,
+                      "size": 60
+                    },
+                    {
+                      "value": 72223,
+                      "size": 60
+                    },
+                    {
+                      "value": 18489298,
+                      "size": 37.5
+                    },
+                    {
+                      "value": 36978595,
+                      "size": 37.5
+                    },
+                    {
+                      "value": 591657528,
+                      "size": 18.75
+                    }
+                  ]
+                },
+                "minDataValue": 0.5,
+                "maxDataValue": 0.7427
+              },
+              {
+                "type": "sizeInfo",
+                "target": "outline",
+                "expression": "view.scale",
+                "stops": [
+                  {
+                    "size": 1.5,
+                    "value": 1078618
+                  },
+                  {
+                    "size": 0.75,
+                    "value": 3370680
+                  },
+                  {
+                    "size": 0.375,
+                    "value": 13482720
+                  },
+                  {
+                    "size": 0,
+                    "value": 26965441
+                  }
+                ]
+              }
+            ],
+            "authoringInfo": {
+              "visualVariables": [
+                {
+                  "type": "colorInfo",
+                  "minSliderValue": 0,
+                  "maxSliderValue": 130651,
+                  "theme": "high-to-low"
+                },
+                {
+                  "type": "sizeInfo",
+                  "minSliderValue": 0.176024,
+                  "maxSliderValue": 0.7427
+                }
+              ]
+            },
+            "type": "classBreaks",
+            "field": "MEDHINC_CY",
+            "backgroundFillSymbol": {
+              "color": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "outline": {
+                "color": [
+                  166,
+                  166,
+                  166,
+                  255
+                ],
+                "width": 0.75,
+                "type": "esriSLS",
+                "style": "esriSLSSolid"
+              },
+              "type": "esriSFS",
+              "style": "esriSFSSolid"
+            },
+            "minValue": -9007199254740991,
+            "classBreakInfos": [
+              {
+                "symbol": {
+                  "color": [
+                    227,
+                    139,
+                    79,
+                    255
+                  ],
+                  "size": 9,
+                  "angle": 0,
+                  "xoffset": 0,
+                  "yoffset": 0,
+                  "type": "esriSMS",
+                  "style": "esriSMSCircle",
+                  "outline": {
+                    "color": [
+                      255,
+                      255,
+                      255,
+                      255
+                    ],
+                    "width": 0.75,
+                    "type": "esriSLS",
+                    "style": "esriSLSSolid"
+                  }
+                },
+                "classMaxValue": 9007199254740991
+              }
+            ]
+          }
