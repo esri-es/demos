@@ -1,0 +1,138 @@
+"renderer": {
+  "visualVariables": [
+    {
+      "type": "transparencyInfo",
+      "valueExpression": "var fieldNames = [ \"MP06024a_B\", \"MP06025a_B\", \"MP06026a_B\" ];\nvar numFields = 3;\nvar maxValueField = null;\nvar maxValue = -Infinity;\nvar value, i, totalValue = null;\nfor(i = 0; i < numFields; i++) {\nvalue = $feature[fieldNames[i]];\nif(value > 0) {\nif(value > maxValue) {\nmaxValue = value;\nmaxValueField = fieldNames[i];\n}\nelse if (value == maxValue) {\nmaxValueField = null;\n}\n}\nif(value != null && value >= 0) {\nif (totalValue == null) { totalValue = 0; }\ntotalValue = totalValue + value;\n}\n}\nvar strength = null;\nif (maxValueField != null && totalValue > 0) {\nstrength = (maxValue / totalValue) * 100;\n}\nreturn strength;",
+      "stops": [
+        {
+          "value": 33.4,
+          "transparency": 85
+        },
+        {
+          "value": 42,
+          "transparency": 0
+        }
+      ],
+      "legendOptions": {
+        "title": "Strength of predominance"
+      }
+    },
+    {
+      "type": "sizeInfo",
+      "target": "outline",
+      "expression": "view.scale",
+      "stops": [
+        {
+          "size": 1.5,
+          "value": 1078618
+        },
+        {
+          "size": 0.75,
+          "value": 3370680
+        },
+        {
+          "size": 0.375,
+          "value": 13482720
+        },
+        {
+          "size": 0,
+          "value": 26965441
+        }
+      ]
+    }
+  ],
+  "authoringInfo": {
+    "type": "predominance",
+    "fields": [
+      "MP06024a_B",
+      "MP06025a_B",
+      "MP06026a_B"
+    ],
+    "visualVariables": [
+      {
+        "type": "transparencyInfo",
+        "minSliderValue": 0,
+        "maxSliderValue": 100
+      }
+    ]
+  },
+  "type": "uniqueValue",
+  "valueExpression": "var fieldNames = [ \"MP06024a_B\", \"MP06025a_B\", \"MP06026a_B\" ];\nvar numFields = 3;\nvar maxValueField = null;\nvar maxValue = -Infinity;\nvar value, i, totalValue = null;\nfor(i = 0; i < numFields; i++) {\nvalue = $feature[fieldNames[i]];\nif(value > 0) {\nif(value > maxValue) {\nmaxValue = value;\nmaxValueField = fieldNames[i];\n}\nelse if (value == maxValue) {\nmaxValueField = null;\n}\n}\n}\nreturn maxValueField;",
+  "uniqueValueInfos": [
+    {
+      "value": "MP06024a_B",
+      "label": "Political party affiliation with: Democratic",
+      "symbol": {
+        "color": [
+          160,
+          53,
+          0,
+          255
+        ],
+        "outline": {
+          "color": [
+            153,
+            153,
+            153,
+            255
+          ],
+          "width": 0.75,
+          "type": "esriSLS",
+          "style": "esriSLSSolid"
+        },
+        "type": "esriSFS",
+        "style": "esriSFSSolid"
+      }
+    },
+    {
+      "value": "MP06025a_B",
+      "label": "Political party affiliation with: Republican",
+      "symbol": {
+        "color": [
+          50,
+          100,
+          200,
+          255
+        ],
+        "outline": {
+          "color": [
+            153,
+            153,
+            153,
+            255
+          ],
+          "width": 0.75,
+          "type": "esriSLS",
+          "style": "esriSLSSolid"
+        },
+        "type": "esriSFS",
+        "style": "esriSFSSolid"
+      }
+    },
+    {
+      "value": "MP06026a_B",
+      "label": "Political party affiliation with: Ind/none",
+      "symbol": {
+        "color": [
+          114,
+          179,
+          142,
+          255
+        ],
+        "outline": {
+          "color": [
+            153,
+            153,
+            153,
+            255
+          ],
+          "width": 0.75,
+          "type": "esriSLS",
+          "style": "esriSLSSolid"
+        },
+        "type": "esriSFS",
+        "style": "esriSFSSolid"
+      }
+    }
+  ]
+}
