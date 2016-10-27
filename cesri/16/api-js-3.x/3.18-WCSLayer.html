@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>What's new: 3.18</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://js.arcgis.com/3.18/esri/css/esri.css">
+
+  <script src="http://js.arcgis.com/3.18/"></script>
+  <style type="text/css">
+    html, body, #map {
+      height:100%;
+      width:100%;
+      margin:0;
+      padding:0;
+      margin:0;
+      font-family: "Open Sans";
+    }
+    #explanation{
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      padding: 1rem 2rem;
+      color: white;
+      background: rgba(0,0,0,.5);
+    }
+    h1{
+      margin: .5rem 0 0;
+    }
+  </style>
+  <script>
+    require([
+      "esri/map",
+      "esri/layers/WCSLayer",
+      "esri/config",
+      "dojo/domReady!"
+    ], function(Map, WCSLayer, esriConfig) {
+      esriConfig.defaults.io.corsEnabledServers.push("sampleserver6.arcgisonline.com");
+
+      var map = new Map("map", {
+        center: [-1.874, 38.999],
+        zoom: 7,
+        basemap: "streets-night-vector"
+      });
+      var wcsLayer = new WCSLayer("https://sampleserver6.arcgisonline.com/arcgis/services/ScientificData/SeaTemperature/ImageServer/WCSServer?foo=bar");
+      map.addLayer(wcsLayer);
+
+    });
+  </script>
+</head>
+<body>
+<div id="map"></div>
+<div id="explanation">
+  <h1>What's new</h1>
+  <p>Nueva clase "<strong>WCSLayer</strong>".</p>
+</div>
+
+</body>
+</html>
