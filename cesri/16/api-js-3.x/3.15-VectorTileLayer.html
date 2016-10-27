@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>What's new: 3.15</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://js.arcgis.com/3.15/esri/css/esri.css">
+
+  <script src="http://js.arcgis.com/3.15/"></script>
+  <style type="text/css">
+    html, body, #map {
+      height:100%;
+      width:100%;
+      margin:0;
+      padding:0;
+      margin:0;
+      font-family: "Open Sans";
+    }
+    #explanation{
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      padding: 1rem 2rem;
+      color: white;
+      background: rgba(0,0,0,.5);
+    }
+    h1{
+      margin: .5rem 0 0;
+    }
+  </style>
+  <script>
+    require([
+      "esri/map",
+      "esri/layers/VectorTileLayer",
+      "dojo/domReady!"
+    ], function(Map, VectorTileLayer) {
+
+      var map = new Map("map", {
+        center: [-1.874, 38.999],
+        zoom: 7
+      });
+      var vectorTileLayer = new VectorTileLayer("http://www.arcgis.com/sharing/rest/content/items/763884983d3544c0a418a97992881fce/resources/styles/root.json?f=pjson");
+      map.addLayer(vectorTileLayer);
+
+    });
+  </script>
+</head>
+<body>
+<div id="map"></div>
+<div id="explanation">
+  <h1>What's new</h1>
+  <p>Ahora las "<strong>VectorTileLayer</strong>" también usan la caché. (Ver <a href="http://www.arcgis.com/home/search.html?q=owner%3Aesri_basemaps&focus=layers-weblayers-tiles&start=11">más estilos</a>)</p>
+</div>
+
+</body>
+</html>

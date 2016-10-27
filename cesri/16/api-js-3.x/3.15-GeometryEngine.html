@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>What's new: 3.15</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://js.arcgis.com/3.15/esri/css/esri.css">
+
+  <script src="http://js.arcgis.com/3.15/"></script>
+  <style>
+  html, body, #map { height: 100%; width: 100%; margin: 0; padding: 0; }
+
+  h3 { margin: 0 0 5px 0; border-bottom: 1px solid #444; }
+
+  #explanation{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 1rem 2rem;
+    color: white;
+    background: rgba(0,0,0,.5);
+    max-width: 30%;
+    line-height: 1.5rem;
+  }
+  h1{
+    margin: .5rem 0 0;
+  }
+  a:visited{
+    color: #ccc;
+  }
+  </style>
+  <script>
+  require([
+    "esri/map",
+    "esri/layers/FeatureLayer",
+    "esri/Color",
+    "esri/graphicsUtils",
+    "esri/symbols/SimpleFillSymbol",
+    "esri/graphic",
+    "esri/geometry/geometryEngine",
+    "dojo/on",
+    "dojo/domReady!"
+  ], function(
+    Map,
+    FeatureLayer,
+    Color,
+    graphicsUtils,
+    SimpleFillSymbol,
+    Graphic,
+    geometryEngine,
+    on
+  ) {
+
+    var map = new Map("map", {
+      center: [ -3.678148, 40.424680],
+      zoom: 12,
+      basemap: "dark-gray"
+    });
+
+    var featureLayer = new FeatureLayer("http://services.arcgis.com/Q6ZFRRvMTlsTTFuP/arcgis/rest/services/Clinicas_y_hospitales_Madrid/FeatureServer/0");
+    map.addLayer(featureLayer);
+
+    featureLayer.on("graphic-add",function(){
+      var geometries = graphicsUtils.getGeometries(featureLayer.graphics);
+
+      //geodesicBuffer(geometries, [distance], unit <see sdk for example codes--9036==km>, unionResults);
+      var bufferedGeometries = geometryEngine.geodesicBuffer(geometries, [0.2], 9036, true);
+
+      //when buffer is done set up renderer and add each geometry to the map's graphics layer as a graphic
+      var symbol = new SimpleFillSymbol();
+      symbol.setColor(new Color([255,255,255,0.1]));
+      symbol.setOutline(null);
+      bufferedGeometries.forEach(function(geometry){
+        map.graphics.add(new Graphic(geometry,symbol));
+      });
+    });
+    
+  });
+  </script>
+</head>
+<body>
+  <div id="map"></div>
+  <div id="explanation">
+    <h1>What's new</h1>
+    <p>
+      "<strong>GeometryEngine</strong>" y "<strong>GeometryEngineAsync</strong>" ya no están en beta e incluyen más de 30, métodos para medir, superponer y probar relaciones espaciales entre geometrías en las aplicaciones web, <a href="https://developers.arcgis.com/javascript/3/jshelp/new_v315.html">más info</a>.<br>
+    </p>
+  </div>
+
+</body>
+</html>
