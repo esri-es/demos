@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Comparador de Geocodificadores</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-beta.36/css/calcite-web.min.css">
+
+  <link rel="stylesheet" href="https://js.arcgis.com/3.18/esri/themes/calcite/dijit/calcite.css">
+  <link rel="stylesheet" href="https://js.arcgis.com/3.18/esri/themes/calcite/esri/esri.css">
+
+  <script src="http://js.arcgis.com/3.18/"></script>
+  <style type="text/css">
+  body, html, #map {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+  #search {
+    display: block;
+    position: absolute;
+    z-index: 3;
+    top: 15px;
+    left: 65px;
+
+  }
+  select{
+    height: 3.25rem;
+    font-size: 1.3375rem;
+    padding: 0.31rem 2rem 0.31rem 1rem;
+  }
+  #legendDiv span:before{
+    content: '';
+    display: inline-block;
+    height: 16px;
+    width: 20px;
+    top: 3px;
+    position: relative;
+    margin-right: 7px;
+  }
+  #legendDiv{
+    display: inline-block;
+    width: auto;
+    position: absolute;
+    background: rgba(255,255,255,.5);
+    bottom: 40px;
+    right: 20px;
+    padding: 1rem;
+  }
+  #legendDiv span{
+    display: block;
+  }
+  .google:before{
+    background-color: rgba(190, 232, 255, .5)
+  }
+  .arcgis:before{
+    background-color: rgba(76, 230, 0, .5);
+  }
+  .osm:before{
+    background-color: rgba(55, 211, 127, .5);
+  }
+  .bing:before{
+    background-color: rgba(255, 85, 0, .5);
+  }
+  .data-science:before{
+    background-color: rgba(133, 133, 133, .5);
+  }
+  .here:before{
+    background-color: rgba(169, 0, 230, .5);
+  }
+  .mapquest:before{
+    background-color: rgba(255, 115, 223, .5);
+  }
+  .mapbox:before{
+    background-color: rgba(0, 92, 230, .5);
+  }
+  .mapzen:before{
+    background-color: rgba(168, 56, 0, .5);
+  }
+  .opencage:before{
+    background-color: rgba(26, 26, 26, .5);
+  }
+
+  #address{
+    position: absolute;
+    z-index: 9;
+    top: 20px;
+    right: 20px;
+  }
+
+  </style>
+  <script>
+  require([
+    "esri/map",
+    "esri/dijit/Search",
+    "esri/layers/GraphicsLayer",
+    "esri/geometry/Point",
+    "esri/Color",
+
+    "esri/symbols/SimpleMarkerSymbol",
+    "esri/symbols/SimpleLineSymbol",
+    "esri/graphic",
+    "esri/request",
+    "esri/dijit/PopupTemplate",
+    "esri/graphicsUtils",
+    "dojo/domReady!"
+  ], function(
+    Map, Search, GraphicsLayer, Point, Color, SimpleMarkerSymbol, SimpleLineSymbol, Graphic, esriRequest, PopupTemplate, graphicsUtils
+  ) {
+
+    map = new Map("map", {
+      center: [-1.874, 38.999],
+      zoom: 7,
+      basemap: "streets"
+    });
+
+    esriConfig.defaults.io.corsEnabledServers.push("spreadsheets.google.com");
+    var spreadsheetID = "1dponc027rplhIHnfkTuF8pLpy8PClWwwngxLMsG7mDo";
+    var requestHandle = esriRequest({
+      "url": "https://spreadsheets.google.com/feeds/list/"+ spreadsheetID +"/od6/public/full?alt=json"
+    });
+
+    requestHandle.then(function(text){
+      var n = text.feed.entry.length, latLong, loc, symbol;
+      var template = new PopupTemplate({
+        title: "{service}",
+        description:"{title}"
+      });
+
+      var lastActiveLayer = null;
+
+      var geocoders = [
+        {name: "google", alias: "Google Geocoder", marker: marker('light-blue')},
+        {name: "esri", alias: "ArcGIS Geocoder (By Esri)", marker: marker('green')},
+        {name: "osm", alias: "Open StreetMap Geocoder (Nominatim)", marker: marker('orange')},
+        {name: "bing", alias: "Bing Geocoder", marker: marker('red')},
+        {name: "datascience", alias: "DataScienceToolkit Geocoder", marker: marker('gray')},
+        {name: "here", alias: "HERE Geocoder", marker: marker('purple')},
+        {name: "mapquest", alias: "Mapquest Geocoder", marker: marker('pink')},
+        {name: "mapbox", alias: "Mapbox Geocoder", marker: marker('blue')},
+        {name: "mapzen", alias: "Mapzen Geocoder", marker: marker('brown')},
+        {name: "opencage", alias: "OpenCage Geocoder", marker: marker('black')},
+      ];
+
+      var mapLayers = [];
+      var selectEl = document.getElementById("address");
+
+      for(i = 0; i < n; i++){
+
+        var newLayer = new GraphicsLayer({
+          id: 'layer-' + i,
+          visible: false
+        });
+        var address= text.feed.entry[i]["gsx$dirección"].$t;
+        mapLayers.push(newLayer);
+
+        map.addLayer(newLayer);
+
+        geocoders.forEach(function(elem){
+
+          latLong = text.feed.entry[i]["gsx$"+elem.name].$t.split(",");
+          if(latLong[1] != 0 & latLong[0] != 0){
+            newLayer.add(
+              new Graphic(
+                new Point(latLong[1], latLong[0]),
+                elem.marker,
+                {
+                  title: address + ' <br>Lat, lng: ' + latLong[0] +', '+ latLong[1] + '',
+                  service: elem.alias },
+                  template
+                )
+              );
+            }
+          });
+
+          selectEl.insertAdjacentHTML('beforeend', '<option value="layer-'+ i +'">'+address+'</div>');
+        }
+
+        selectEl.addEventListener('change', function(evt){
+
+          if(map.getLayer(lastActiveLayer)){
+            map.getLayer(lastActiveLayer).setVisibility(false);
+          }
+          lastActiveLayer = document.querySelector('#address').value;
+          var l = map.getLayer(lastActiveLayer);
+          l.setVisibility(true);
+          //setTimeout(function(){
+          map.setExtent(graphicsUtils.graphicsExtent(l.graphics));
+
+        });
+
+      },
+
+      function(error){
+        alert("An error occurred: " + error);
+      });
+
+      function marker(color){
+        switch(color){
+          case 'orange': color = [255, 211, 127, .5]; break;
+          case 'light-blue': color = [190, 232, 255, .5]; break;
+          case 'green': color = [76, 230, 0, .5]; break;
+          case 'red': color = [255, 85, 0, .5]; break;
+          case 'gray': color = [133, 133, 133, .5]; break;
+          case 'purple': color = [169, 0, 230, .5]; break;
+          case 'pink': color = [255, 115, 223, .5]; break;
+          case 'blue': color = [0, 92, 230, .5]; break;
+          case 'brown': color = [168, 56, 0, .5]; break;
+          case 'black': color = [26, 26, 26, .5]; break;
+        }
+
+        var line = new SimpleLineSymbol();
+        line.setWidth(3);
+        line.setColor(new Color([255, 255, 255, 1]));
+        var marker = new SimpleMarkerSymbol();
+        marker.setColor(new Color(color));
+        marker.setOutline(line);
+        marker.setSize(20);
+
+        return marker;
+      }
+
+      var s = new Search({
+        map: map
+      }, "search");
+      s.startup();
+    });
+    </script>
+  </head>
+  <body class="calcite">
+    <div id="search"></div>
+    <div id="map"></div>
+    <div id="layerListDom">
+      <select id="address">
+        <option>Selecciona una dirección</option>
+      </select>
+    </div>
+    <div id="legendDiv">
+      <span class="google">Google Maps</span>
+      <span class="arcgis">ArcGIS (by Esri)</span>
+      <span class="osm">Open StreetMap</span>
+      <span class="bing">Bing Maps</span>
+      <span class="data-science">DataScienceToolkit</span>
+      <span class="here">Here</span>
+      <span class="mapquest">Mapquest</span>
+      <span class="mapbox">Mapbox</span>
+      <span class="mapzen">Mapzen</span>
+      <span class="opencage">OpenCage</span>
+    </div>
+  </body>
+  </html>
