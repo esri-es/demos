@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="esri-map-example">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+
+        <title>Angular Esri Quick Start</title>
+
+        <link rel="stylesheet" href="//js.arcgis.com/4.1/esri/css/main.css">
+        <style type="text/css">
+            html, body, .esri-view {
+                padding: 0;
+                margin: 0;
+                height: 100%;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body ng-controller="MapController as vm">
+        <esri-map-view map="vm.map" view-options="{zoom: 10, center: [-101.17, 21.78]}">
+        </esri-map-view>
+
+        <!-- load Esri JSAPI -->
+        <script src="//js.arcgis.com/4.1/"></script>
+        <!-- load AngularJS -->
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+        <!-- load angular-esri-map -->
+        <script src="//unpkg.com/angular-esri-map@2"></script>
+
+        <script type="text/javascript">
+            angular.module('esri-map-example', ['esri.map'])
+                .controller('MapController', function(esriLoader) {
+                    var self = this;
+                    esriLoader.require([
+                        'esri/Map',
+                        'esri/layers/VectorTileLayer'
+                    ], function(Map, VectorTileLayer) {
+                        self.map = new Map();
+
+                        var tileLyr = new VectorTileLayer({
+                            url: '//hhkaos2.maps.arcgis.com/sharing/rest/content/items/5fb6e20a6f404580a85021d26efe32a8/resources/styles/root.json'
+                        });
+                        self.map.add(tileLyr);
+                    });
+                });
+        </script>
+    </body>
+</html>

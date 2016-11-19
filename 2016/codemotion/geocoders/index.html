@@ -5,13 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>Comparador de Geocodificadores</title>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-beta.36/css/calcite-web.min.css">
+  <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-beta.36/css/calcite-web.min.css">
 
-  <link rel="stylesheet" href="https://js.arcgis.com/3.18/esri/themes/calcite/dijit/calcite.css">
-  <link rel="stylesheet" href="https://js.arcgis.com/3.18/esri/themes/calcite/esri/esri.css">
+  <link rel="stylesheet" href="//js.arcgis.com/3.18/esri/themes/calcite/dijit/calcite.css">
+  <link rel="stylesheet" href="//js.arcgis.com/3.18/esri/themes/calcite/esri/esri.css">
 
-  <script src="http://js.arcgis.com/3.18/"></script>
+  <script src="//js.arcgis.com/3.18/"></script>
   <style type="text/css">
   body, html, #map {
     margin: 0;
@@ -120,7 +120,7 @@
     esriConfig.defaults.io.corsEnabledServers.push("spreadsheets.google.com");
     var spreadsheetID = "1dponc027rplhIHnfkTuF8pLpy8PClWwwngxLMsG7mDo";
     var requestHandle = esriRequest({
-      "url": "https://spreadsheets.google.com/feeds/list/"+ spreadsheetID +"/od6/public/full?alt=json"
+      "url": "//spreadsheets.google.com/feeds/list/"+ spreadsheetID +"/od6/public/full?alt=json"
     });
 
     requestHandle.then(function(text){
