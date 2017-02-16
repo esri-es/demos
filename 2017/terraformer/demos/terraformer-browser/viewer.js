@@ -72,23 +72,23 @@ require([
 
 
     switch(type){
-    case 'wkt':
-      try{
-        showWKT(input);
-      }catch(e){ alert("This is not a WKT valid format");}
-      break;
-    case 'geojson':
-      try{
-        showGeoJSON(JSON.parse(input));
-      }catch(e){ alert("This is not a GeoJSON valid format");}
-      break;
-    case 'arcgis':
-      try{
-        showArcGIS(JSON.parse(input));
-      }catch(e){ alert("This is not an ArcGIS valid format");}
-      break;
+      case 'wkt':
+        try{
+          showWKT(input);
+        }catch(e){ alert("This is not a WKT valid format");}
+        break;
+      case 'geojson':
+        try{
+          showGeoJSON(JSON.parse(input));
+        }catch(e){ alert("This is not a GeoJSON valid format");}
+        break;
+      case 'arcgis':
+        try{
+          showArcGIS(JSON.parse(input));
+        }catch(e){ alert("This is not an ArcGIS valid format");}
+        break;
+      }
     }
-  }
 
   function showConvexOnMap(){
 
@@ -99,7 +99,7 @@ require([
     var arcgis = Terraformer.ArcGIS.convert(convex.coordinates[0]);
 
     // create a new geometry object from json
-    var geometry = Geometry.fromJson(arcgis);
+    var geometry = esri.geometry.fromJson(arcgis);
 
     // make a new graphic to put on the map
     var gfx = new Graphic(geometry, hullSymbol);
@@ -124,7 +124,7 @@ require([
     var arcgis = Terraformer.ArcGIS.convert(bbox);
 
     // create a new geometry object from json
-    var geometry = Geometry.fromJson(arcgis);
+    var geometry = esri.geometry.fromJson(arcgis);
 
     // make a new graphic to put on the map
     var gfx = new Graphic(geometry, boundsSymbol);

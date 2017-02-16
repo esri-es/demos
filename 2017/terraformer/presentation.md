@@ -116,7 +116,7 @@ Repo: [github.com/Esri/geojson-layer-js](https://github.com/Esri/geojson-layer-j
 
 ### ArcGIS -> GeoJSON
 
-* [Layer](http://services.arcgis.com/Q6ZFRRvMTlsTTFuP/ArcGIS/rest/services/Enriched%20Barrios%20de%20Madrid%20con%20pobaci%C3%B3n/FeatureServer/0):
+* [Layer](http://services.arcgis.com/Q6ZFRRvMTlsTTFuP/ArcGIS/rest/services/Barrios%20de%20Madrid%20con%20poblaci%C3%B3n/FeatureServer/0):
    * Where: 1=1
    * Output Spatial Reference:	4326
    * Format: GEOJSON
