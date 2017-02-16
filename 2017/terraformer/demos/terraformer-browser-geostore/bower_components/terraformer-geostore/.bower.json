@@ -1,0 +1,24 @@
+{
+  "name": "terraformer-geostore",
+  "version": "1.0.2",
+  "main": "browser/terraformer-geostore.min.js",
+  "ignore": [
+    "versions",
+    "spec",
+    "node"
+  ],
+  "dependencies": {
+    "terraformer": "~1.0.1"
+  },
+  "homepage": "https://github.com/Esri/terraformer-geostore",
+  "_release": "1.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.2",
+    "commit": "fdd0bf7b738b04a7c6fa70353f2d54448e199b9e"
+  },
+  "_source": "https://github.com/Esri/terraformer-geostore.git",
+  "_target": "^1.0.2",
+  "_originalSource": "terraformer-geostore",
+  "_direct": true
+}

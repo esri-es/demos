@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GeoJSON tutorial - ArcGIS &amp; Leaflet</title>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <style>
+    html, body, #map {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+
+</head>
+<body>
+
+  <div id='map'></div>
+
+  <script>
+  var map = L.map('map');
+
+  L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}/', {
+    maxZoom: 18,
+    attribution: 'Esri'
+  }).addTo(map);
+
+  //var geoJsonService = '//services.arcgis.com/Q6ZFRRvMTlsTTFuP/arcgis/rest/services/Enriched%20Barrios%20de%20Madrid%20con%20poblaci%C3%B3n/FeatureServer/0/query?';
+  var geoJsonService = '//services.arcgis.com/DO4gTjwJVIJ7O9Ca/ArcGIS/rest/services/co_waldo_canyon_20120706_0001_dd83/FeatureServer/0/query?';
+
+  // ************* Display features
+  var params = {
+    'where': '1=1',
+    'f': 'geojson',
+    'outSR' :4326
+  };
+
+  var strParams = $.param(params);
+  $.getJSON( geoJsonService + strParams, function( data ) {
+    L.geoJSON(data).addTo(map);
+  });
+  // ************* End display features
+
+  // ************* Set extent to features extent
+  params = {
+    'where': '1=1',
+    'returnExtentOnly': true,
+    'outSR': 4326,
+    'f': 'geojson'
+  };
+
+  strParams = $.param(params);
+  $.getJSON( geoJsonService + strParams, function( data ) {
+    console.log(data);
+    map.fitBounds([
+      [data.bbox[1], data.bbox[0]],
+      [data.bbox[3],data.bbox[2]]
+    ]);
+  });
+  // ************* End set extent to features extent
+
+  </script>
+
+</body>
+</html>

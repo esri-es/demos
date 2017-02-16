@@ -1,0 +1,22 @@
+{
+  "name": "terraformer-browser-geostore",
+  "homepage": "https://github.com/esri-es/demos",
+  "authors": [
+    "RaulJimenezOrtega <hhkaos@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "terraformer-geostore": "^1.0.2",
+    "terraformer-geostore-memory": "^1.0.0",
+    "terraformer-geostore-rtree": "^1.0.0"
+  }
+}

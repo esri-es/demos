@@ -1,0 +1,10 @@
+{
+  "name": "terraformer-geostore-memory",
+  "version": "1.0.0",
+  "main": "terraformer-geostore-memory.min.js",
+  "ignore"        : ["versions", "spec", "node"],
+  "dependencies": {
+    "terraformer": "~1.0.1",
+    "terraformer-geostore": "~1.0.0"
+  }
+}

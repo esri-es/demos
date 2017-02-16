@@ -1,0 +1,38 @@
+{
+  "name": "terraformer-geostore",
+  "version": "1.0.2",
+  "description": "GeoStore for Terraformer, helps a geo-database toolkit",
+  "main": "node/terraformer-geostore.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Esri/terraformer-geostore.git"
+  },
+  "keywords": [
+    "GIS",
+    "GeoStore",
+    "Terraformer",
+    "Database"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Esri/terraformer-geostore/issues"
+  },
+  "dependencies": {
+    "terraformer": "1.0.x"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-concat": "0.3.x",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-jasmine": "~0.4.2",
+    "grunt-jasmine-node": "https://github.com/magicmoose/grunt-jasmine-node/tarball/master",
+    "grunt-template-jasmine-istanbul": "~0.2.5",
+    "terraformer-rtree": "~1.0.x",
+    "terraformer-geostore-index-btree": "https://github.com/JerrySievert/terraformer-geostore-index-btree/tarball/master",
+    "grunt-s3": "~0.2.0-alpha.3"
+  }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Terraformer Demos</title>
+
+<script src="bower_components/terraformer/terraformer.js"></script>
+<script src="bower_components/terraformer-geostore/browser/terraformer-geostore.js"></script>
+<script src="bower_components/terraformer-geostore-memory/terraformer-geostore-memory.js"></script>
+<script src="bower_components/terraformer-geostore-rtree/terraformer-geostore-rtree.js"></script>
+
+<script>
+var store = new Terraformer.GeoStore({
+  store: new Terraformer.GeoStore.Memory(),
+  index: new Terraformer.RTree()
+});
+
+// Add a GeoJSON feature
+store.add({
+  "type": "Feature",
+  "properties": {
+    "name": "Ladds Addition"
+  },
+  "id": "ladds-addition",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [ [ -122.65355587005614, 45.50499344809821 ], [ -122.65355587005614, 45.512061121601 ], [ -122.64535903930664, 45.512061121601 ], [ -122.64535903930664, 45.50499344809821 ], [ -122.65355587005614, 45.50499344809821 ] ]
+    ]
+  }
+}, function (err, success) {
+  // callback when the geojson is added
+});
+
+// You can also add FeatureCollections of multiple Features
+store.add({
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Esri PDX"
+      },
+      "id": "esri-pdx",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -122.67629563808441, 45.51646293140592 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Barista"
+      },
+      "id": "barista",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -122.67520129680635, 45.51926322043975 ]
+      }
+    }
+  ]
+}, function (err, success) {
+  // callback when all features are added
+  console.log("All added");
+});
+
+// ask the store which features are within a given polygon.
+store.within({
+  "type": "Polygon",
+  "coordinates": [
+    [ [-122.69290924072266, 45.54038305764738], [-122.72054672241211, 45.535453299886896], [-122.69479751586914, 45.51464736754301], [-122.67848968505858, 45.495398037299395], [-122.66836166381836, 45.495398037299395], [-122.66681671142577, 45.50321887154943], [-122.67127990722655, 45.51067773196122], [-122.67127990722655, 45.522585798722176], [-122.67110824584961, 45.53028260179986], [-122.69290924072266, 45.54038305764738] ]
+  ]
+}, function (err, results) {
+  console.log("yep")
+  for (var i = results.length - 1; i >= 0; i--) {
+    console.log(results[i].id);
+  };
+});
+</script>
+</head>
+<body>
+<h1>Only JS</h1>
+</body>
+</html>
