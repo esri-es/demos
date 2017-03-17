@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html ng-app="ritsi-map">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+
+  <title>Angular, ArcGIS JSAPI and Webmap</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <!-- Calcite Maps Bootstrap -->
+  <link rel="stylesheet" href="//esri.github.io/calcite-maps/dist/css/calcite-maps-bootstrap.min-v0.3.css">
+
+  <!-- Calcite Maps -->
+  <link rel="stylesheet" href="//esri.github.io/calcite-maps/dist/css/calcite-maps-arcgis-4.x.min-v0.3.css">
+  <link rel="stylesheet" href="//js.arcgis.com/4.3/esri/css/main.css">
+  <style type="text/css">
+  html, body, .esri-view {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+  }
+  .calcite-navbar.calcite-bg-light.navbar{
+    background-color: rgba(255,255,255,.5);
+  }
+  .calcite-title-main{
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 8px black;
+    padding-left: 2rem;
+  }
+
+  </style>
+</head>
+<body ng-controller="MapController" class="calcite calcite-maps calcite-nav-top calcite-margin-all calcite-zoom-top-left calcite-layout-inline-left">
+  <div class="navbar calcite-navbar navbar-fixed-top calcite-bg-light">
+    <div class="calcite-title calcite-overflow-hidden">
+      <span class="calcite-title-main hidden-xs hidden-sm">{{webmap.portalItem.title}}</span>
+      <span class="calcite-title-main hidden-md hidden-lg">BCN App</span>
+      <span class="calcite-title-divider"></span>
+      <span class="calcite-title-sub">
+        <select  id="bookmark"
+                 ng-model="selectedItem"
+                 ng-init="selectedItem = webmap.bookmarks[0]"
+                 ng-options="b as b.name for b in webmap.bookmarks"
+                 ng-change="update()"
+                 class="form-control pull-right">
+        </select>
+      </span>
+    </div>
+  </div>
+
+  <div id="viewDiv"></div>
+
+  <!-- load Esri JSAPI -->
+  <script src="//js.arcgis.com/4.3/"></script>
+  <!-- load AngularJS -->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+  <!-- load angular-esri-map -->
+  <script src="//unpkg.com/angular-esri-map@2"></script>
+
+  <script type="text/javascript">
+  var app = angular.module('ritsi-map', ['esri.map'])
+  .controller('MapController', function(esriLoader, $scope) {
+
+    esriLoader.require([
+      'esri/views/MapView',
+      'esri/WebMap',
+      'esri/geometry/Polygon',
+      'dojo/domReady!'
+    ], function(MapView, WebMap, Polygon) {
+      var webmap = new WebMap({
+        portalItem: { id: 'f40e2a9a0808434fbaab026288651063'}
+      });
+
+      webmap.load().then(function(w) {
+        $scope.webmap = w;
+        $scope.$apply();
+
+        // Add custom action on popup (part 1) -> http://arcg.is/2mV2WR4
+        var myLayer = w.allLayers.find(function(lyr){
+          return lyr.id === 'Pubs_and_Bars_BCN_7190';
+        });
+        myLayer.popupTemplate.actions= [{
+            id: 'find-brewery',
+            image: 'https://developers.arcgis.com/javascript/latest/sample-code/popup-custom-action/live/beer.png',
+            title: 'Buscar en Google Maps'
+          }]
+      });
+
+      var view = new MapView({
+        map: webmap,
+        container: 'viewDiv'
+      });
+
+      // Add custom action on popup (part 2) -> http://arcg.is/2mV2WR4
+      view.then(function() {
+        var popup = view.popup;
+        popup.viewModel.on('trigger-action', function(event) {
+          if (event.action.id === 'find-brewery') {
+            var attributes = popup.viewModel.selectedFeature.attributes;
+            window.open('https://www.google.es/maps/search/' + attributes.name);
+          }
+        });
+
+        document.getElementById('bookmark').selectedIndex=1
+      });
+
+      $scope.update = function(){
+         view.extent = $scope.selectedItem.extent;
+      };
+
+    });
+  });
+
+  </script>
+</body>
+</html>
