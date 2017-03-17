@@ -31,7 +31,9 @@
     text-shadow: 0px 0px 8px black;
     padding-left: 2rem;
   }
-
+  .esri-popup--is-docked-top-right{
+    margin-top: 9rem;
+  }
   </style>
 </head>
 <body ng-controller="MapController" class="calcite calcite-maps calcite-nav-top calcite-margin-all calcite-zoom-top-left calcite-layout-inline-left">
@@ -86,7 +88,7 @@
         myLayer.popupTemplate.actions= [{
             id: 'find-brewery',
             image: 'https://developers.arcgis.com/javascript/latest/sample-code/popup-custom-action/live/beer.png',
-            title: 'Buscar en Google Maps'
+            title: 'More info'
           }]
       });
 

@@ -1,0 +1,39 @@
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Cluster de gasolineras con Esri Leaflet</title>
+
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+
+    <link rel="stylesheet" href="http://esri.github.io/calcite-maps/dist/css/calcite-maps-esri-leaflet.min-v0.3.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/leaflet/0.7.3/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
+
+    <script src="https://cdn.jsdelivr.net/leaflet/0.7.3/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js"></script>
+    <script src="https://cdn.jsdelivr.net/leaflet.esri/1.0.0/esri-leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/leaflet.esri.clustered-feature-layer/1.0.2/esri-leaflet-clustered-feature-layer.js"></script>
+
+    <style>
+        body { margin:0; padding:0; }
+        #map { position: absolute; top:0; bottom:0; right:0; left:0; }
+    </style>
+
+</head>
+
+<body class="calcite-map">
+
+<div id="map"></div>
+
+<script>
+    var map = L.map('map').setView([41.387712, 2.152052], 10);
+
+    L.esri.basemapLayer("Streets").addTo(map);
+
+    L.esri.clusteredFeatureLayer({
+        url: 'http://www.mapabase.es/arcgis/rest/services/Otros/Gasolineras/FeatureServer/0'
+    }).addTo(map);
+</script>
+</body>
+</html>
